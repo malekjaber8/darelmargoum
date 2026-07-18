@@ -1,0 +1,10 @@
+# Saved webpage exports (not real video files — full page snapshots with
+# third-party scripts and encrypted stream segments). Not usable, not published.
+images/*/video.html
+images/*/video_files/
+
+# Stray empty folder
+images/Nouveau dossier/
+
+# Claude Code project tooling (skills, local config) — not site content
+.claude/

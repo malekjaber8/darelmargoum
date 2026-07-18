@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margoum Tunisia — Mobilier tissé main</title>
+<meta name="description" content="Fauteuils et chaises façonnés à la main à Kairouan, habillés de tissage margoum authentique. L'artisanat textile tunisien rencontre l'ébénisterie.">
+<link rel="icon" type="image/png" href="images/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="loader" id="loader">
+  <div class="loader-mark">M</div>
+</div>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#accueil" class="logo" data-cursor="big">
+      <img src="images/logo-mark.png" alt="" class="logo-icon" id="logoIcon" onerror="this.classList.add('hidden'); document.getElementById('logoIconFallback').classList.add('visible')">
+      <svg class="logo-icon-fallback" id="logoIconFallback" width="42" height="42" viewBox="0 0 42 42" fill="none">
+        <circle cx="21" cy="21" r="19.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M14 28 L14 16 L21 10 L28 16 L28 28" stroke="currentColor" stroke-width="1.3" fill="none"/>
+        <path d="M17 28 V20 H25 V28" stroke="currentColor" stroke-width="1.3" fill="none"/>
+      </svg>
+      <span class="logo-text">Margoum<em>Tunisia</em></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#accueil" class="nav-link">Accueil</a>
+      <a href="#collection" class="nav-link">Collection</a>
+      <a href="#savoir-faire" class="nav-link">Savoir-faire</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-line header-cta" data-cursor="big">Sur-mesure</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section id="accueil" class="hero">
+    <svg class="hero-motif" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <pattern id="diamondGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path d="M5 0 L10 5 L5 10 L0 5 Z" fill="none" stroke="currentColor" stroke-width="0.15"/>
+        </pattern>
+      </defs>
+      <rect width="100" height="100" fill="url(#diamondGrid)"/>
+    </svg>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow" data-aos="fade-up">Atelier de Kairouan · Depuis 1994</p>
+        <h1 class="hero-title">
+          <span class="line"><span class="word">Le</span> <span class="word">Margoum</span></span>
+          <span class="line"><span class="word italic accent">prend</span> <span class="word italic accent">forme</span></span>
+          <span class="line"><span class="word">dans</span> <span class="word">le</span> <span class="word">bois.</span></span>
+        </h1>
+        <p class="hero-text" data-aos="fade-up" data-aos-delay="150">
+          Fauteuils et chaises façonnés à la main, habillés de tissage margoum
+          authentique — où l'artisanat textile tunisien rencontre l'ébénisterie
+          traditionnelle.
+        </p>
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+          <a href="#collection" class="btn btn-solid" data-cursor="big">Voir la collection</a>
+          <a href="#savoir-faire" class="btn btn-line" data-cursor="big">Notre savoir-faire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="face-wrap">
+      <div class="face-grid" id="faceGrid">
+        <figure class="face-item face-tl">
+          <img src="images/face-1.jpg" alt="Ruelle tunisienne, tapis margoum suspendus" style="object-position: center 35%;">
+          <span class="face-strips">
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span>
+          </span>
+        </figure>
+
+        <figure class="face-item face-bl">
+          <img src="images/face-2.jpg" alt="Gros plan sur des tapis margoum tissés main">
+          <span class="face-strips">
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span>
+          </span>
+        </figure>
+
+        <figure class="face-item face-center">
+          <img src="images/face-3.jpg" alt="Tapis margoum suspendus contre une fenêtre traditionnelle">
+          <span class="face-strips">
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span>
+          </span>
+        </figure>
+
+        <figure class="face-item face-tr">
+          <img src="images/face-4.jpg" alt="Atelier avec chaises et tabourets tapissés de margoum">
+          <span class="face-strips">
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span>
+          </span>
+        </figure>
+
+        <figure class="face-item face-br">
+          <img src="images/face-5.jpg" alt="Tapis margoum roulés dans l'atelier">
+          <span class="face-strips">
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span><span class="face-strip"></span>
+            <span class="face-strip"></span><span class="face-strip alt"></span>
+          </span>
+        </figure>
+
+        <div class="seal face-seal" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="seal-ring">
+            <defs><path id="sealCircle" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"/></defs>
+            <text font-size="12.5" letter-spacing="3" fill="currentColor">
+              <textPath href="#sealCircle" startOffset="0%">FAIT MAIN · KAIROUAN · TUNISIE · MARGOUM · </textPath>
+            </text>
+          </svg>
+          <svg viewBox="0 0 100 100" class="seal-chair">
+            <path d="M30 78 L30 45 Q30 30 50 30 Q70 30 70 45 L70 78" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M34 78 V58 H66 V78" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M30 55 H70" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <a href="#collection" class="scroll-cue" aria-label="Défiler">
+      <span></span> Défiler
+    </a>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Tissé main</span><span class="dot">✦</span>
+      <span>Bois massif</span><span class="dot">✦</span>
+      <span>Motifs margoum</span><span class="dot">✦</span>
+      <span>Fait à Kairouan</span><span class="dot">✦</span>
+      <span>Édition limitée</span><span class="dot">✦</span>
+      <span>Tissé main</span><span class="dot">✦</span>
+      <span>Bois massif</span><span class="dot">✦</span>
+      <span>Motifs margoum</span><span class="dot">✦</span>
+      <span>Fait à Kairouan</span><span class="dot">✦</span>
+      <span>Édition limitée</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <section id="collection" class="cat-showcase">
+    <div class="container">
+      <p class="eyebrow" data-aos="fade-up">La collection</p>
+      <h2 class="section-title" data-aos="fade-up">Quatre familles, un même fil</h2>
+    </div>
+
+    <a class="cat-row" href="catalogue-fauteuils.html" data-aos="fade-up">
+      <div class="cat-visual">
+        <img src="images/cat-fauteuil.jpg" alt="Canapé margoum « Fouteulle »" class="cat-img">
+      </div>
+      <div class="cat-text">
+        <span class="cat-index">01</span>
+        <h3>Fauteuils &amp; canapés</h3>
+        <p>Structures en bois massif, coussins et assises habillés de tissage margoum authentique. Le confort du salon, la mémoire du métier à tisser.</p>
+        <span class="cat-link">Voir le catalogue <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="currentColor" stroke-width="1.4"/></svg></span>
+      </div>
+    </a>
+
+    <a class="cat-row reverse" href="catalogue-chaises.html" data-aos="fade-up">
+      <div class="cat-visual">
+        <img src="images/cat-chaise.jpg" alt="Chaises margoum" class="cat-img">
+      </div>
+      <div class="cat-text">
+        <span class="cat-index">02</span>
+        <h3>Chaises</h3>
+        <p>Pieds tournés en bois clair, dossiers et assises tissés main — chaque chaise porte un motif margoum différent, jamais deux identiques.</p>
+        <span class="cat-link">Voir le catalogue <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="currentColor" stroke-width="1.4"/></svg></span>
+      </div>
+    </a>
+
+    <a class="cat-row" href="catalogue-chaises-rondes.html" data-aos="fade-up">
+      <div class="cat-visual">
+        <img src="images/cat-chaise-ronde.jpg" alt="Chaise ronde margoum" class="cat-img">
+      </div>
+      <div class="cat-text">
+        <span class="cat-index">03</span>
+        <h3>Chaises rondes</h3>
+        <p>Une silhouette signature à dossier enveloppant, pensée comme une pièce d'accent — le margoum en majesté dans un coin de pièce.</p>
+        <span class="cat-link">Voir le catalogue <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="currentColor" stroke-width="1.4"/></svg></span>
+      </div>
+    </a>
+
+    <a class="cat-row reverse" href="catalogue-poufs.html" data-aos="fade-up">
+      <div class="cat-visual">
+        <img src="images/cat-pouffe.jpg" alt="Poufs margoum" class="cat-img">
+      </div>
+      <div class="cat-text">
+        <span class="cat-index">04</span>
+        <h3>Poufs &amp; assises basses</h3>
+        <p>Pour le salon comme pour la terrasse — des poufs souples entièrement recouverts de margoum, faciles à déplacer, impossibles à ignorer.</p>
+        <span class="cat-link">Voir le catalogue <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L11 1M15 5L11 9" stroke="currentColor" stroke-width="1.4"/></svg></span>
+      </div>
+    </a>
+  </section>
+
+  <section id="savoir-faire" class="process">
+    <div class="process-pin">
+      <div class="container process-head">
+        <p class="eyebrow" data-aos="fade-up">Notre savoir-faire</p>
+        <h2 class="section-title" data-aos="fade-up">Du bois brut au fauteuil fini</h2>
+      </div>
+
+      <div class="process-track" id="processTrack">
+        <div class="process-step">
+          <span class="step-num">01</span>
+          <h3>Le bois</h3>
+          <p>Sélection de bois massif — noyer, chêne, olivier — séché naturellement puis découpé à la main par nos ébénistes.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">02</span>
+          <h3>Le tissage</h3>
+          <p>Sur métier vertical, nos artisanes tissent le margoum motif par motif, fil après fil, selon des dessins transmis de génération en génération.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">03</span>
+          <h3>L'assemblage</h3>
+          <p>Le tissage est tendu et fixé à la structure en bois, à la main, sans clous apparents — une technique propre à l'atelier.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-num">04</span>
+          <h3>La finition</h3>
+          <p>Ponçage, huilage naturel du bois et contrôle qualité pièce par pièce avant expédition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container stats-inner">
+      <div class="stat" data-aos="fade-up">
+        <span class="stat-num" data-count="30">0</span>
+        <span class="stat-label">Ans de tradition</span>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="100">
+        <span class="stat-num" data-count="500">0</span>
+        <span class="stat-label">Fauteuils &amp; chaises livrés</span>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="200">
+        <span class="stat-num" data-count="15">0</span>
+        <span class="stat-label">Artisanes partenaires</span>
+      </div>
+      <div class="stat" data-aos="fade-up" data-aos-delay="300">
+        <span class="stat-num" data-count="12">0</span>
+        <span class="stat-label">Essences de bois</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-aos="fade-up">Sur-mesure &amp; contact</p>
+          <h2 class="section-title" data-aos="fade-up">Composez votre pièce</h2>
+        </div>
+        <p class="section-text" data-aos="fade-up">
+          Choisissez l'essence de bois et le motif margoum — nous façonnons la pièce sur-mesure.
+        </p>
+      </div>
+
+      <div class="contact-inner">
+        <form class="contact-form" id="contactForm" data-aos="fade-up">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="piece">Pièce souhaitée</label>
+            <input type="text" id="piece" name="piece" placeholder="Fauteuil, chaise, sur-mesure…">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid" data-cursor="big">Envoyer la demande</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="150">
+          <div class="info-item">
+            <h4>Atelier</h4>
+            <p>Avenue Habib Bourguiba, Kairouan, Tunisie</p>
+          </div>
+          <div class="info-item">
+            <h4>Téléphone</h4>
+            <p>+216 XX XXX XXX</p>
+          </div>
+          <div class="info-item">
+            <h4>Email</h4>
+            <p>contact@margoum-tunisia.tn</p>
+          </div>
+          <div class="info-item">
+            <h4>Horaires</h4>
+            <p>Lun – Sam · 9h00 – 18h00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-marquee">
+    <div class="footer-marquee-track">
+      <span>Margoum Tunisia</span><span>Margoum Tunisia</span><span>Margoum Tunisia</span><span>Margoum Tunisia</span>
+    </div>
+  </div>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Margoum Tunisia. Tous droits réservés.</span>
+    <div class="footer-social">
+      <a href="#" data-cursor="big">Instagram</a>
+      <a href="#" data-cursor="big">Facebook</a>
+      <a href="#" data-cursor="big">Pinterest</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaises Rondes Margoum — Margoum Tunisia</title>
+<meta name="description" content="Catalogue des chaises rondes Margoum Tunisia : dossier enveloppant, pièce d'accent signature.">
+<link rel="icon" type="image/png" href="images/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="subpage">
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div class="loader" id="loader">
+  <div class="loader-mark">M</div>
+</div>
+
+<header class="header scrolled" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" data-cursor="big">
+      <img src="images/logo-mark.png" alt="" class="logo-icon" id="logoIcon" onerror="this.classList.add('hidden'); document.getElementById('logoIconFallback').classList.add('visible')">
+      <svg class="logo-icon-fallback" id="logoIconFallback" width="42" height="42" viewBox="0 0 42 42" fill="none">
+        <circle cx="21" cy="21" r="19.5" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M14 28 L14 16 L21 10 L28 16 L28 28" stroke="currentColor" stroke-width="1.3" fill="none"/>
+        <path d="M17 28 V20 H25 V28" stroke="currentColor" stroke-width="1.3" fill="none"/>
+      </svg>
+      <span class="logo-text">Margoum<em>Tunisia</em></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html#accueil" class="nav-link">Accueil</a>
+      <a href="index.html#collection" class="nav-link active">Collection</a>
+      <a href="index.html#savoir-faire" class="nav-link">Savoir-faire</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="btn btn-line header-cta" data-cursor="big">Sur-mesure</a>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="cat-hero">
+    <img src="images/cat-chaise-ronde.jpg" alt="Chaise ronde margoum">
+    <div class="cat-hero-content container">
+      <a href="index.html#collection" class="cat-back">← Retour à la collection</a>
+      <p class="eyebrow">Collection · 03</p>
+      <h1>Chaises Rondes</h1>
+      <p>Une silhouette signature à dossier enveloppant, pensée comme une pièce d'accent — le margoum en majesté dans un coin de pièce.</p>
+    </div>
+  </section>
+
+  <section class="cat-catalog">
+    <div class="container">
+      <p class="eyebrow" data-aos="fade-up">Le catalogue</p>
+      <h2 class="section-title" data-aos="fade-up">Nos pièces</h2>
+
+      <div class="gallery-grid">
+        <article class="product-card" data-aos="fade-up">
+          <div class="chair-swatch chair-4"><span class="tag">Pièce signature</span></div>
+          <div class="product-info">
+            <h3>Chaise ronde « Corolle »</h3>
+            <p>Dossier enveloppant, pieds bois clair tourné</p>
+            <span class="cat-soon">Photos et prix à venir</span>
+          </div>
+        </article>
+        <article class="product-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="chair-swatch chair-6"></div>
+          <div class="product-info">
+            <h3>Chaise ronde « Duna »</h3>
+            <p>Rayures multicolores, assise rembourrée</p>
+            <span class="cat-soon">Photos et prix à venir</span>
+          </div>
+        </article>
+        <article class="product-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="chair-swatch chair-3"></div>
+          <div class="product-info">
+            <h3>Chaise ronde « Terra »</h3>
+            <p>Tons ocre &amp; brique, finition mate</p>
+            <span class="cat-soon">Photos et prix à venir</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-cta">
+    <div class="container">
+      <h2>Une pièce sur-mesure ?</h2>
+      <p>Choisissez le bois, le motif margoum, les dimensions — nous façonnons la pièce pour vous.</p>
+      <a href="index.html#contact" class="btn btn-solid" data-cursor="big">Nous contacter</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-marquee">
+    <div class="footer-marquee-track">
+      <span>Margoum Tunisia</span><span>Margoum Tunisia</span><span>Margoum Tunisia</span><span>Margoum Tunisia</span>
+    </div>
+  </div>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Margoum Tunisia. Tous droits réservés.</span>
+    <div class="footer-social">
+      <a href="#" data-cursor="big">Instagram</a>
+      <a href="#" data-cursor="big">Facebook</a>
+      <a href="#" data-cursor="big">Pinterest</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
