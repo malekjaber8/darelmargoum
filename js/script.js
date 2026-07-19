@@ -81,11 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.hero-title .word', {
       yPercent: 110, opacity: 0, duration: 0.9, stagger: 0.035, delay: 0.25, ease: 'power4.out'
     });
-    gsap.from('.hero-visual', { opacity: 0, scale: 0.96, duration: 1, delay: 0.3, ease: 'power3.out' });
+    gsap.from('.hero-bg-img', { opacity: 0, scale: 1.12, duration: 1.6, delay: 0.1, ease: 'power2.out' });
 
-    // Parallax hero motif
-    gsap.to('.hero-motif', {
-      yPercent: 15,
+    // Subtle parallax drift on the hero background photo while scrolling past it
+    gsap.to('.hero-bg-img', {
+      yPercent: 8,
+      scale: 1.06,
       ease: 'none',
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true }
     });
