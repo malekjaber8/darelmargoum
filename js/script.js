@@ -132,25 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: { trigger: el, start: 'top 85%', once: true }
       });
     });
-
-    // Pinned horizontal scroll for the "savoir-faire" process section (desktop only, only on pages that have it)
-    const mm = gsap.matchMedia();
-    if (document.getElementById('processTrack')) mm.add('(min-width: 761px)', () => {
-      const track = document.getElementById('processTrack');
-      const getDistance = () => track.scrollWidth - window.innerWidth + 160;
-
-      const st = ScrollTrigger.create({
-        trigger: '.process',
-        start: 'top top',
-        end: () => '+=' + getDistance(),
-        scrub: 1,
-        pin: true,
-        invalidateOnRefresh: true,
-        animation: gsap.to(track, { x: () => -getDistance(), ease: 'none' })
-      });
-
-      return () => st.kill();
-    });
   }
 
   // ---------- Collection: wheel + drag horizontal scroll ----------
