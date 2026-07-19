@@ -519,24 +519,29 @@ section { padding: 130px 0; position: relative; }
 .trust-item h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 2px; }
 .trust-item p { font-size: 0.78rem; color: var(--ink-soft); }
 
-/* ===================== Tapis heritage split ===================== */
-.tapis-heritage { background: var(--cream); }
-.tapis-heritage-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
+/* ===================== Tapis heritage (full-bleed photo, overlaid text) ===================== */
+.tapis-heritage {
+  position: relative;
+  height: 560px;
+  display: flex;
   align-items: center;
+  overflow: hidden;
 }
-.tapis-heritage-text p { color: var(--ink-soft); line-height: 1.75; max-width: 440px; margin: 18px 0 30px; }
-.tapis-heritage-visual { position: relative; height: 420px; }
-.tapis-photo {
+.tapis-heritage-bg { position: absolute; inset: 0; z-index: 0; }
+.tapis-heritage-bg-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tapis-heritage-overlay {
   position: absolute;
-  border-radius: var(--radius-lg);
-  object-fit: cover;
-  box-shadow: 0 24px 50px -20px rgba(28,26,23,0.35);
+  inset: 0;
+  background: linear-gradient(90deg,
+    var(--cream) 0%,
+    rgba(253,251,247,0.94) 32%,
+    rgba(253,251,247,0.55) 52%,
+    rgba(253,251,247,0.1) 70%,
+    transparent 85%);
 }
-.tapis-photo-a { width: 46%; height: 62%; top: 0; left: 4%; transform: rotate(-4deg); z-index: 1; }
-.tapis-photo-b { width: 52%; height: 78%; bottom: 0; right: 2%; transform: rotate(3deg); z-index: 2; }
+.tapis-heritage-inner { position: relative; z-index: 1; }
+.tapis-heritage-text { max-width: 480px; }
+.tapis-heritage-text p { color: var(--ink-soft); line-height: 1.75; max-width: 440px; margin: 18px 0 30px; }
 
 /* ===================== Carousels (collection + tapis) ===================== */
 .carousel-section { background: var(--cream); }
@@ -874,8 +879,7 @@ body.subpage .header {
   .contact-inner { grid-template-columns: 1fr; }
   .stats-inner { grid-template-columns: repeat(2, 1fr); }
   .trust-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 26px; }
-  .tapis-heritage-inner, .craft-inner { grid-template-columns: 1fr; gap: 40px; }
-  .tapis-heritage-visual { order: -1; height: 340px; }
+  .craft-inner { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
@@ -896,6 +900,21 @@ body.subpage .header {
       transparent 82%);
   }
   .hero-copy { max-width: 100%; }
+  .tapis-heritage {
+    height: auto;
+    min-height: 520px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: flex-end;
+  }
+  .tapis-heritage-overlay {
+    background: linear-gradient(0deg,
+      var(--cream) 0%,
+      rgba(253,251,247,0.95) 32%,
+      rgba(253,251,247,0.5) 58%,
+      transparent 82%);
+  }
+  .tapis-heritage-text { max-width: 100%; }
   .craft-steps { grid-template-columns: 1fr; gap: 20px; }
 }
 
