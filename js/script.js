@@ -311,6 +311,19 @@ document.addEventListener('DOMContentLoaded', () => {
     videoPlayBtn.addEventListener('click', togglePlay);
     craftVideo.addEventListener('click', togglePlay);
 
+    // Auto-play as soon as the video scrolls into view (muted, so browsers allow it
+    // without a click) and pause again once it scrolls back out.
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          craftVideo.play().catch(() => {});
+        } else {
+          craftVideo.pause();
+        }
+      });
+    }, { threshold: 0.4 });
+    videoObserver.observe(videoFrame);
+
     videoMuteBtn.addEventListener('click', () => {
       craftVideo.muted = !craftVideo.muted;
       muteIconOn.hidden = craftVideo.muted;

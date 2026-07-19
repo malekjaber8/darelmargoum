@@ -657,11 +657,36 @@ section { padding: 100px 0; position: relative; }
 
 /* ===================== Video (savoir-faire follow-up) ===================== */
 .video-section { background: var(--cream); padding-top: 0; }
-.video-section .section-text { max-width: 480px; margin-bottom: 40px; }
+.video-section > .container:first-child { margin-bottom: 44px; }
+.video-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+}
+.video-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+}
+.video-brand-logo {
+  height: 150px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--cream), 0 0 0 5px var(--terracotta), 0 14px 30px -12px rgba(28,26,23,0.45);
+}
+.video-brand-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 320px;
+}
 .video-frame {
   position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -941,6 +966,10 @@ body.subpage .header {
   .stats-inner { grid-template-columns: repeat(2, 1fr); }
   .trust-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 26px; }
   .craft-inner { grid-template-columns: 1fr; gap: 40px; }
+  .video-layout { grid-template-columns: 1fr; gap: 34px; }
+  .video-brand { flex-direction: row; align-items: center; }
+  .video-brand-logo { height: 90px; }
+  .video-brand-quote { font-size: 1.15rem; max-width: 100%; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
