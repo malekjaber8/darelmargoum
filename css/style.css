@@ -466,6 +466,7 @@ section { padding: 100px 0; position: relative; }
   overflow: hidden;
   transition: transform 0.6s ease;
 }
+.chair-swatch img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .product-card:hover .chair-swatch { transform: scale(1.04); }
 .chair-swatch .tag {
   position: absolute;
@@ -653,6 +654,55 @@ section { padding: 100px 0; position: relative; }
 .craft-step svg { color: var(--terracotta); margin-bottom: 4px; }
 .craft-step-num { font-family: var(--font-display); font-style: italic; font-size: 0.8rem; color: var(--terracotta); }
 .craft-step-label { font-size: 0.85rem; font-weight: 500; }
+
+/* ===================== Video (savoir-faire follow-up) ===================== */
+.video-section { background: var(--cream); padding-top: 0; }
+.video-section .section-text { max-width: 480px; margin-bottom: 40px; }
+.video-frame {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow:
+    0 0 0 6px var(--cream),
+    0 0 0 7px var(--cream-line),
+    0 30px 60px -24px rgba(28,26,23,0.4);
+  background: var(--dark);
+}
+.video-player { width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer; }
+.video-play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  background: rgba(253,251,247,0.94);
+  color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  padding-left: 6px;
+  box-shadow: 0 14px 30px -10px rgba(28,26,23,0.5);
+  transition: transform 0.35s var(--ease), opacity 0.35s ease, background 0.3s ease;
+}
+.video-play-btn:hover { transform: translate(-50%, -50%) scale(1.08); background: var(--cream); }
+.video-frame.playing .video-play-btn { opacity: 0; pointer-events: none; transform: translate(-50%, -50%) scale(0.7); }
+
+.video-mute-btn {
+  position: absolute;
+  right: 18px; bottom: 18px;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: rgba(14,33,29,0.55);
+  backdrop-filter: blur(4px);
+  color: var(--cream);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+.video-frame.playing .video-mute-btn { opacity: 1; transform: translateY(0); }
+.video-mute-btn:hover { background: rgba(14,33,29,0.8); }
 
 /* ===================== Stats ===================== */
 .stats { background: var(--sand); padding: 90px 0; }

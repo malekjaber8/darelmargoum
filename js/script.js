@@ -294,6 +294,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderCart();
 
+  // ---------- Craft video (play/pause + mute toggle) ----------
+  const craftVideo = document.getElementById('craftVideo');
+  const videoFrame = craftVideo ? craftVideo.closest('.video-frame') : null;
+  const videoPlayBtn = document.getElementById('videoPlayBtn');
+  const videoMuteBtn = document.getElementById('videoMuteBtn');
+  const muteIconOn = document.getElementById('muteIconOn');
+  const muteIconOff = document.getElementById('muteIconOff');
+
+  if (craftVideo && videoFrame) {
+    const togglePlay = () => {
+      if (craftVideo.paused) { craftVideo.play(); } else { craftVideo.pause(); }
+    };
+    craftVideo.addEventListener('play', () => videoFrame.classList.add('playing'));
+    craftVideo.addEventListener('pause', () => videoFrame.classList.remove('playing'));
+    videoPlayBtn.addEventListener('click', togglePlay);
+    craftVideo.addEventListener('click', togglePlay);
+
+    videoMuteBtn.addEventListener('click', () => {
+      craftVideo.muted = !craftVideo.muted;
+      muteIconOn.hidden = craftVideo.muted;
+      muteIconOff.hidden = !craftVideo.muted;
+    });
+  }
+
   // ---------- Newsletter form (front-end only) ----------
   const newsletterForm = document.getElementById('newsletterForm');
   const newsletterStatus = document.getElementById('newsletterStatus');
