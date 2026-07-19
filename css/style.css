@@ -413,7 +413,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ===================== Sections common ===================== */
-section { padding: 130px 0; position: relative; }
+section { padding: 100px 0; position: relative; }
 .section-head {
   display: flex;
   justify-content: space-between;
@@ -503,7 +503,7 @@ section { padding: 130px 0; position: relative; }
   100% { transform: scale(1.14) translate(2%, 1%); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cat-img, .cat-hero img { animation: none; }
+  .cat-img, .cat-hero img, .cat-card-img img, .tapis-card-media img, .hero-bg-img, .tapis-heritage-bg-img { animation: none; }
 }
 
 /* ===================== Trust badge strip ===================== */
@@ -523,6 +523,7 @@ section { padding: 130px 0; position: relative; }
 .tapis-heritage {
   position: relative;
   height: 560px;
+  padding: 0;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -544,7 +545,8 @@ section { padding: 130px 0; position: relative; }
 .tapis-heritage-text p { color: var(--ink-soft); line-height: 1.75; max-width: 440px; margin: 18px 0 30px; }
 
 /* ===================== Carousels (collection + tapis) ===================== */
-.carousel-section { background: var(--cream); }
+.carousel-section { background: var(--cream); padding: 60px 0; }
+.carousel-section + .carousel-section { padding-top: 10px; }
 .carousel-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 34px; }
 .carousel-see-all {
   display: inline-flex; align-items: center; gap: 8px;
@@ -595,8 +597,13 @@ section { padding: 130px 0; position: relative; }
 }
 .cat-card:hover { transform: translateY(-6px); box-shadow: 0 24px 44px -22px rgba(28,26,23,0.35); }
 .cat-card-img { aspect-ratio: 4 / 3.4; overflow: hidden; }
-.cat-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
-.cat-card:hover .cat-card-img img { transform: scale(1.06); }
+.cat-card-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  animation: living 14s ease-in-out infinite alternate;
+  transition: filter 0.4s ease;
+}
+.cat-card:nth-child(even) .cat-card-img img { animation-name: livingAlt; }
+.cat-card:hover .cat-card-img img { animation-play-state: paused; filter: brightness(1.04); }
 .cat-card-body { padding: 16px 18px; }
 .cat-card-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 3px; }
 .cat-card-body p { font-size: 0.8rem; color: var(--ink-soft); }
@@ -612,8 +619,12 @@ section { padding: 130px 0; position: relative; }
 }
 .tapis-card:hover { transform: translateY(-6px); box-shadow: 0 24px 44px -22px rgba(28,26,23,0.35); }
 .tapis-card-media { display: block; aspect-ratio: 4 / 3.4; overflow: hidden; }
-.tapis-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
-.tapis-card:hover .tapis-card-media img { transform: scale(1.06); }
+.tapis-card-media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  animation: livingAlt 15s ease-in-out infinite alternate;
+  transition: filter 0.4s ease;
+}
+.tapis-card:hover .tapis-card-media img { animation-play-state: paused; filter: brightness(1.04); }
 .tapis-card-soon .tapis-card-media { opacity: 0.9; }
 .tapis-card-body { padding: 16px 18px; }
 .tapis-card-body h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 3px; }
