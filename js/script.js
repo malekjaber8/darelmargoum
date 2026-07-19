@@ -296,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---------- Craft video (play/pause + mute toggle) ----------
   const craftVideo = document.getElementById('craftVideo');
+  const craftVideoBg = document.getElementById('craftVideoBg');
   const videoFrame = craftVideo ? craftVideo.closest('.video-frame') : null;
   const videoPlayBtn = document.getElementById('videoPlayBtn');
   const videoMuteBtn = document.getElementById('videoMuteBtn');
@@ -303,16 +304,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const muteIconOff = document.getElementById('muteIconOff');
 
   if (craftVideo && videoFrame) {
+    const syncBg = () => {
+      if (!craftVideoBg) return;
+      if (craftVideo.paused) craftVideoBg.pause(); else craftVideoBg.play().catch(() => {});
+    };
     const togglePlay = () => {
       if (craftVideo.paused) { craftVideo.play(); } else { craftVideo.pause(); }
     };
-    craftVideo.addEventListener('play', () => videoFrame.classList.add('playing'));
-    craftVideo.addEventListener('pause', () => videoFrame.classList.remove('playing'));
+    craftVideo.addEventListener('play', () => { videoFrame.classList.add('playing'); syncBg(); });
+    craftVideo.addEventListener('pause', () => { videoFrame.classList.remove('playing'); syncBg(); });
     videoPlayBtn.addEventListener('click', togglePlay);
     craftVideo.addEventListener('click', togglePlay);
 
-    // Auto-play as soon as the video scrolls into view (muted, so browsers allow it
-    // without a click) and pause again once it scrolls back out.
+    // Browsers only allow audible autoplay after the visitor has interacted with the
+    // page at least once. So: start muted (always allowed), and the moment the visitor
+    // clicks/taps/presses a key anywhere on the site for the first time, unmute — from
+    // then on the video plays with sound automatically whenever it scrolls into view.
+    const unmuteOnFirstInteraction = () => {
+      craftVideo.muted = false;
+      muteIconOn.hidden = true;
+      muteIconOff.hidden = false;
+    };
+    ['click', 'touchstart', 'keydown'].forEach(evt => {
+      document.addEventListener(evt, unmuteOnFirstInteraction, { once: true, passive: true });
+    });
+
+    // Auto-play as soon as the video scrolls into view, and pause again once it
+    // scrolls back out.
     const videoObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -324,7 +342,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.4 });
     videoObserver.observe(videoFrame);
 
-    videoMuteBtn.addEventListener('click', () => {
+    videoMuteBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       craftVideo.muted = !craftVideo.muted;
       muteIconOn.hidden = craftVideo.muted;
       muteIconOff.hidden = !craftVideo.muted;
