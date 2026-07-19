@@ -759,6 +759,49 @@ section { padding: 100px 0; position: relative; }
 .video-frame.playing .video-mute-btn { opacity: 1; transform: translateY(0); }
 .video-mute-btn:hover { background: rgba(14,33,29,0.8); }
 
+/* ===================== Projects (hotel work, auto-scrolling band) ===================== */
+.projects-section { background: var(--bg-soft); }
+.projects-section .section-text { max-width: 520px; margin-bottom: 50px; }
+.projects-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.projects-track {
+  display: inline-flex;
+  gap: 22px;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+.projects-marquee:hover .projects-track { animation-play-state: paused; }
+.project-card {
+  position: relative;
+  flex: none;
+  width: 240px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 32px -18px rgba(28,26,23,0.4);
+}
+.project-card .chair-swatch { height: 280px; }
+.project-label {
+  position: absolute;
+  left: 16px; bottom: 14px;
+  z-index: 1;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(14,33,29,0.55) 0%, transparent 45%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .projects-track { animation: none; overflow-x: auto; }
+}
+
 /* ===================== Stats ===================== */
 .stats { background: var(--sand); padding: 90px 0; }
 .stats-inner {
