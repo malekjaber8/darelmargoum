@@ -19,19 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Center reveals first as the "seed", then the four surrounding photos
-    // weave open outward around it, like a frame assembling itself.
+    // The three columns weave open left to right, tallest (center) slightly offset.
     const tl = gsap.timeline({ delay: 0.3 });
 
     tl.from('.face-item img', { scale: 1.22, duration: 1.7, ease: 'power2.out' }, 0);
 
-    tl.to('.face-center .face-strip', {
-      scaleY: 0, duration: 0.7, stagger: 0.045, ease: 'power3.inOut'
+    tl.to('.face-col-a .face-strip', {
+      scaleY: 0, duration: 0.65, stagger: 0.04, ease: 'power3.inOut'
     }, 0.1);
 
-    tl.to(['.face-tl', '.face-bl', '.face-tr', '.face-br'].map(s => s + ' .face-strip').join(', '), {
-      scaleY: 0, duration: 0.6, stagger: { each: 0.02, from: 'center', grid: 'auto' }, ease: 'power3.inOut'
-    }, 0.55);
+    tl.to('.face-tall .face-strip', {
+      scaleY: 0, duration: 0.7, stagger: 0.04, ease: 'power3.inOut'
+    }, 0.3);
+
+    tl.to('.face-col-b .face-strip', {
+      scaleY: 0, duration: 0.65, stagger: 0.04, ease: 'power3.inOut'
+    }, 0.5);
 
     tl.from('.face-seal', { scale: 0, rotate: -25, opacity: 0, duration: 0.7, ease: 'back.out(1.8)' }, 1.15);
   }
