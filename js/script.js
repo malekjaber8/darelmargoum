@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll(
-      '[data-cursor="big"], .product-card, .nav-link, .cat-card, .tapis-card, .wish-btn, .btn-add-cart, .carousel-arrow'
+      '[data-cursor="big"], .product-card, .nav-link, .cat-card, .tapis-card, .wish-btn, .btn-order, .carousel-arrow'
     ).forEach(el => {
       el.addEventListener('mouseenter', () => cursorRing.classList.add('big'));
       el.addEventListener('mouseleave', () => cursorRing.classList.remove('big'));
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart();
   }
 
-  document.querySelectorAll('.btn-add-cart[data-id]').forEach(btn => {
+  document.querySelectorAll('.btn-order[data-id]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const priceAttr = btn.dataset.price;
@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const autoVideos = [
     setupAutoVideo({ videoId: 'craftVideo', bgId: 'craftVideoBg', playBtnId: 'videoPlayBtn', muteBtnId: 'videoMuteBtn', muteOnId: 'muteIconOn', muteOffId: 'muteIconOff' }),
-    setupAutoVideo({ videoId: 'reassuranceVideo', bgId: 'reassuranceVideoBg', muteBtnId: 'reassuranceMuteBtn', muteOnId: 'reassuranceMuteIconOn', muteOffId: 'reassuranceMuteIconOff' })
+    setupAutoVideo({ videoId: 'reassuranceVideo', bgId: 'reassuranceVideoBg', playBtnId: 'reassurancePlayBtn', muteBtnId: 'reassuranceMuteBtn', muteOnId: 'reassuranceMuteIconOn', muteOffId: 'reassuranceMuteIconOff' })
   ].filter(Boolean);
 
   // Browsers only allow audible autoplay after the visitor has interacted with the page at
@@ -424,13 +424,12 @@ document.addEventListener('DOMContentLoaded', () => {
     { label: 'Contact', url: 'index.html#contact' }
   ];
 
+  const headerSearch = document.getElementById('headerSearch');
   const searchToggle = document.getElementById('searchToggle');
-  const searchPanel = document.getElementById('searchPanel');
-  const searchClose = document.getElementById('searchClose');
   const searchInput = document.getElementById('searchInput');
   const searchResultsEl = document.getElementById('searchResults');
 
-  if (searchToggle && searchPanel && searchInput && searchResultsEl) {
+  if (headerSearch && searchToggle && searchInput && searchResultsEl) {
     const renderSearchResults = (query) => {
       const q = query.trim().toLowerCase();
       searchResultsEl.innerHTML = '';
@@ -450,22 +449,20 @@ document.addEventListener('DOMContentLoaded', () => {
         searchResultsEl.appendChild(a);
       });
     };
-
-    const openSearch = () => {
-      searchPanel.classList.add('open');
-      searchToggle.classList.add('active');
-      setTimeout(() => searchInput.focus(), 200);
-    };
     const closeSearch = () => {
-      searchPanel.classList.remove('open');
-      searchToggle.classList.remove('active');
+      headerSearch.classList.remove('open');
       searchInput.value = '';
       renderSearchResults('');
     };
     searchToggle.addEventListener('click', () => {
-      if (searchPanel.classList.contains('open')) closeSearch(); else openSearch();
+      if (headerSearch.classList.contains('open') || headerSearch.classList.contains('always-open')) {
+        if (searchInput.value) { const first = searchResultsEl.querySelector('a'); if (first) window.location.href = first.getAttribute('href'); }
+        else searchInput.focus();
+      } else {
+        headerSearch.classList.add('open');
+        setTimeout(() => searchInput.focus(), 200);
+      }
     });
-    if (searchClose) searchClose.addEventListener('click', closeSearch);
     searchInput.addEventListener('input', () => renderSearchResults(searchInput.value));
     searchInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
@@ -473,11 +470,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if (first) window.location.href = first.getAttribute('href');
       } else if (e.key === 'Escape') {
         closeSearch();
+        searchInput.blur();
       }
     });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && searchPanel.classList.contains('open')) closeSearch();
+    document.addEventListener('click', (e) => {
+      if (!headerSearch.contains(e.target) && !headerSearch.classList.contains('always-open')) closeSearch();
     });
   }
+
+  // ---------- Avis clients pagination ----------
+  const reviewPages = document.querySelectorAll('.reviews-page');
+  const reviewDots = document.querySelectorAll('.reviews-dot');
+  reviewDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const target = dot.dataset.page;
+      reviewPages.forEach(p => p.classList.toggle('active', p.dataset.page === target));
+      reviewDots.forEach(d => d.classList.toggle('active', d === dot));
+    });
+  });
 
 });

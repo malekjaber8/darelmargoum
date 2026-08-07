@@ -34,16 +34,43 @@
     </a>
     <nav class="nav" id="nav">
       <a href="#accueil" class="nav-link">Accueil</a>
-      <a href="#collection" class="nav-link">Catégories</a>
-      <a href="#tapis" class="nav-link">Tapis Margoum</a>
-      <a href="#savoir-faire" class="nav-link">Savoir-faire</a>
+      <div class="nav-item-dropdown">
+        <a href="#collection" class="nav-link">Catégories <svg width="10" height="7" viewBox="0 0 10 7" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav-dropdown-panel">
+          <div class="nav-dropdown-col">
+            <h5>Mobilier &amp; Assises</h5>
+            <a href="catalogue-fauteuils.html">Fauteuils</a>
+            <a href="catalogue-chaises.html">Chaises en Margoum</a>
+            <a href="catalogue-chaises-rondes.html">Chaises Rondes</a>
+            <a href="catalogue-poufs.html">Poufs &amp; Méridiennes</a>
+            <a href="catalogue-salon-exterieur.html">Salon en Margoum</a>
+            <a href="catalogue-tables-accessoires.html">Tables &amp; Accessoires</a>
+          </div>
+          <div class="nav-dropdown-col">
+            <h5><a href="#tapis">Tapis &amp; Margoum</a></h5>
+            <a href="catalogue-tapis.html">Tous les tapis</a>
+          </div>
+          <div class="nav-dropdown-col">
+            <h5>Déco &amp; Couteaux</h5>
+            <a href="catalogue-deco-couteaux.html">Couteaux &amp; Coussins</a>
+          </div>
+        </div>
+      </div>
+      <a href="#savoir-faire" class="nav-link">À propos</a>
+      <a href="#sur-mesure" class="nav-link">Sur-Mesure</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
     <div class="header-actions">
-      <a href="#sur-mesure" class="btn btn-line header-cta" data-cursor="big">Sur-mesure</a>
-      <button class="search-toggle" id="searchToggle" data-cursor="big" aria-label="Rechercher">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
+      <div class="header-search" id="headerSearch">
+        <button type="button" class="search-toggle" id="searchToggle" data-cursor="big" aria-label="Rechercher">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <input type="text" id="searchInput" class="header-search-input" placeholder="Rechercher…" autocomplete="off">
+        <div class="header-search-results" id="searchResults"></div>
+      </div>
+      <a href="#contact" class="account-toggle" data-cursor="big" aria-label="Mon compte">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </a>
       <button class="cart-toggle" id="cartToggle" data-cursor="big" aria-label="Panier">
         <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
         <span class="cart-count" id="cartCount" hidden>0</span>
@@ -54,17 +81,6 @@
     </button>
   </div>
 </header>
-
-<div class="search-panel" id="searchPanel">
-  <div class="container search-panel-inner">
-    <svg class="search-panel-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-    <input type="text" id="searchInput" placeholder="Rechercher une catégorie, un produit…" autocomplete="off">
-    <button class="search-close" id="searchClose" aria-label="Fermer la recherche">
-      <svg width="16" height="16" viewBox="0 0 16 16"><path d="M1 1L15 15M15 1L1 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-    </button>
-  </div>
-  <div class="container search-results" id="searchResults"></div>
-</div>
 
 <div class="cart-overlay" id="cartOverlay"></div>
 <aside class="cart-drawer" id="cartDrawer" aria-label="Panier">
@@ -89,28 +105,20 @@
 
 <main>
 
-  <section id="accueil" class="hero">
+  <section id="accueil" class="hero hero-centered">
     <div class="hero-bg">
-      <img src="images/hero-staged.jpg" alt="Fauteuils margoum dans un intérieur" class="hero-bg-img">
+      <img src="images/hero-courtyard.jpg" alt="Cour intérieure aménagée avec fauteuils et tapis margoum" class="hero-bg-img">
       <div class="hero-overlay"></div>
     </div>
 
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow" data-aos="fade-up">Atelier de Kairouan · Depuis 1994</p>
         <h1 class="hero-title hero-title-left">
-          <span class="line"><span class="word italic accent">L'Élégance</span></span>
-          <span class="line"><span class="word">de</span> <span class="word">l'Artisanat</span> <span class="word">Tunisien</span></span>
-          <span class="line"><span class="word">dans</span> <span class="word">Votre</span> <span class="word">Intérieur.</span></span>
+          <span class="line"><span class="word">L'Élégance</span> <span class="word">de</span> <span class="word">l'Artisanat</span></span>
+          <span class="line"><span class="word">Tunisien</span> <span class="word">dans</span> <span class="word">Votre</span> <span class="word">Intérieur</span></span>
         </h1>
-        <p class="hero-text" data-aos="fade-up" data-aos-delay="150">
-          Fauteuils et chaises façonnés à la main, habillés de tissage margoum
-          authentique — où l'artisanat textile tunisien rencontre l'ébénisterie
-          traditionnelle.
-        </p>
         <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
           <a href="#collection" class="btn btn-solid" data-cursor="big">Découvrir la Collection</a>
-          <a href="#savoir-faire" class="btn btn-line" data-cursor="big">Notre savoir-faire</a>
         </div>
       </div>
     </div>
@@ -120,7 +128,10 @@
     <div class="container reassurance-inner">
       <div class="reassurance-video video-frame" id="reassuranceFrame">
         <video class="video-bg" id="reassuranceVideoBg" src="images/reassurance.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
-        <video class="video-player" id="reassuranceVideo" src="images/reassurance.mp4" muted loop playsinline preload="metadata" poster="images/hero-staged.jpg"></video>
+        <video class="video-player" id="reassuranceVideo" src="images/reassurance.mp4" muted loop playsinline preload="metadata" poster="images/hero-courtyard.jpg"></video>
+        <button class="video-play-btn" id="reassurancePlayBtn" aria-label="Lire la vidéo">
+          <svg width="18" height="21" viewBox="0 0 22 26" fill="currentColor"><path d="M0 0L22 13L0 26V0Z"/></svg>
+        </button>
         <button class="video-mute-btn" id="reassuranceMuteBtn" aria-label="Activer le son">
           <svg id="reassuranceMuteIconOn" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8.5a5 5 0 0 1 0 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <svg id="reassuranceMuteIconOff" width="16" height="16" viewBox="0 0 24 24" fill="none" hidden><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 9l5 6M20 9l-5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -129,198 +140,147 @@
       <div class="reassurance-items">
         <div class="trust-item" data-aos="fade-up">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/></svg>
-          <div><h4>Fait main &amp; authentique 100%</h4><p>Un artisanat tunisien véritable</p></div>
+          <div><h4>Fait Main &amp; Authentique 100%</h4></div>
         </div>
         <div class="trust-item" data-aos="fade-up" data-aos-delay="80">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="1" y="7" width="14" height="10" rx="1.2" stroke="currentColor" stroke-width="1.4"/><path d="M15 10h4l3 3.5V17h-7" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="6" cy="19.5" r="1.6" stroke="currentColor" stroke-width="1.3"/><circle cx="18" cy="19.5" r="1.6" stroke="currentColor" stroke-width="1.3"/></svg>
-          <div><h4>Livraison Tunisie &amp; international</h4><p>Partout au pays, et à l'étranger</p></div>
+          <div><h4>Livraison sur toute la Tunisie 🇹🇳 et internationaux ✈️</h4></div>
         </div>
         <div class="trust-item" data-aos="fade-up" data-aos-delay="160">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M20 5L5 20M9 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zM20 18.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div><h4>Sur-mesure disponible</h4><p>Vos dimensions, votre motif</p></div>
+          <div><h4>Sur-Mesure disponible</h4></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="collection" class="carousel-section categories-section">
-    <div class="container">
-      <p class="eyebrow" data-aos="fade-up">L'essentiel de l'atelier</p>
+  <section id="collection" class="categories-section">
+    <div class="container section-center-head">
       <h2 class="section-title" data-aos="fade-up">Nos Catégories Phares</h2>
+      <span class="title-divider"></span>
     </div>
-
-    <div class="category-family">
-      <div class="container family-head">
-        <h3 class="family-title" data-aos="fade-up">Mobilier &amp; Assises</h3>
+    <div class="container category-tiles">
+      <div class="category-tile" data-aos="fade-up">
+        <a href="catalogue-fauteuils.html" class="category-tile-img">
+          <img src="images/cat-fauteuil.jpg" alt="Mobilier &amp; Assises">
+          <span class="category-tile-name">Mobilier &amp; Assises</span>
+        </a>
+        <ul class="category-tile-list">
+          <li><a href="catalogue-chaises.html">Chaises en Margoum</a></li>
+          <li><a href="catalogue-poufs.html">Poufs &amp; Méridiennes</a></li>
+          <li><a href="catalogue-tables-accessoires.html">Tables &amp; Accessoires</a></li>
+          <li><a href="catalogue-salon-exterieur.html">Salon en Margoum</a></li>
+        </ul>
       </div>
-      <div class="carousel-wrap">
-        <button class="carousel-arrow carousel-prev" aria-label="Précédent">
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M15 6H1M1 6L6 1M1 6L6 11" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <div class="carousel-track" id="mobilierCarousel">
-          <a class="cat-card" href="catalogue-fauteuils.html" data-aos="zoom-in-up">
-            <div class="cat-card-img"><img src="images/cat-fauteuil.jpg" alt="Fauteuils margoum"></div>
-            <div class="cat-card-body"><h3>Fauteuils</h3><p>Confort &amp; caractère</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-chaises.html" data-aos="zoom-in-up" data-aos-delay="60">
-            <div class="cat-card-img"><img src="images/cat-chaise.jpg" alt="Chaises en margoum"></div>
-            <div class="cat-card-body"><h3>Chaises en Margoum</h3><p>Élégantes &amp; durables</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-chaises-rondes.html" data-aos="zoom-in-up" data-aos-delay="120">
-            <div class="cat-card-img"><img src="images/cat-chaise-ronde.jpg" alt="Chaise ronde margoum"></div>
-            <div class="cat-card-body"><h3>Chaises Rondes</h3><p>Pièce d'accent signature</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-poufs.html" data-aos="zoom-in-up" data-aos-delay="180">
-            <div class="cat-card-img"><img src="images/cat-pouffe.jpg" alt="Poufs et méridiennes margoum"></div>
-            <div class="cat-card-body"><h3>Poufs &amp; Méridiennes</h3><p>Assises basses &amp; détente</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-salon-exterieur.html" data-aos="zoom-in-up" data-aos-delay="240">
-            <div class="cat-card-img"><img src="images/cat-salon-exterieur.jpg" alt="Salon en margoum"></div>
-            <div class="cat-card-body"><h3>Salon en Margoum</h3><p>Harmonie &amp; convivialité</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-tables-accessoires.html" data-aos="zoom-in-up" data-aos-delay="300">
-            <div class="cat-card-img"><span class="tag">Bientôt</span><img src="images/face-2.jpg" alt="Tables et accessoires margoum"></div>
-            <div class="cat-card-body"><h3>Tables &amp; Accessoires</h3><p>Détails qui subliment</p></div>
-          </a>
-        </div>
-        <button class="carousel-arrow carousel-next" aria-label="Suivant">
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M1 6H15M15 6L10 1M15 6L10 11" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
+      <div class="category-tile" data-aos="fade-up" data-aos-delay="100">
+        <a href="catalogue-tapis.html" class="category-tile-img">
+          <img src="images/cat-tapis.jpg" alt="Tapis &amp; Margoum">
+          <span class="category-tile-name">Tapis &amp; Margoum</span>
+        </a>
+        <ul class="category-tile-list">
+          <li><a href="catalogue-tapis.html">Margoum de Kairouan</a></li>
+          <li><a href="catalogue-tapis.html">Margoum de Oudhref</a></li>
+          <li><a href="catalogue-tapis.html">Margoum de Gafsa</a></li>
+          <li><a href="catalogue-tapis.html">Tapis Zarbi de Kairouan</a></li>
+          <li><a href="catalogue-tapis.html">Kilim traditionnel du Sud Tunisien, Coloré</a></li>
+        </ul>
       </div>
-    </div>
-
-    <div class="category-family">
-      <div class="container family-head">
-        <h3 class="family-title" data-aos="fade-up">Tapis &amp; Margoum</h3>
-      </div>
-      <div class="carousel-wrap">
-        <button class="carousel-arrow carousel-prev" aria-label="Précédent">
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M15 6H1M1 6L6 1M1 6L6 11" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <div class="carousel-track" id="tapisFamilyCarousel">
-          <a class="cat-card" href="catalogue-tapis.html" data-aos="zoom-in-up">
-            <div class="cat-card-img"><img src="images/cat-tapis.jpg" alt="Margoum de Kairouan"></div>
-            <div class="cat-card-body"><h3>Margoum de Kairouan</h3><p>Le motif d'origine</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-tapis.html" data-aos="zoom-in-up" data-aos-delay="60">
-            <div class="cat-card-img"><img src="images/tapis-1.jpg" alt="Margoum de Oudhref"></div>
-            <div class="cat-card-body"><h3>Margoum de Oudhref</h3><p>Tissage du Sud-Est</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-tapis.html" data-aos="zoom-in-up" data-aos-delay="120">
-            <div class="cat-card-img"><img src="images/tapis-2.jpg" alt="Margoum de Gafsa"></div>
-            <div class="cat-card-body"><h3>Margoum de Gafsa</h3><p>Motifs du Sud tunisien</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-tapis.html" data-aos="zoom-in-up" data-aos-delay="180">
-            <div class="cat-card-img"><img src="images/tapis-4.jpg" alt="Zarbia de Kairouan"></div>
-            <div class="cat-card-body"><h3>Zarbia de Kairouan</h3><p>Tapis haute laine</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-tapis.html" data-aos="zoom-in-up" data-aos-delay="240">
-            <div class="cat-card-img"><img src="images/tapis-6.jpg" alt="Kilim traditionnel du Sud tunisien"></div>
-            <div class="cat-card-body"><h3>Kilim Traditionnel du Sud</h3><p>Coloré &amp; graphique</p></div>
-          </a>
-        </div>
-        <button class="carousel-arrow carousel-next" aria-label="Suivant">
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M1 6H15M15 6L10 1M15 6L10 11" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <div class="category-family">
-      <div class="container family-head">
-        <h3 class="family-title" data-aos="fade-up">Déco &amp; Couteaux</h3>
-      </div>
-      <div class="carousel-wrap">
-        <div class="carousel-track carousel-track-static" id="decoCarousel">
-          <a class="cat-card" href="catalogue-deco-couteaux.html" data-aos="zoom-in-up">
-            <div class="cat-card-img"><span class="tag">Bientôt</span><img src="images/face-3.jpg" alt="Couteaux artisanaux"></div>
-            <div class="cat-card-body"><h3>Couteaux Artisanaux</h3><p>Forgés &amp; manche margoum</p></div>
-          </a>
-          <a class="cat-card" href="catalogue-deco-couteaux.html" data-aos="zoom-in-up" data-aos-delay="60">
-            <div class="cat-card-img"><span class="tag">Bientôt</span><img src="images/face-5.jpg" alt="Coussins margoum"></div>
-            <div class="cat-card-body"><h3>Coussins</h3><p>Motifs margoum faits main</p></div>
-          </a>
-        </div>
+      <div class="category-tile" data-aos="fade-up" data-aos-delay="200">
+        <a href="catalogue-deco-couteaux.html" class="category-tile-img">
+          <img src="images/face-3.jpg" alt="Déco &amp; Couteaux">
+          <span class="category-tile-name">Déco &amp; Couteaux</span>
+        </a>
+        <ul class="category-tile-list">
+          <li><a href="catalogue-deco-couteaux.html">Couteaux artisanaux</a></li>
+          <li><a href="catalogue-deco-couteaux.html">Coussins</a></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="best-sellers" class="carousel-section best-sellers-section">
-    <div class="container carousel-head">
-      <h2 class="section-title" data-aos="fade-up">Nos Coups de Cœur</h2>
+  <section id="best-sellers" class="best-sellers-section">
+    <div class="container section-center-head">
+      <h2 class="section-title" data-aos="fade-up">Nos Coups de Cœur / Best-Sellers</h2>
+      <span class="title-divider"></span>
     </div>
     <div class="container best-sellers-grid">
       <article class="tapis-card" data-aos="zoom-in-up">
-        <button class="wish-btn" data-wish-id="best-fauteuil-kilim" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
         <a href="catalogue-fauteuils.html" class="tapis-card-media"><img src="images/fauteuil-2.jpg" alt="Fauteuil margoum kilim rouge"></a>
         <div class="tapis-card-body">
-          <h3>Fauteuil Margoum — Kilim Rouge</h3>
+          <h3>Fauteuil Margoum Élégance</h3>
           <p>Best-seller hôtellerie</p>
-          <div class="tapis-card-foot">
-            <strong class="price">Prix sur demande</strong>
-            <button class="btn-add-cart" data-id="best-fauteuil-kilim" data-name="Fauteuil Margoum — Kilim Rouge" data-img="images/fauteuil-2.jpg" aria-label="Ajouter au panier">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-            </button>
+          <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+          <div class="tapis-card-buttons">
+            <button class="btn-order" data-id="best-fauteuil-kilim" data-name="Fauteuil Margoum Élégance" data-img="images/fauteuil-2.jpg" data-cursor="big">Commander</button>
+            <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Fauteuil%20Margoum%20%C3%89l%C3%A9gance" target="_blank" rel="noopener" data-cursor="big">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+              WhatsApp
+            </a>
           </div>
         </div>
       </article>
       <article class="tapis-card" data-aos="zoom-in-up" data-aos-delay="60">
-        <button class="wish-btn" data-wish-id="best-chaise-ronde" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <a href="catalogue-chaises-rondes.html" class="tapis-card-media"><img src="images/chaise-ronde-1.jpg" alt="Chaise ronde margoum"></a>
+        <a href="catalogue-tapis.html" class="tapis-card-media"><img src="images/tapis-3.jpg" alt="Tapis margoum Kairouan"></a>
         <div class="tapis-card-body">
-          <h3>Chaise Ronde Margoum</h3>
-          <p>Pièce d'accent signature</p>
-          <div class="tapis-card-foot">
-            <strong class="price">Prix sur demande</strong>
-            <button class="btn-add-cart" data-id="best-chaise-ronde" data-name="Chaise Ronde Margoum" data-img="images/chaise-ronde-1.jpg" aria-label="Ajouter au panier">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-            </button>
+          <h3>Tapis Margoum Kairouan</h3>
+          <p>Tissé à la main</p>
+          <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+          <div class="tapis-card-buttons">
+            <button class="btn-order" data-id="tapis-doree" data-name="Tapis Margoum Kairouan" data-img="images/tapis-3.jpg" data-cursor="big">Commander</button>
+            <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Tapis%20Margoum%20Kairouan" target="_blank" rel="noopener" data-cursor="big">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+              WhatsApp
+            </a>
           </div>
         </div>
       </article>
       <article class="tapis-card" data-aos="zoom-in-up" data-aos-delay="120">
-        <button class="wish-btn" data-wish-id="tapis-doree" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <a href="catalogue-tapis.html" class="tapis-card-media"><img src="images/tapis-3.jpg" alt="Tapis margoum losange doré"></a>
+        <a href="catalogue-poufs.html" class="tapis-card-media"><img src="images/pouffe-1.jpg" alt="Pouf margoum coloré"></a>
         <div class="tapis-card-body">
-          <h3>Tapis Margoum — Losange Doré</h3>
-          <p>Tissé à la main</p>
-          <div class="tapis-card-foot">
-            <strong class="price">Prix sur demande</strong>
-            <button class="btn-add-cart" data-id="tapis-doree" data-name="Tapis Margoum — Losange Doré" data-img="images/tapis-3.jpg" aria-label="Ajouter au panier">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-            </button>
+          <h3>Pouf Margoum Coloré</h3>
+          <p>Assise basse &amp; détente</p>
+          <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+          <div class="tapis-card-buttons">
+            <button class="btn-order" data-id="best-pouffe" data-name="Pouf Margoum Coloré" data-img="images/pouffe-1.jpg" data-cursor="big">Commander</button>
+            <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Pouf%20Margoum%20Color%C3%A9" target="_blank" rel="noopener" data-cursor="big">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+              WhatsApp
+            </a>
           </div>
         </div>
       </article>
       <article class="tapis-card" data-aos="zoom-in-up" data-aos-delay="180">
-        <button class="wish-btn" data-wish-id="best-pouffe" aria-label="Ajouter aux favoris">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-        </button>
-        <a href="catalogue-poufs.html" class="tapis-card-media"><img src="images/pouffe-1.jpg" alt="Pouf margoum"></a>
+        <a href="catalogue-salon-exterieur.html" class="tapis-card-media"><img src="images/realisations/hotel-2.jpg" alt="Salon margoum traditionnel"></a>
         <div class="tapis-card-body">
-          <h3>Pouf Margoum</h3>
-          <p>Assise basse &amp; détente</p>
-          <div class="tapis-card-foot">
-            <strong class="price">Prix sur demande</strong>
-            <button class="btn-add-cart" data-id="best-pouffe" data-name="Pouf Margoum" data-img="images/pouffe-1.jpg" aria-label="Ajouter au panier">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-            </button>
+          <h3>Salon Margoum Traditionnel</h3>
+          <p>Pièce signature hôtellerie</p>
+          <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+          <div class="tapis-card-buttons">
+            <button class="btn-order" data-id="best-salon" data-name="Salon Margoum Traditionnel" data-img="images/realisations/hotel-2.jpg" data-cursor="big">Commander</button>
+            <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Salon%20Margoum%20Traditionnel" target="_blank" rel="noopener" data-cursor="big">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+              WhatsApp
+            </a>
           </div>
         </div>
       </article>
     </div>
   </section>
 
-  <section id="sur-mesure" class="cat-cta sur-mesure-section">
-    <div class="container">
-      <h2>Vos dimensions, votre motif margoum</h2>
-      <p>Décrivez-nous la pièce dont vous rêvez — nos artisans la conçoivent sur-mesure, à vos dimensions exactes. Réponse rapide, directement sur WhatsApp.</p>
-      <a href="https://wa.me/21629457597?text=Bonjour%2C%20je%20souhaite%20une%20pi%C3%A8ce%20sur-mesure.%20Pouvez-vous%20m'aider%20%3F" target="_blank" rel="noopener" class="btn btn-solid" data-cursor="big">Discuter sur WhatsApp</a>
+  <section id="sur-mesure" class="sur-mesure-section">
+    <div class="sur-mesure-inner">
+      <div class="sur-mesure-media" data-aos="fade-right">
+        <img src="images/face-4.jpg" alt="Artisane tissant un margoum à la main">
+      </div>
+      <div class="sur-mesure-text" data-aos="fade-left">
+        <p class="eyebrow">Sur-Mesure</p>
+        <h2>Vous avez une idée précise ?</h2>
+        <p>Nous réalisons vos projets sur-mesure selon vos dimensions et vos envies. Décrivez-nous la pièce dont vous rêvez — nos artisans la conçoivent pour vous.</p>
+        <a href="https://wa.me/21629457597?text=Bonjour%2C%20je%20souhaite%20une%20pi%C3%A8ce%20sur-mesure.%20Pouvez-vous%20m'aider%20%3F" target="_blank" rel="noopener" class="btn btn-solid" data-cursor="big">
+          Discuter sur WhatsApp
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -354,86 +314,81 @@
       </button>
       <div class="carousel-track" id="tapisCarousel">
         <article class="tapis-card" data-aos="zoom-in-up">
-          <button class="wish-btn" data-wish-id="tapis-bleu" aria-label="Ajouter aux favoris">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-          </button>
           <a href="catalogue-tapis.html" class="tapis-card-media"><img src="images/cat-tapis.jpg" alt="Tapis Margoum bleu"></a>
           <div class="tapis-card-body">
             <h3>Tapis Margoum — Bleu</h3>
             <p>Tissé à la main</p>
-            <div class="tapis-card-foot">
-              <strong class="price">Prix sur demande</strong>
-              <button class="btn-add-cart" data-id="tapis-bleu" data-name="Tapis Margoum — Bleu" data-img="images/cat-tapis.jpg" aria-label="Ajouter au panier">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-              </button>
+            <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+            <div class="tapis-card-buttons">
+              <button class="btn-order" data-id="tapis-bleu" data-name="Tapis Margoum — Bleu" data-img="images/cat-tapis.jpg" data-cursor="big">Commander</button>
+              <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Tapis%20Margoum%20%E2%80%94%20Bleu" target="_blank" rel="noopener" data-cursor="big">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+                WhatsApp
+              </a>
             </div>
           </div>
         </article>
 
         <article class="tapis-card" data-aos="zoom-in-up" data-aos-delay="60">
-          <button class="wish-btn" data-wish-id="tapis-multicolore" aria-label="Ajouter aux favoris">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-          </button>
           <a href="catalogue-tapis.html" class="tapis-card-media"><img src="images/tapis-1.jpg" alt="Tapis Margoum losanges multicolores"></a>
           <div class="tapis-card-body">
             <h3>Tapis Margoum — Losange Multicolore</h3>
             <p>Tissé à la main</p>
-            <div class="tapis-card-foot">
-              <strong class="price">Prix sur demande</strong>
-              <button class="btn-add-cart" data-id="tapis-multicolore" data-name="Tapis Margoum — Losange Multicolore" data-img="images/tapis-1.jpg" aria-label="Ajouter au panier">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-              </button>
+            <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+            <div class="tapis-card-buttons">
+              <button class="btn-order" data-id="tapis-multicolore" data-name="Tapis Margoum — Losange Multicolore" data-img="images/tapis-1.jpg" data-cursor="big">Commander</button>
+              <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Tapis%20Margoum%20%E2%80%94%20Losange%20Multicolore" target="_blank" rel="noopener" data-cursor="big">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+                WhatsApp
+              </a>
             </div>
           </div>
         </article>
 
         <article class="tapis-card" data-aos="zoom-in-up" data-aos-delay="120">
-          <button class="wish-btn" data-wish-id="tapis-fuchsia" aria-label="Ajouter aux favoris">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-          </button>
           <a href="catalogue-tapis.html" class="tapis-card-media"><img src="images/tapis-2.jpg" alt="Tapis Margoum rayures fuchsia"></a>
           <div class="tapis-card-body">
             <h3>Tapis Margoum — Rayures Fuchsia</h3>
             <p>Tissé à la main</p>
-            <div class="tapis-card-foot">
-              <strong class="price">Prix sur demande</strong>
-              <button class="btn-add-cart" data-id="tapis-fuchsia" data-name="Tapis Margoum — Rayures Fuchsia" data-img="images/tapis-2.jpg" aria-label="Ajouter au panier">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-              </button>
+            <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+            <div class="tapis-card-buttons">
+              <button class="btn-order" data-id="tapis-fuchsia" data-name="Tapis Margoum — Rayures Fuchsia" data-img="images/tapis-2.jpg" data-cursor="big">Commander</button>
+              <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Tapis%20Margoum%20%E2%80%94%20Rayures%20Fuchsia" target="_blank" rel="noopener" data-cursor="big">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+                WhatsApp
+              </a>
             </div>
           </div>
         </article>
 
         <article class="tapis-card" data-aos="zoom-in-up" data-aos-delay="180">
-          <button class="wish-btn" data-wish-id="tapis-grenat" aria-label="Ajouter aux favoris">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-          </button>
           <a href="catalogue-tapis.html" class="tapis-card-media"><img src="images/tapis-4.jpg" alt="Tapis Margoum étoiles grenat"></a>
           <div class="tapis-card-body">
             <h3>Tapis Margoum — Étoiles Grenat</h3>
             <p>Tissé à la main</p>
-            <div class="tapis-card-foot">
-              <strong class="price">Prix sur demande</strong>
-              <button class="btn-add-cart" data-id="tapis-grenat" data-name="Tapis Margoum — Étoiles Grenat" data-img="images/tapis-4.jpg" aria-label="Ajouter au panier">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-              </button>
+            <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+            <div class="tapis-card-buttons">
+              <button class="btn-order" data-id="tapis-grenat" data-name="Tapis Margoum — Étoiles Grenat" data-img="images/tapis-4.jpg" data-cursor="big">Commander</button>
+              <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Tapis%20Margoum%20%E2%80%94%20%C3%89toiles%20Grenat" target="_blank" rel="noopener" data-cursor="big">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+                WhatsApp
+              </a>
             </div>
           </div>
         </article>
 
         <article class="tapis-card" data-aos="zoom-in-up" data-aos-delay="240">
-          <button class="wish-btn" data-wish-id="tapis-naturel" aria-label="Ajouter aux favoris">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 20.5s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2-2.5 4.6-10 9.3-10 9.3z" stroke="currentColor" stroke-width="1.5"/></svg>
-          </button>
           <a href="catalogue-tapis.html" class="tapis-card-media"><img src="images/tapis-6.jpg" alt="Tapis Margoum losange naturel"></a>
           <div class="tapis-card-body">
             <h3>Tapis Margoum — Losange Naturel</h3>
             <p>Tissé à la main</p>
-            <div class="tapis-card-foot">
-              <strong class="price">Prix sur demande</strong>
-              <button class="btn-add-cart" data-id="tapis-naturel" data-name="Tapis Margoum — Losange Naturel" data-img="images/tapis-6.jpg" aria-label="Ajouter au panier">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 4h2l1.6 10.6a2 2 0 0 0 2 1.7h8.4a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
-              </button>
+            <div class="tapis-card-price-row"><strong class="price">Prix sur demande</strong></div>
+            <div class="tapis-card-buttons">
+              <button class="btn-order" data-id="tapis-naturel" data-name="Tapis Margoum — Losange Naturel" data-img="images/tapis-6.jpg" data-cursor="big">Commander</button>
+              <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Tapis%20Margoum%20%E2%80%94%20Losange%20Naturel" target="_blank" rel="noopener" data-cursor="big">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
+                WhatsApp
+              </a>
             </div>
           </div>
         </article>
@@ -574,27 +529,51 @@
   </section>
 
   <!-- Placeholder testimonials — swap for real client reviews when available -->
+  <!-- Placeholder testimonials — swap for real client reviews when available -->
   <section id="avis" class="reviews-section">
-    <div class="container">
-      <p class="eyebrow" data-aos="fade-up">Avis clients</p>
-      <h2 class="section-title" data-aos="fade-up">Ce qu'ils en disent</h2>
+    <div class="container section-center-head">
+      <h2 class="section-title" data-aos="fade-up">Avis Clients</h2>
+      <span class="title-divider"></span>
     </div>
     <div class="container reviews-grid">
-      <article class="review-card" data-aos="fade-up">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-quote">« Un savoir-faire exceptionnel — nos fauteuils margoum font sensation dans notre maison d'hôtes. »</p>
-        <p class="review-author">— Amira B., maison d'hôtes à Kairouan</p>
-      </article>
-      <article class="review-card" data-aos="fade-up" data-aos-delay="80">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-quote">« Livraison rapide, finitions impeccables, exactement ce qu'on voulait pour notre salon. »</p>
-        <p class="review-author">— Karim T., Tunis</p>
-      </article>
-      <article class="review-card" data-aos="fade-up" data-aos-delay="160">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-quote">« L'équipe a suivi nos dimensions à la lettre pour un projet hôtelier — résultat magnifique. »</p>
-        <p class="review-author">— Sonia M., responsable design, hôtel partenaire</p>
-      </article>
+      <div class="reviews-page active" data-page="1">
+        <article class="review-card" data-aos="fade-up">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">« Un travail exceptionnel, les finitions sont parfaites et la qualité irréprochable. »</p>
+          <p class="review-author">— Amina, Tunis</p>
+        </article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">« Livraison rapide et produit magnifique, je recommande vivement ! »</p>
+          <p class="review-author">— Yassine, Sousse</p>
+        </article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">« Le sur-mesure est parfait, exactement ce que je voulais pour mon salon. »</p>
+          <p class="review-author">— Salma, Kairouan</p>
+        </article>
+      </div>
+      <div class="reviews-page" data-page="2">
+        <article class="review-card" data-aos="fade-up">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">« Un savoir-faire exceptionnel — nos fauteuils margoum font sensation dans notre maison d'hôtes. »</p>
+          <p class="review-author">— Amira B., maison d'hôtes à Kairouan</p>
+        </article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">« Livraison rapide, finitions impeccables, exactement ce qu'on voulait pour notre salon. »</p>
+          <p class="review-author">— Karim T., Tunis</p>
+        </article>
+        <article class="review-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">« L'équipe a suivi nos dimensions à la lettre pour un projet hôtelier — résultat magnifique. »</p>
+          <p class="review-author">— Sonia M., responsable design, hôtel partenaire</p>
+        </article>
+      </div>
+    </div>
+    <div class="reviews-pagination">
+      <button class="reviews-dot active" data-page="1" aria-label="Page d'avis 1"></button>
+      <button class="reviews-dot" data-page="2" aria-label="Page d'avis 2"></button>
     </div>
   </section>
 
@@ -659,6 +638,13 @@
 </main>
 
 <footer class="footer">
+  <svg class="footer-illustration" viewBox="0 0 340 200" fill="none" aria-hidden="true">
+    <path d="M0 200V120c10-30 30-40 50-40s40 10 50 40v80" stroke="var(--gold)" stroke-width="1.2"/>
+    <path d="M100 200V90c14-34 36-46 60-46s46 12 60 46v110" stroke="var(--gold)" stroke-width="1.2"/>
+    <path d="M220 200V130c8-26 26-36 45-36s37 10 45 36v70" stroke="var(--gold)" stroke-width="1.2"/>
+    <circle cx="160" cy="44" r="10" stroke="var(--gold)" stroke-width="1.2"/>
+    <path d="M0 200H340" stroke="var(--gold)" stroke-width="1.2"/>
+  </svg>
   <div class="container footer-grid">
     <div class="footer-brand">
       <a href="#accueil" class="logo footer-logo">
@@ -667,9 +653,9 @@
       </a>
       <p>Le Margoum, c'est l'alliance du bois et du tissage pour sublimer vos espaces avec authenticité et raffinement.</p>
       <div class="footer-contact">
-        <p>Bchechma, avant l'entrée de Kairouan, rue de Tunisie</p>
-        <p><a href="tel:+21629457597">29 457 597</a> / <a href="tel:+21656093248">56 093 248</a></p>
-        <p><a href="mailto:contact.tapismargoum@gmail.com">contact.tapismargoum@gmail.com</a></p>
+        <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 21s-6-6.7-6-11.5A6 6 0 0 1 18 9.5C18 14.3 12 21 12 21z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.2" stroke="currentColor" stroke-width="1.5"/></svg> Bchechma, avant l'entrée de Kairouan, rue de Tunisie</p>
+        <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 5c0 8 7 15 15 15l2-4-5-2-2 2c-2-1-4-3-5-5l2-2-2-5-4 1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg> <a href="tel:+21629457597">29 457 597</a> / <a href="tel:+21656093248">56 093 248</a></p>
+        <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M3 6.5l9 6 9-6" stroke="currentColor" stroke-width="1.4"/></svg> <a href="mailto:contact.tapismargoum@gmail.com">contact.tapismargoum@gmail.com</a></p>
       </div>
       <div class="footer-social">
         <a href="#" data-cursor="big" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.5"/><circle cx="17.8" cy="6.2" r="1.1" fill="currentColor"/></svg></a>
@@ -679,11 +665,11 @@
     </div>
 
     <div class="footer-col">
-      <h4>Navigation</h4>
+      <h4>Liens rapides</h4>
       <a href="#accueil">Accueil</a>
       <a href="#collection">Catégories</a>
-      <a href="#tapis">Tapis Margoum</a>
-      <a href="#savoir-faire">Savoir-faire</a>
+      <a href="#savoir-faire">À propos</a>
+      <a href="#sur-mesure">Sur-Mesure</a>
       <a href="#contact">Contact</a>
     </div>
 
