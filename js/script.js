@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from('.eyebrow', { y: 16, opacity: 0, duration: 0.7, delay: 0.15, ease: 'power3.out' });
+    gsap.from('.hero .eyebrow', { y: 16, opacity: 0, duration: 0.7, delay: 0.15, ease: 'power3.out' });
     gsap.from('.hero-title .word', {
       yPercent: 110, opacity: 0, duration: 0.9, stagger: 0.035, delay: 0.25, ease: 'power4.out'
     });
@@ -171,6 +171,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   syncWishButtons();
 
+  // ---------- WhatsApp ----------
+  const WHATSAPP_NUMBER = '21629457597'; // client's primary number, +216 no leading 0 — swap freely if they prefer the other one
+  const buildWhatsAppLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
   // ---------- Cart (localStorage, functional add/remove/qty + drawer) ----------
   const CART_KEY = 'margoum_cart';
   const getCart = () => JSON.parse(localStorage.getItem(CART_KEY) || '[]');
@@ -184,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartEmptyEl = document.getElementById('cartEmpty');
   const cartCountEl = document.getElementById('cartCount');
   const cartSubtotalEl = document.getElementById('cartSubtotal');
+  const cartCheckoutEl = document.getElementById('cartCheckout');
 
   function openCart() {
     if (!cartDrawer) return;
@@ -292,61 +297,87 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  function buildOrderSummary(items) {
+    const lines = items.map(i => {
+      const priceText = i.price != null ? `${i.price * i.qty} TND` : 'Prix sur demande';
+      return `• ${i.name} x${i.qty} — ${priceText}`;
+    });
+    return `Bonjour, je souhaite commander :\n${lines.join('\n')}`;
+  }
+
+  if (cartCheckoutEl) {
+    cartCheckoutEl.addEventListener('click', (e) => {
+      const items = getCart();
+      if (!items.length) return; // empty cart: let the default href (#contact) behave normally
+      e.preventDefault();
+      window.open(buildWhatsAppLink(buildOrderSummary(items)), '_blank', 'noopener');
+    });
+  }
+
   renderCart();
 
-  // ---------- Craft video (play/pause + mute toggle) ----------
-  const craftVideo = document.getElementById('craftVideo');
-  const craftVideoBg = document.getElementById('craftVideoBg');
-  const videoFrame = craftVideo ? craftVideo.closest('.video-frame') : null;
-  const videoPlayBtn = document.getElementById('videoPlayBtn');
-  const videoMuteBtn = document.getElementById('videoMuteBtn');
-  const muteIconOn = document.getElementById('muteIconOn');
-  const muteIconOff = document.getElementById('muteIconOff');
+  // ---------- Auto-play videos (play/pause + mute, autoplay-on-scroll-into-view) ----------
+  // Shared by the savoir-faire "craft" video and the reassurance-bar video — both use the
+  // same dual blurred-bg + sharp-foreground <video> markup pattern.
+  function setupAutoVideo({ videoId, bgId, playBtnId, muteBtnId, muteOnId, muteOffId }) {
+    const video = document.getElementById(videoId);
+    const frame = video ? video.closest('.video-frame') : null;
+    if (!video || !frame) return null;
+    const bg = bgId ? document.getElementById(bgId) : null;
+    const playBtn = playBtnId ? document.getElementById(playBtnId) : null;
+    const muteBtn = muteBtnId ? document.getElementById(muteBtnId) : null;
+    const muteOn = muteOnId ? document.getElementById(muteOnId) : null;
+    const muteOff = muteOffId ? document.getElementById(muteOffId) : null;
 
-  if (craftVideo && videoFrame) {
     const syncBg = () => {
-      if (!craftVideoBg) return;
-      if (craftVideo.paused) craftVideoBg.pause(); else craftVideoBg.play().catch(() => {});
+      if (!bg) return;
+      if (video.paused) bg.pause(); else bg.play().catch(() => {});
     };
-    const togglePlay = () => {
-      if (craftVideo.paused) { craftVideo.play(); } else { craftVideo.pause(); }
-    };
-    craftVideo.addEventListener('play', () => { videoFrame.classList.add('playing'); syncBg(); });
-    craftVideo.addEventListener('pause', () => { videoFrame.classList.remove('playing'); syncBg(); });
-    videoPlayBtn.addEventListener('click', togglePlay);
-    craftVideo.addEventListener('click', togglePlay);
+    const togglePlay = () => { if (video.paused) video.play(); else video.pause(); };
+    video.addEventListener('play', () => { frame.classList.add('playing'); syncBg(); });
+    video.addEventListener('pause', () => { frame.classList.remove('playing'); syncBg(); });
+    if (playBtn) playBtn.addEventListener('click', togglePlay);
+    video.addEventListener('click', togglePlay);
 
-    // Browsers only allow audible autoplay after the visitor has interacted with the
-    // page at least once. So: start muted (always allowed), and the moment the visitor
-    // clicks/taps/presses a key anywhere on the site for the first time, unmute — from
-    // then on the video plays with sound automatically whenever it scrolls into view.
+    // Auto-play as soon as the video scrolls into view, and pause again once it scrolls back out.
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      });
+    }, { threshold: 0.4 });
+    videoObserver.observe(frame);
+
+    if (muteBtn) {
+      muteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+        if (muteOn) muteOn.hidden = video.muted;
+        if (muteOff) muteOff.hidden = !video.muted;
+      });
+    }
+    return { video, muteOn, muteOff };
+  }
+
+  const autoVideos = [
+    setupAutoVideo({ videoId: 'craftVideo', bgId: 'craftVideoBg', playBtnId: 'videoPlayBtn', muteBtnId: 'videoMuteBtn', muteOnId: 'muteIconOn', muteOffId: 'muteIconOff' }),
+    setupAutoVideo({ videoId: 'reassuranceVideo', bgId: 'reassuranceVideoBg', muteBtnId: 'reassuranceMuteBtn', muteOnId: 'reassuranceMuteIconOn', muteOffId: 'reassuranceMuteIconOff' })
+  ].filter(Boolean);
+
+  // Browsers only allow audible autoplay after the visitor has interacted with the page at
+  // least once. So: start muted (always allowed), and the moment the visitor clicks/taps/
+  // presses a key anywhere on the site for the first time, unmute every auto-video — from
+  // then on they play with sound automatically whenever they scroll into view.
+  if (autoVideos.length) {
     const unmuteOnFirstInteraction = () => {
-      craftVideo.muted = false;
-      muteIconOn.hidden = true;
-      muteIconOff.hidden = false;
+      autoVideos.forEach(({ video, muteOn, muteOff }) => {
+        video.muted = false;
+        if (muteOn) muteOn.hidden = true;
+        if (muteOff) muteOff.hidden = false;
+      });
     };
     ['click', 'touchstart', 'keydown'].forEach(evt => {
       document.addEventListener(evt, unmuteOnFirstInteraction, { once: true, passive: true });
-    });
-
-    // Auto-play as soon as the video scrolls into view, and pause again once it
-    // scrolls back out.
-    const videoObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          craftVideo.play().catch(() => {});
-        } else {
-          craftVideo.pause();
-        }
-      });
-    }, { threshold: 0.4 });
-    videoObserver.observe(videoFrame);
-
-    videoMuteBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      craftVideo.muted = !craftVideo.muted;
-      muteIconOn.hidden = craftVideo.muted;
-      muteIconOff.hidden = !craftVideo.muted;
     });
   }
 
@@ -367,5 +398,86 @@ document.addEventListener('DOMContentLoaded', () => {
     status.textContent = 'Merci, votre demande a bien été préparée ! (branchez un backend/service email pour l\'envoi réel)';
     form.reset();
   });
+
+  // ---------- Search (lightweight, hardcoded dataset — no product database to query) ----------
+  // NB: keep this list in sync by hand whenever a new named category/product is added.
+  const SEARCH_DATA = [
+    { label: 'Mobilier & Assises', url: 'index.html#collection' },
+    { label: 'Fauteuils', url: 'catalogue-fauteuils.html' },
+    { label: 'Chaises en Margoum', url: 'catalogue-chaises.html' },
+    { label: 'Chaises Rondes', url: 'catalogue-chaises-rondes.html' },
+    { label: 'Poufs & Méridiennes', url: 'catalogue-poufs.html' },
+    { label: 'Tables & Accessoires', url: 'catalogue-tables-accessoires.html' },
+    { label: 'Salon en Margoum', url: 'catalogue-salon-exterieur.html' },
+    { label: 'Tapis & Margoum', url: 'index.html#tapis' },
+    { label: 'Margoum de Kairouan', url: 'catalogue-tapis.html' },
+    { label: 'Margoum de Oudhref', url: 'catalogue-tapis.html' },
+    { label: 'Margoum de Gafsa', url: 'catalogue-tapis.html' },
+    { label: 'Zarbia de Kairouan', url: 'catalogue-tapis.html' },
+    { label: 'Kilim traditionnel du Sud', url: 'catalogue-tapis.html' },
+    { label: 'Déco & Couteaux', url: 'catalogue-deco-couteaux.html' },
+    { label: 'Couteaux artisanaux', url: 'catalogue-deco-couteaux.html' },
+    { label: 'Coussins', url: 'catalogue-deco-couteaux.html' },
+    { label: 'Nos réalisations', url: 'index.html#realisations' },
+    { label: 'Savoir-faire', url: 'index.html#savoir-faire' },
+    { label: 'Sur-mesure', url: 'index.html#sur-mesure' },
+    { label: 'Contact', url: 'index.html#contact' }
+  ];
+
+  const searchToggle = document.getElementById('searchToggle');
+  const searchPanel = document.getElementById('searchPanel');
+  const searchClose = document.getElementById('searchClose');
+  const searchInput = document.getElementById('searchInput');
+  const searchResultsEl = document.getElementById('searchResults');
+
+  if (searchToggle && searchPanel && searchInput && searchResultsEl) {
+    const renderSearchResults = (query) => {
+      const q = query.trim().toLowerCase();
+      searchResultsEl.innerHTML = '';
+      if (!q) return;
+      const matches = SEARCH_DATA.filter(item => item.label.toLowerCase().includes(q)).slice(0, 6);
+      if (!matches.length) {
+        const p = document.createElement('p');
+        p.className = 'search-empty';
+        p.textContent = `Aucun résultat pour « ${query.trim()} ».`;
+        searchResultsEl.appendChild(p);
+        return;
+      }
+      matches.forEach(item => {
+        const a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.label;
+        searchResultsEl.appendChild(a);
+      });
+    };
+
+    const openSearch = () => {
+      searchPanel.classList.add('open');
+      searchToggle.classList.add('active');
+      setTimeout(() => searchInput.focus(), 200);
+    };
+    const closeSearch = () => {
+      searchPanel.classList.remove('open');
+      searchToggle.classList.remove('active');
+      searchInput.value = '';
+      renderSearchResults('');
+    };
+    searchToggle.addEventListener('click', () => {
+      if (searchPanel.classList.contains('open')) closeSearch(); else openSearch();
+    });
+    if (searchClose) searchClose.addEventListener('click', closeSearch);
+    searchInput.addEventListener('input', () => renderSearchResults(searchInput.value));
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const first = searchResultsEl.querySelector('a');
+        if (first) window.location.href = first.getAttribute('href');
+      } else if (e.key === 'Escape') {
+        closeSearch();
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && searchPanel.classList.contains('open')) closeSearch();
+    });
+  }
 
 });
