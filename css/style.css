@@ -634,8 +634,9 @@ section { padding: 100px 0; position: relative; }
 
 /* Reassurance bar: small looping video + 3 trust items */
 .trust-strip-video { padding: 46px 0; }
-.reassurance-inner { display: grid; grid-template-columns: 260px 1fr; gap: 50px; align-items: center; }
-.reassurance-video.video-frame { aspect-ratio: 16 / 10; box-shadow: 0 16px 34px -18px rgba(28,26,23,0.35); }
+.reassurance-inner { display: grid; grid-template-columns: 340px 1fr; gap: 50px; align-items: center; }
+.reassurance-video.video-frame { aspect-ratio: 4 / 3; box-shadow: 0 16px 34px -18px rgba(28,26,23,0.35); }
+.reassurance-video .video-player { object-fit: cover; animation: none; }
 .reassurance-video .video-mute-btn { width: 34px; height: 34px; right: 12px; bottom: 12px; opacity: 1; transform: translateY(0); }
 .reassurance-video .video-play-btn { width: 58px; height: 58px; }
 .reassurance-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }

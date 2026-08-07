@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const autoVideos = [
     setupAutoVideo({ videoId: 'craftVideo', bgId: 'craftVideoBg', playBtnId: 'videoPlayBtn', muteBtnId: 'videoMuteBtn', muteOnId: 'muteIconOn', muteOffId: 'muteIconOff' }),
-    setupAutoVideo({ videoId: 'reassuranceVideo', bgId: 'reassuranceVideoBg', playBtnId: 'reassurancePlayBtn', muteBtnId: 'reassuranceMuteBtn', muteOnId: 'reassuranceMuteIconOn', muteOffId: 'reassuranceMuteIconOff' })
+    setupAutoVideo({ videoId: 'reassuranceVideo', playBtnId: 'reassurancePlayBtn', muteBtnId: 'reassuranceMuteBtn', muteOnId: 'reassuranceMuteIconOn', muteOffId: 'reassuranceMuteIconOff' })
   ].filter(Boolean);
 
   // Browsers only allow audible autoplay after the visitor has interacted with the page at
