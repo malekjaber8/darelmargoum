@@ -639,9 +639,10 @@ section { padding: 100px 0; position: relative; }
 .reassurance-video .video-player { object-fit: cover; animation: none; }
 .reassurance-video .video-mute-btn { width: 34px; height: 34px; right: 12px; bottom: 12px; opacity: 1; transform: translateY(0); }
 .reassurance-video .video-play-btn { width: 58px; height: 58px; }
-.reassurance-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
-.reassurance-items .trust-item { padding: 0 22px; }
+.reassurance-items { display: flex; justify-content: space-between; align-items: center; }
+.reassurance-items .trust-item { padding: 0 26px; }
 .reassurance-items .trust-item:first-child { padding-left: 0; }
+.reassurance-items .trust-item:last-child { padding-right: 0; }
 .reassurance-items .trust-item + .trust-item { border-left: 1px solid var(--cream-line); }
 
 /* ===================== Tapis heritage (full-bleed photo, overlaid text) ===================== */
@@ -732,8 +733,19 @@ section { padding: 100px 0; position: relative; }
 .title-divider::before { left: -11px; }
 .title-divider::after { right: -11px; }
 
+/* Subtle repeating margoum-diamond texture, layered under a section's own background-color */
+.pattern-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23c9a227' stroke-opacity='0.16' stroke-width='1'%3E%3Cpath d='M28 3L51 28L28 53L5 28Z'/%3E%3Ccircle cx='28' cy='28' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 56px 56px;
+}
+
+/* Small ornamental flourish used to break up long runs of flat-background sections */
+.section-divider { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 6px 0; color: var(--terracotta); }
+.section-divider::before, .section-divider::after { content: ''; flex: 1; max-width: 220px; height: 1px; background: var(--cream-line); }
+
 /* L'Univers Margoum Tunisia: 3 image cards with a badge, overlaid title/CTA, + a trust strip below */
-.universe-section { background: var(--cream); }
+.universe-section { background-color: var(--cream); }
 .universe-eyebrow {
   display: flex; align-items: center; justify-content: center; gap: 14px;
   text-transform: uppercase; letter-spacing: 0.14em;
@@ -777,6 +789,8 @@ section { padding: 100px 0; position: relative; }
 }
 .universe-card:hover .universe-card-btn { background: var(--gold); }
 .universe-trust { padding-top: 30px; border-top: 1px solid var(--cream-line); }
+.universe-section { padding-bottom: 60px; }
+.best-sellers-section { padding-top: 60px; }
 .cat-card-img img {
   width: 100%; height: 100%; object-fit: cover; display: block;
   animation: living 14s ease-in-out infinite alternate;
@@ -1066,7 +1080,7 @@ section { padding: 100px 0; position: relative; }
 .info-item p { color: var(--ink-soft); font-size: 0.92rem; }
 
 /* ===================== Reviews (avis clients) ===================== */
-.reviews-section { background: var(--bg-soft); }
+.reviews-section { background-color: var(--bg-soft); }
 .reviews-grid { margin-top: 50px; }
 .reviews-page { display: none; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .reviews-page.active { display: grid; }
@@ -1291,7 +1305,7 @@ section { padding: 100px 0; position: relative; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .reassurance-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .reassurance-video { width: 260px; }
-  .reassurance-items { grid-template-columns: 1fr; gap: 16px; width: 100%; max-width: 340px; }
+  .reassurance-items { flex-direction: column; justify-content: flex-start; gap: 16px; width: 100%; max-width: 340px; }
   .reassurance-items .trust-item { padding-left: 0; border-left: none !important; }
   .best-sellers-grid { grid-template-columns: repeat(2, 1fr); }
   .universe-cards { grid-template-columns: 1fr; gap: 40px; }
