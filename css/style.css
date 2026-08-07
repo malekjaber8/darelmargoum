@@ -743,7 +743,7 @@ section { padding: 100px 0; position: relative; }
 }
 .universe-eyebrow svg { color: var(--terracotta); flex: none; }
 .universe-subtitle { text-align: center; color: var(--ink-soft); }
-.universe-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin: 50px 0 60px; }
+.universe-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; margin-top: 50px; margin-bottom: 60px; }
 .universe-card {
   position: relative; display: block; aspect-ratio: 3 / 4;
   border-radius: var(--radius-lg); overflow: hidden;
