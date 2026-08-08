@@ -317,8 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCart();
 
   // ---------- Auto-play videos (play/pause + mute, autoplay-on-scroll-into-view) ----------
-  // Shared by the savoir-faire "craft" video and the reassurance-bar video — both use the
-  // same dual blurred-bg + sharp-foreground <video> markup pattern.
+  // Shared by the "Le geste, en images" craft video and the reassurance-bar video.
   function setupAutoVideo({ videoId, bgId, playBtnId, muteBtnId, muteOnId, muteOffId }) {
     const video = document.getElementById(videoId);
     const frame = video ? video.closest('.video-frame') : null;
@@ -419,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { label: 'Couteaux artisanaux', url: 'catalogue-deco-couteaux.html' },
     { label: 'Coussins', url: 'catalogue-deco-couteaux.html' },
     { label: 'Nos réalisations', url: 'index.html#realisations' },
-    { label: 'Savoir-faire', url: 'index.html#savoir-faire' },
+    { label: 'Savoir-faire', url: 'index.html#reassurance' },
     { label: 'Sur-mesure', url: 'index.html#sur-mesure' },
     { label: 'Contact', url: 'index.html#contact' }
   ];
