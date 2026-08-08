@@ -488,4 +488,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---------- Catalogue page: sort products ----------
+  const catSort = document.getElementById('catSort');
+  const catGrid = document.getElementById('catGrid');
+  if (catSort && catGrid) {
+    const originalOrder = [...catGrid.children];
+    catSort.addEventListener('change', () => {
+      const val = catSort.value;
+      let items;
+      if (val === 'az') items = [...catGrid.children].sort((a, b) => a.dataset.name.localeCompare(b.dataset.name, 'fr'));
+      else if (val === 'za') items = [...catGrid.children].sort((a, b) => b.dataset.name.localeCompare(a.dataset.name, 'fr'));
+      else items = originalOrder;
+      items.forEach(el => catGrid.appendChild(el));
+    });
+  }
+
 });
