@@ -829,36 +829,59 @@ section { padding: 100px 0; position: relative; }
 }
 .best-sellers-grid .tapis-card { width: 100%; }
 
-/* ===================== Video (savoir-faire follow-up) ===================== */
-.video-section { background: var(--cream); padding-top: 0; }
-.video-section > .container:first-child { margin-bottom: 44px; }
-.video-layout {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 60px;
-  align-items: center;
-}
-.video-brand {
+/* ===================== Promo banner (sur-mesure, gradient photo card) ===================== */
+.promo-banner-section { padding: 70px 0; background: var(--cream); }
+.promo-banner {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 22px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  min-height: 320px;
+  padding: 0 54px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 30px 70px -32px rgba(28,26,23,0.45);
 }
-.video-brand-logo {
-  height: 150px;
-  width: auto;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px var(--cream), 0 0 0 5px var(--terracotta), 0 14px 30px -12px rgba(28,26,23,0.45);
+.promo-banner-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.promo-banner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg, var(--dark) 0%, var(--dark) 34%, rgba(61,17,25,0.88) 46%, rgba(61,17,25,0.28) 64%, rgba(61,17,25,0) 80%);
+  z-index: 1;
 }
-.video-brand-quote {
+.promo-banner-content { position: relative; z-index: 2; padding: 50px 0; max-width: 440px; }
+.promo-banner-content h2 {
   font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 500;
-  font-size: 1.35rem;
-  line-height: 1.5;
-  color: var(--ink);
-  max-width: 320px;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 2.6vw, 2.35rem);
+  line-height: 1.25;
+  color: var(--cream);
+  margin-bottom: 16px;
 }
+.promo-banner-content h2 .accent { color: var(--gold); font-style: italic; }
+.promo-banner-content p { color: rgba(253,251,247,0.85); line-height: 1.7; max-width: 380px; }
+.promo-banner-btn {
+  position: relative; z-index: 2;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--cream); color: var(--dark);
+  padding: 17px 28px;
+  border-radius: 999px;
+  font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  white-space: nowrap;
+  box-shadow: 0 16px 34px -14px rgba(0,0,0,0.4);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s ease, background 0.35s ease, color 0.35s ease;
+}
+.promo-banner-btn svg { flex: none; color: var(--terracotta); transition: color 0.35s ease; }
+.promo-banner-btn:hover { transform: translateY(-3px); box-shadow: 0 22px 42px -16px rgba(0,0,0,0.45); background: var(--terracotta); color: #fff; }
+.promo-banner-btn:hover svg { color: #fff; }
+@media (max-width: 760px) {
+  .promo-banner { flex-direction: column; align-items: flex-start; padding: 34px 26px; min-height: 420px; }
+  .promo-banner::before { background: linear-gradient(180deg, var(--dark) 0%, var(--dark) 42%, rgba(61,17,25,0.78) 62%, rgba(61,17,25,0.15) 88%); }
+  .promo-banner-content { padding: 0; max-width: 100%; }
+}
+
 .video-frame {
   position: relative;
   aspect-ratio: 4 / 3;
@@ -1328,10 +1351,6 @@ section { padding: 100px 0; position: relative; }
   .contact-inner { grid-template-columns: 1fr; }
   .stats-inner { grid-template-columns: repeat(2, 1fr); }
   .trust-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 26px; }
-  .video-layout { grid-template-columns: 1fr; gap: 34px; }
-  .video-brand { flex-direction: row; align-items: center; }
-  .video-brand-logo { height: 90px; }
-  .video-brand-quote { font-size: 1.15rem; max-width: 100%; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .reassurance-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .reassurance-video { width: 260px; }

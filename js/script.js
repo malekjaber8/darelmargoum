@@ -316,8 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderCart();
 
-  // ---------- Auto-play videos (play/pause + mute, autoplay-on-scroll-into-view) ----------
-  // Shared by the "Le geste, en images" craft video and the reassurance-bar video.
+  // ---------- Auto-play video (play/pause + mute, autoplay-on-scroll-into-view) ----------
   function setupAutoVideo({ videoId, bgId, playBtnId, muteBtnId, muteOnId, muteOffId }) {
     const video = document.getElementById(videoId);
     const frame = video ? video.closest('.video-frame') : null;
@@ -359,7 +358,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const autoVideos = [
-    setupAutoVideo({ videoId: 'craftVideo', bgId: 'craftVideoBg', playBtnId: 'videoPlayBtn', muteBtnId: 'videoMuteBtn', muteOnId: 'muteIconOn', muteOffId: 'muteIconOff' }),
     setupAutoVideo({ videoId: 'reassuranceVideo', playBtnId: 'reassurancePlayBtn', muteBtnId: 'reassuranceMuteBtn', muteOnId: 'reassuranceMuteIconOn', muteOffId: 'reassuranceMuteIconOff' })
   ].filter(Boolean);
 
