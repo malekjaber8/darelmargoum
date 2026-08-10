@@ -131,26 +131,11 @@
       <aside class="cat-sidebar" data-aos="fade-up">
         <div class="cat-sidebar-filters">
         <div class="cat-sidebar-block">
-          <h4>Mobilier &amp; Assises</h4>
-          <nav class="cat-sidebar-nav">
-            <a href="catalogue-fauteuils.html">Fauteuils &amp; Canapés</a>
-            <a href="catalogue-chaises.html">Chaises</a>
-            <a href="catalogue-chaises-rondes.html">Chaises Rondes</a>
-            <a href="catalogue-poufs.html">Poufs &amp; Assises Basses</a>
-            <a href="catalogue-salon-exterieur.html">Salon Extérieur</a>
-            <a href="catalogue-tables-accessoires.html">Tables &amp; Accessoires</a>
-          </nav>
-        </div>
-        <div class="cat-sidebar-block">
-          <h4>Tapis &amp; Margoum</h4>
-          <nav class="cat-sidebar-nav">
-            <a href="catalogue-tapis.html">Tous les tapis</a>
-          </nav>
-        </div>
-        <div class="cat-sidebar-block">
           <h4>Déco &amp; Couteaux</h4>
-          <nav class="cat-sidebar-nav">
-            <a href="catalogue-deco-couteaux.html" class="active">Couteaux &amp; Coussins</a>
+          <nav class="cat-sidebar-nav cat-filter-nav" id="decoFilterNav">
+            <a href="#" class="active" data-filter="all">Tout voir</a>
+            <a href="#" data-filter="couteaux">Couteaux artisanaux</a>
+            <a href="#" data-filter="coussins">Coussins</a>
           </nav>
         </div>
         </div>
@@ -174,8 +159,14 @@
           </div>
         </div>
 
+        <nav class="cat-toolbar-chips cat-filter-nav">
+          <a href="#" class="cat-chip active" data-filter="all">Tout voir</a>
+          <a href="#" class="cat-chip" data-filter="couteaux">Couteaux artisanaux</a>
+          <a href="#" class="cat-chip" data-filter="coussins">Coussins</a>
+        </nav>
+
         <div class="cat-grid" id="catGrid">
-          <article class="tapis-card" data-name="Couteau Artisanal" data-aos="fade-up">
+          <article class="tapis-card" data-name="Couteau Artisanal" data-filter-cat="couteaux" data-aos="fade-up">
             <div class="tapis-card-media tapis-card-media-placeholder pattern-bg">
               <div class="tapis-card-placeholder-icon">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.6" stroke="currentColor" stroke-width="1.3"/><path d="M4 16l4.5-4 3 3 3.5-4L20 16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
@@ -195,7 +186,7 @@
               </div>
             </div>
           </article>
-          <article class="tapis-card" data-name="Coussin Margoum" data-aos="fade-up" data-aos-delay="80">
+          <article class="tapis-card" data-name="Coussin Margoum" data-filter-cat="coussins" data-aos="fade-up" data-aos-delay="80">
             <div class="tapis-card-media tapis-card-media-placeholder pattern-bg">
               <div class="tapis-card-placeholder-icon">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.6" stroke="currentColor" stroke-width="1.3"/><path d="M4 16l4.5-4 3 3 3.5-4L20 16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
@@ -215,7 +206,7 @@
               </div>
             </div>
           </article>
-          <article class="tapis-card" data-name="Set de Couteaux" data-aos="fade-up" data-aos-delay="160">
+          <article class="tapis-card" data-name="Set de Couteaux" data-filter-cat="couteaux" data-aos="fade-up" data-aos-delay="160">
             <div class="tapis-card-media tapis-card-media-placeholder pattern-bg">
               <div class="tapis-card-placeholder-icon">
                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="8.5" cy="10" r="1.6" stroke="currentColor" stroke-width="1.3"/><path d="M4 16l4.5-4 3 3 3.5-4L20 16" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>

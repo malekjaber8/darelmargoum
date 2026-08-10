@@ -131,26 +131,15 @@
       <aside class="cat-sidebar" data-aos="fade-up">
         <div class="cat-sidebar-filters">
         <div class="cat-sidebar-block">
-          <h4>Mobilier &amp; Assises</h4>
-          <nav class="cat-sidebar-nav">
-            <a href="catalogue-fauteuils.html">Fauteuils &amp; Canapés</a>
-            <a href="catalogue-chaises.html">Chaises</a>
-            <a href="catalogue-chaises-rondes.html">Chaises Rondes</a>
-            <a href="catalogue-poufs.html">Poufs &amp; Assises Basses</a>
-            <a href="catalogue-salon-exterieur.html">Salon Extérieur</a>
-            <a href="catalogue-tables-accessoires.html">Tables &amp; Accessoires</a>
-          </nav>
-        </div>
-        <div class="cat-sidebar-block">
           <h4>Tapis &amp; Margoum</h4>
-          <nav class="cat-sidebar-nav">
-            <a href="catalogue-tapis.html" class="active">Tous les tapis</a>
-          </nav>
-        </div>
-        <div class="cat-sidebar-block">
-          <h4>Déco &amp; Couteaux</h4>
-          <nav class="cat-sidebar-nav">
-            <a href="catalogue-deco-couteaux.html">Couteaux &amp; Coussins</a>
+          <nav class="cat-sidebar-nav cat-filter-nav" id="tapisFilterNav">
+            <a href="#" class="active" data-filter="all">Tous les tapis</a>
+            <a href="#" data-filter="kairouan">Margoum de Kairouan</a>
+            <a href="#" data-filter="oudhref">Margoum de Oudhref</a>
+            <a href="#" data-filter="gafsa">Margoum de Gafsa</a>
+            <a href="#" data-filter="zarbia">Zarbia de Kairouan</a>
+            <a href="#" data-filter="kilim">Kilim traditionnel du Sud</a>
+            <a href="#" data-filter="colore">Pièces colorées</a>
           </nav>
         </div>
         </div>
@@ -174,8 +163,18 @@
           </div>
         </div>
 
+        <nav class="cat-toolbar-chips cat-filter-nav">
+          <a href="#" class="cat-chip active" data-filter="all">Tous les tapis</a>
+          <a href="#" class="cat-chip" data-filter="kairouan">Margoum de Kairouan</a>
+          <a href="#" class="cat-chip" data-filter="oudhref">Margoum de Oudhref</a>
+          <a href="#" class="cat-chip" data-filter="gafsa">Margoum de Gafsa</a>
+          <a href="#" class="cat-chip" data-filter="zarbia">Zarbia de Kairouan</a>
+          <a href="#" class="cat-chip" data-filter="kilim">Kilim traditionnel du Sud</a>
+          <a href="#" class="cat-chip" data-filter="colore">Pièces colorées</a>
+        </nav>
+
         <div class="cat-grid" id="catGrid">
-          <article class="tapis-card" data-name="Tapis « Kairouan Bleu »" data-aos="fade-up">
+          <article class="tapis-card" data-name="Tapis « Kairouan Bleu »" data-filter-cat="kairouan" data-aos="fade-up">
             <a href="#" class="tapis-card-media"><img src="images/cat-tapis.jpg" alt="Tapis margoum bleu nuit"></a>
             <div class="tapis-card-body">
               <h3>Tapis « Kairouan Bleu »</h3>

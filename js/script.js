@@ -501,4 +501,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ---------- Catalogue page: filter products by sub-category (sidebar + toolbar chips, kept in sync) ----------
+  const catFilterNavs = document.querySelectorAll('.cat-filter-nav');
+  const catCountEl = document.querySelector('.cat-count');
+  if (catFilterNavs.length && catGrid) {
+    const applyCatFilter = (filter) => {
+      let visible = 0;
+      [...catGrid.children].forEach(card => {
+        const show = filter === 'all' || card.dataset.filterCat === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      if (catCountEl) catCountEl.textContent = `${visible} pièce${visible > 1 ? 's' : ''}`;
+      catFilterNavs.forEach(nav => {
+        nav.querySelectorAll('a[data-filter]').forEach(a => a.classList.toggle('active', a.dataset.filter === filter));
+      });
+    };
+    catFilterNavs.forEach(nav => {
+      nav.addEventListener('click', (e) => {
+        const link = e.target.closest('a[data-filter]');
+        if (!link) return;
+        e.preventDefault();
+        applyCatFilter(link.dataset.filter);
+      });
+    });
+  }
+
 });
