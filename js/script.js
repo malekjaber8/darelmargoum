@@ -83,6 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     gsap.from('.hero-bg-img', { opacity: 0, scale: 1.12, duration: 1.6, delay: 0.1, ease: 'power2.out' });
 
+    // Catalogue page hero: same word-by-word title reveal, plus the logo mark popping in
+    gsap.from('.cat-hero-v2-text .eyebrow', { y: 16, opacity: 0, duration: 0.7, delay: 0.1, ease: 'power3.out' });
+    gsap.from('.cat-hero-v2-text h1 .word', {
+      yPercent: 110, opacity: 0, duration: 0.8, stagger: 0.03, delay: 0.2, ease: 'power4.out'
+    });
+    gsap.from('.cat-hero-v2-mark', {
+      scale: 0, opacity: 0, duration: 0.6, delay: 0.7, ease: 'back.out(2.2)'
+    });
+
     // Subtle parallax drift on the hero background photo while scrolling past it
     gsap.to('.hero-bg-img', {
       yPercent: 8,
