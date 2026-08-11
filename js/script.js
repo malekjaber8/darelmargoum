@@ -306,6 +306,222 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---------- Product quick-view modal (gallery + full specs) ----------
+  const TAPIS_DETAILS = {
+    'kairouan-royal-bleu-sidi-bou-said': {
+      name: 'Margoum Kairouan Royal – Bleu Sidi Bou Saïd',
+      price: 1500,
+      description: "Une pièce maîtresse inspirée du charme de l'architecture tunisienne et des couleurs de la Méditerranée. Le mariage parfait entre la sérénité du bleu et la finesse des motifs traditionnels, idéal pour apporter élégance et sensation d'espace aux intérieurs modernes.",
+      specs: [
+        { label: 'Dimensions', value: '2m × 3m (surface totale : 6 m²)' },
+        { label: 'Poids', value: '12 kg' },
+        { label: 'Composition', value: '100% laine pure (première qualité)' },
+        { label: 'Fabrication', value: 'Tissage artisanal fait main' },
+        { label: 'Entretien', value: 'Résistant aux taches, facile à nettoyer au quotidien' },
+        { label: 'Idéal pour', value: 'Salons modernes, espaces de vie et décors méditerranéens (blanc & bleu)' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-royal-bleu-sidi-bou-said.mp4', poster: 'images/margoum/kairouan-royal-bleu-sidi-bou-said.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-royal-bleu-sidi-bou-said.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-royal-bleu-sidi-bou-said-2.jpg' }
+      ]
+    },
+    'kairouan-beige-makroudha': {
+      name: 'Margoum Kairouan Classique – Beige Makroudha',
+      price: 1550,
+      description: "Un modèle d'une sobriété et d'une élégance absolues. Ses teintes terreuses et chaleureuses apportent une atmosphère apaisante et s'harmonisent naturellement avec tous les styles de mobilier, qu'ils soient contemporains ou traditionnels.",
+      specs: [
+        { label: 'Dimensions', value: '204 × 316 cm' },
+        { label: 'Poids', value: '12 kg' },
+        { label: 'Composition', value: '100% laine pure (première qualité)' },
+        { label: 'Fabrication', value: 'Tissage artisanal fait main' },
+        { label: 'Entretien', value: 'Fils robustes et nettoyage facile' },
+        { label: 'Idéal pour', value: 'Décors contemporains, style Boho-Chic et mobilier en bois massif' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-beige-makroudha.mp4', poster: 'images/margoum/kairouan-beige-makroudha-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-beige-makroudha-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-beige-makroudha-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-beige-makroudha-3.jpg' }
+      ]
+    },
+    'kairouan-rouge-royal': {
+      name: 'Margoum Kairouan Traditionnel – Rouge Royal',
+      price: 1650,
+      description: "Incarnation du patrimoine et du savoir-faire tunisien. Ce modèle se distingue par sa teinte rouge profonde et ses motifs géométriques denses, reflétant la richesse de l'artisanat de Kairouan et apportant une touche d'hospitalité chaleureuse.",
+      specs: [
+        { label: 'Dimensions', value: '193 × 314 cm' },
+        { label: 'Poids', value: '12 kg' },
+        { label: 'Composition', value: '100% laine pure (première qualité)' },
+        { label: 'Fabrication', value: 'Tissage artisanal fait main' },
+        { label: 'Entretien', value: 'Couleurs durables, laine haut de gamme facile à entretenir' },
+        { label: 'Idéal pour', value: 'Salons traditionnels, espaces de réception et demeures de charme' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-rouge-royal.mp4', poster: 'images/margoum/kairouan-rouge-royal-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-rouge-royal-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-rouge-royal-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-rouge-royal-3.jpg' }
+      ]
+    },
+    'kairouan-vert-oasis': {
+      name: 'Margoum Kairouan Moderne – Vert Oasis',
+      price: 950,
+      description: "Une pièce pleine de vitalité et de fraîcheur qui invite la nature des oasis tunisiennes dans votre intérieur. Un contraste élégant entre les motifs géométriques et la richesse du vert, favorisant une ambiance relaxante.",
+      specs: [
+        { label: 'Dimensions', value: '170 × 250 cm' },
+        { label: 'Poids', value: '8 kg' },
+        { label: 'Composition', value: '100% laine pure (première qualité)' },
+        { label: 'Fabrication', value: 'Tissage artisanal fait main' },
+        { label: 'Idéal pour', value: 'Coins lecture, espaces de détente et intérieurs inspirés de la nature' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-vert-oasis.mp4', poster: 'images/margoum/kairouan-vert-oasis-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-vert-oasis-1.jpg' }
+      ]
+    },
+    'kairouan-miel-ambre': {
+      name: 'Margoum Kairouan Doré – Couleur Miel',
+      price: 950,
+      description: "Une nuance lumineuse qui rappelle la chaleur du bois et du soleil. Ce tapis apporte une belle luminosité à la pièce et met en valeur votre mobilier grâce à ses dégradés riches et ambrés.",
+      specs: [
+        { label: 'Dimensions', value: '170 × 250 cm' },
+        { label: 'Poids', value: '8 kg' },
+        { label: 'Composition', value: '100% laine pure (première qualité)' },
+        { label: 'Fabrication', value: 'Tissage artisanal fait main' },
+        { label: 'Entretien', value: 'Très pratique et simple à entretenir' },
+        { label: 'Idéal pour', value: 'Salons, bureaux, et intérieurs associant le fer forgé ou le bois naturel' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-miel-ambre.mp4', poster: 'images/margoum/kairouan-miel-ambre-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-miel-ambre-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-miel-ambre-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-miel-ambre-3.jpg' }
+      ]
+    },
+    'kairouan-gris-contemporain': {
+      name: 'Margoum Kairouan Design – Gris Contemporain',
+      price: 1350,
+      description: "La réinterprétation moderne du Margoum conçue pour les amateurs de design contemporain. Il associe la neutralité du gris à l'authenticité des géométries berbères pour s'intégrer parfaitement dans les appartements modernes.",
+      specs: [
+        { label: 'Dimensions', value: '2m × 3m' },
+        { label: 'Poids', value: '12 kg' },
+        { label: 'Composition', value: '100% laine pure (première qualité)' },
+        { label: 'Fabrication', value: 'Tissage artisanal fait main' },
+        { label: 'Entretien', value: "Laine traitée facilitant l'aspiration et le détachage" },
+        { label: 'Idéal pour', value: 'Intérieurs modernes, appartements urbains et salons aux tons neutres (blanc, gris, miel)' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-gris-contemporain.mp4', poster: 'images/margoum/kairouan-gris-contemporain-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-gris-contemporain-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-gris-contemporain-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-gris-contemporain-3.jpg' }
+      ]
+    },
+    'kairouan-beige-sable': {
+      name: 'Margoum Kairouan Classique – Beige Sable',
+      price: 950,
+      description: "Un modèle d'une sobriété et d'une élégance absolues. Ses teintes terreuses et chaleureuses apportent une atmosphère apaisante et s'harmonisent naturellement avec tous les styles de mobilier, qu'ils soient contemporains ou traditionnels.",
+      specs: [
+        { label: 'Dimensions', value: '170 × 250 cm' },
+        { label: 'Poids', value: '8 kg' },
+        { label: 'Composition', value: '100% laine pure (première qualité)' },
+        { label: 'Fabrication', value: 'Tissage artisanal fait main' },
+        { label: 'Entretien', value: 'Fils robustes et nettoyage facile' },
+        { label: 'Idéal pour', value: 'Décors contemporains, style Boho-Chic et mobilier en bois massif' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-beige-sable.mp4', poster: 'images/margoum/kairouan-beige-sable-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-beige-sable-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-beige-sable-2.jpg' }
+      ]
+    },
+    'ensemble-chambre-sidi-bou-said': {
+      name: 'Ensemble Margoum Chambre à Coucher – Style Sidi Bou Saïd',
+      price: 950,
+      description: "Inspiré par la poésie architecturale de Sidi Bou Saïd, cet ensemble de Margoum insuffle à votre chambre à coucher la fraîcheur et la sérénité de la Méditerranée. Le contraste parfait entre le blanc éclatant et les nuances de bleu azur met en valeur les motifs géométriques berbères traditionnels, tissés avec une finesse exceptionnelle.",
+      specs: [
+        { label: 'Composition du pack', value: '1 grand tapis de pied de lit + 2 descentes de lit assorties' },
+        { label: 'Grand tapis (pied de lit)', value: '1.20m × 1.80m' },
+        { label: 'Descentes de lit (x2)', value: '0.70m × 1.20m' },
+        { label: 'Poids total du pack', value: '~8 kg' },
+        { label: 'Matière', value: '100% laine pure (première qualité)' },
+        { label: 'Fabrication', value: 'Tissé entièrement à la main' },
+        { label: 'Couleurs', value: 'Blanc / beige naturel et bleu azur Sidi Bou Saïd' },
+        { label: 'Entretien', value: 'Laine naturelle traitée, facile à aspirer et résistante aux taches' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/ensemble-chambre-sidi-bou-said-1.jpg' },
+        { type: 'image', src: 'images/margoum/ensemble-chambre-sidi-bou-said-2.jpg' }
+      ]
+    }
+  };
+
+  const quickviewOverlay = document.getElementById('quickviewOverlay');
+  const quickviewModal = document.getElementById('quickviewModal');
+  const quickviewClose = document.getElementById('quickviewClose');
+  const quickviewGalleryMain = document.getElementById('quickviewGalleryMain');
+  const quickviewGalleryThumbs = document.getElementById('quickviewGalleryThumbs');
+  const quickviewTitle = document.getElementById('quickviewTitle');
+  const quickviewPrice = document.getElementById('quickviewPrice');
+  const quickviewDesc = document.getElementById('quickviewDesc');
+  const quickviewSpecs = document.getElementById('quickviewSpecs');
+  const quickviewOrderBtn = document.getElementById('quickviewOrderBtn');
+  const quickviewWhatsBtn = document.getElementById('quickviewWhatsBtn');
+
+  function renderQuickviewMedia(item) {
+    quickviewGalleryMain.innerHTML = item.type === 'video'
+      ? `<video src="${item.src}" poster="${item.poster || ''}" autoplay muted loop playsinline></video>`
+      : `<img src="${item.src}" alt="">`;
+  }
+
+  function openQuickview(id) {
+    const product = TAPIS_DETAILS[id];
+    if (!product || !quickviewModal) return;
+
+    quickviewTitle.textContent = product.name;
+    quickviewPrice.textContent = product.price.toLocaleString('fr-FR') + ' TND';
+    quickviewDesc.textContent = product.description;
+    quickviewSpecs.innerHTML = product.specs.map(s => `<li><strong>${s.label}</strong><span>${s.value}</span></li>`).join('');
+
+    renderQuickviewMedia(product.media[0]);
+    quickviewGalleryThumbs.innerHTML = product.media.map((m, i) => `
+      <button type="button" data-index="${i}" class="${i === 0 ? 'active' : ''}">
+        ${m.type === 'video' ? `<video src="${m.src}" muted playsinline></video>` : `<img src="${m.src}" alt="">`}
+      </button>
+    `).join('');
+    quickviewGalleryThumbs.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        renderQuickviewMedia(product.media[+btn.dataset.index]);
+        quickviewGalleryThumbs.querySelectorAll('button').forEach(b => b.classList.toggle('active', b === btn));
+      });
+    });
+
+    const cardImg = product.media[0].poster || (product.media.find(m => m.type === 'image') || {}).src;
+    quickviewOrderBtn.onclick = () => addToCart({ id, name: product.name, img: cardImg, price: product.price });
+    quickviewWhatsBtn.href = buildWhatsAppLink(`Bonjour, je suis intéressé par : ${product.name}`);
+
+    quickviewModal.classList.add('open');
+    quickviewOverlay.classList.add('open');
+  }
+
+  function closeQuickview() {
+    if (!quickviewModal) return;
+    quickviewModal.classList.remove('open');
+    quickviewOverlay.classList.remove('open');
+    quickviewGalleryMain.querySelectorAll('video').forEach(v => v.pause());
+  }
+
+  document.querySelectorAll('[data-quickview]').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      openQuickview(trigger.dataset.quickview);
+    });
+  });
+  if (quickviewClose) quickviewClose.addEventListener('click', closeQuickview);
+  if (quickviewOverlay) quickviewOverlay.addEventListener('click', closeQuickview);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeQuickview(); });
+
   function buildOrderSummary(items) {
     const lines = items.map(i => {
       const priceText = i.price != null ? `${i.price * i.qty} TND` : 'Prix sur demande';

@@ -435,6 +435,98 @@ a { text-decoration: none; color: inherit; }
 .cart-checkout { display: block; text-align: center; width: 100%; }
 .cart-note { font-size: 0.72rem; color: var(--ink-soft); text-align: center; margin-top: 10px; }
 
+/* ===================== Product quick-view modal (gallery + full specs) ===================== */
+.quickview-overlay {
+  position: fixed; inset: 0;
+  background: rgba(28,26,23,0.55);
+  z-index: 950;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+.quickview-overlay.open { opacity: 1; visibility: visible; }
+.quickview-modal {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -48%) scale(0.97);
+  width: min(920px, 92vw);
+  max-height: 88vh;
+  overflow-y: auto;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  z-index: 951;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  box-shadow: 0 40px 90px -28px rgba(28,26,23,0.5);
+}
+.quickview-modal.open { opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
+.quickview-close {
+  position: absolute; top: 16px; right: 16px; z-index: 3;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(253,251,247,0.92);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
+  transition: background 0.3s ease;
+}
+.quickview-close:hover { background: #fff; }
+
+.quickview-gallery { position: relative; background: var(--dark); }
+.quickview-gallery-main { aspect-ratio: 4 / 5; overflow: hidden; }
+.quickview-gallery-main img, .quickview-gallery-main video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.quickview-gallery-thumbs { display: flex; gap: 8px; padding: 12px; }
+.quickview-gallery-thumbs button {
+  width: 52px; height: 52px; flex: none;
+  border-radius: 8px; overflow: hidden;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+.quickview-gallery-thumbs button.active { opacity: 1; border-color: var(--gold); }
+.quickview-gallery-thumbs img, .quickview-gallery-thumbs video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.quickview-info { padding: 44px 40px; }
+.quickview-info h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--dark); margin-bottom: 10px; line-height: 1.25; }
+.quickview-price { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: var(--terracotta); margin-bottom: 16px; }
+.quickview-desc { color: var(--ink-soft); line-height: 1.7; margin-bottom: 22px; }
+.quickview-specs { list-style: none; padding: 0; margin: 0 0 28px; border-top: 1px solid var(--cream-line); }
+.quickview-specs li { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--cream-line); font-size: 0.86rem; }
+.quickview-specs li strong { color: var(--dark); font-weight: 600; flex: none; }
+.quickview-specs li span { color: var(--ink-soft); text-align: right; }
+.quickview-actions { display: flex; gap: 12px; }
+.quickview-trust { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--cream-line); }
+.quickview-trust-badge {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.82rem; font-weight: 600; color: var(--dark);
+  margin-bottom: 14px;
+}
+.quickview-trust-badge svg { flex: none; color: var(--terracotta); }
+.quickview-trust-details summary {
+  cursor: pointer;
+  font-size: 0.84rem; font-weight: 600; color: var(--terracotta);
+  list-style: none;
+}
+.quickview-trust-details summary::-webkit-details-marker { display: none; }
+.quickview-trust-details summary::after { content: '+'; float: right; }
+.quickview-trust-details[open] summary::after { content: '−'; }
+.quickview-trust-details ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+.quickview-trust-details li { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; padding-left: 16px; position: relative; }
+.quickview-trust-details li::before { content: '—'; position: absolute; left: 0; color: var(--cream-line); }
+.quickview-trust-advice {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.82rem; font-weight: 500;
+  color: var(--dark);
+  text-decoration: underline;
+  text-decoration-color: var(--cream-line);
+}
+.quickview-trust-advice:hover { color: var(--terracotta); }
+@media (max-width: 760px) {
+  .quickview-modal { grid-template-columns: 1fr; max-height: 92vh; top: 50%; }
+  .quickview-gallery-main { aspect-ratio: 4 / 3; }
+  .quickview-info { padding: 30px 24px; }
+}
+
 /* Wishlist heart toggle used on product/category cards */
 .wish-btn {
   position: absolute;
@@ -824,7 +916,7 @@ section { padding: 100px 0; position: relative; }
   transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
 }
 .tapis-card:hover { transform: translateY(-6px); box-shadow: 0 24px 44px -22px rgba(28,26,23,0.35); }
-.tapis-card-media { display: block; aspect-ratio: 4 / 3.4; overflow: hidden; }
+.tapis-card-media { position: relative; display: block; aspect-ratio: 4 / 3.4; overflow: hidden; }
 .tapis-card-media img {
   width: 100%; height: 100%; object-fit: cover; display: block;
   animation: livingAlt 15s ease-in-out infinite alternate;
@@ -832,6 +924,22 @@ section { padding: 100px 0; position: relative; }
 }
 .tapis-card:hover .tapis-card-media img { animation-play-state: paused; filter: brightness(1.04); }
 .tapis-card-soon .tapis-card-media { opacity: 0.9; }
+.tapis-card-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tapis-card-media-video { position: relative; }
+.tapis-card-view-btn {
+  position: absolute; z-index: 1;
+  left: 14px; bottom: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(61,17,25,0.85);
+  backdrop-filter: blur(3px);
+  color: var(--cream);
+  font-size: 0.76rem;
+  font-weight: 600;
+  opacity: 0; transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.tapis-card:hover .tapis-card-view-btn { opacity: 1; transform: translateY(0); }
 .tapis-card-body { padding: 20px 22px; }
 .tapis-card-body h3 { font-size: 1.08rem; font-weight: 600; margin-bottom: 4px; }
 .tapis-card-body > p { font-size: 0.86rem; color: var(--ink-soft); margin-bottom: 14px; }
