@@ -964,6 +964,157 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-1.jpg' },
         { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-2.jpg' }
       ]
+    },
+    'kairouan-descente-mihrab': {
+      name: 'Ensemble Descente de Lit « Mihrab Géométrique » Kairouan (3 Pièces)',
+      price: 2400,
+      description: "Un ensemble complet d'une élégance rare, conçu sur-mesure pour sublimer les chambres à coucher principales. Issu de la nouvelle collection 2026, ce set de 3 pièces se compose d'un grand tapis central pour le devant du lit et de deux descentes de lit assorties. Tissé à la main en pure laine traditionnelle de Kairouan avec une finesse remarquable de 20x20 nœuds au décimètre carré (1er Choix), il arbore un motif géométrique central en losange (Mihrab) entouré d'un tressage aux tons terreux, miel et chocolat sur fond ivoire. Cet ensemble apporte une douceur incomparable au réveil et un prestige authentique à votre espace nuit.",
+      specs: [
+        { label: 'Contenu du set', value: '1 tapis devant de lit + 2 descentes de lit assorties' },
+        { label: 'Tapis devant de lit', value: '123 x 180 cm' },
+        { label: 'Descentes de lit (x2)', value: '74 x 141 cm (chacune)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine traditionnelle de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-descente-mihrab.mp4', poster: 'images/margoum/kairouan-descente-mihrab-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-mihrab-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-mihrab-2.jpg' }
+      ]
+    },
+    'kairouan-descente-yasmine-royale': {
+      name: 'Ensemble Descente de Lit « Yasmine » Kairouan Finesse Royale (3 Pièces)',
+      price: 2500,
+      description: "Un joyau de l'artisanat de Kairouan conçu pour transformer la chambre à coucher en un havre de prestige et de confort. Issu de la collection exclusive 2026, cet ensemble de 3 pièces arbore le motif emblématique « Yasmine » décliné avec une finesse extrême de 30x30 nœuds au décimètre carré (1er Choix). Tissé à la main en pure laine de qualité supérieure, son champ central ivoire accueille des rinceaux floraux méticuleux, magnifiquement encadrés par une bordure corail et bordeaux. Offrant une douceur incomparable au réveil, cet ensemble apporte élégance, chaleur et raffinement intemporel à votre espace nuit.",
+      specs: [
+        { label: 'Contenu du set', value: '1 tapis devant de lit + 2 descentes de lit assorties' },
+        { label: 'Tapis devant de lit', value: '100 x 170 cm' },
+        { label: 'Descentes de lit (x2)', value: '70 x 150 cm (chacune)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Extrême Royale — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-royale-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-royale-2.jpg' }
+      ]
+    },
+    'kairouan-descente-yasmine-all-over': {
+      name: 'Ensemble Descente de Lit « Yasmine All-Over » Kairouan (3 Pièces)',
+      price: 2350,
+      description: "Un ensemble raffiné et moderne dédié à l'aménagement des chambres à coucher de prestige. Issu de la collection 2026, ce set de 3 pièces adopte le motif floral continu « Yasmine All-Over » (sans bordure encadrante), apportant une sensation de grandeur et de continuité visuelle. Tissé à la main en pure laine traditionnelle de Kairouan avec une densité de 20x20 nœuds au décimètre carré (1er Choix), il marie un fond ivoire douillet à des rinceaux floraux aux nuances bordeaux, prune et olive. Cet ensemble offre une douceur incomparable au quotidien et une touche d'élégance artisanale intemporelle.",
+      specs: [
+        { label: 'Contenu du set', value: '1 tapis devant de lit + 2 descentes de lit assorties' },
+        { label: 'Tapis devant de lit', value: '108 x 175 cm' },
+        { label: 'Descentes de lit (x2)', value: '75 x 150 cm (chacune)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine traditionnelle de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif All-over)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-all-over-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-all-over-2.jpg' }
+      ]
+    },
+    'kairouan-descente-yasmine-beige-brun': {
+      name: 'Ensemble Descente de Lit « Yasmine Beige & Brun » Kairouan (3 Pièces)',
+      price: 2500,
+      description: "Une harmonie parfaite de tons chauds et naturels dédiée à l'aménagement des chambres à coucher de haut standing. Issu de la nouvelle collection 2026, cet ensemble de 3 pièces met à l'honneur le motif « Yasmine » dans une élégante déclinaison beige et brun. Tissé à la main en pure laine traditionnelle de Kairouan avec une finesse de 20x20 nœuds au décimètre carré (1er Choix), il marie la douceur d'un fond beige ivoire à la finesse de rinceaux floraux teintés de marron glacé et chocolat. Cet ensemble apporte une atmosphère feutrée, chaleureuse et authentique à votre espace nuit.",
+      specs: [
+        { label: 'Contenu du set', value: '1 tapis devant de lit + 2 descentes de lit assorties' },
+        { label: 'Tapis devant de lit', value: '120 x 180 cm' },
+        { label: 'Descentes de lit (x2)', value: '75 x 150 cm (chacune)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine traditionnelle de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-beige-brun-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-beige-brun-2.jpg' }
+      ]
+    },
+    'kairouan-descente-yasmine-vert-olive': {
+      name: 'Ensemble Descente de Lit « Yasmine Vert Olive » Kairouan Finesse Royale (3 Pièces)',
+      price: 1950,
+      description: "Un chef-d'œuvre d'artisanat inspiré par la nature et le prestige de Kairouan. Issu de la collection exclusive 2026, cet ensemble de 3 pièces sublime le motif traditionnel « Yasmine » dans une nuance vert olive apaisante et hautement élégante. Tissé à la main en pure laine avec une finesse extrême de 30x30 nœuds au décimètre carré (1er Choix), il associe la douceur d'un fond ivoire à la précision de rinceaux floraux et d'une bordure vert olive. Cet ensemble apporte une atmosphère rafraîchissante, un confort moelleux et une note de sérénité à votre espace nuit.",
+      specs: [
+        { label: 'Contenu du set', value: '1 tapis devant de lit + 2 descentes de lit assorties' },
+        { label: 'Tapis devant de lit', value: '90 x 160 cm' },
+        { label: 'Descentes de lit (x2)', value: '70 x 140 cm (chacune)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Extrême Royale — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-vert-olive-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-vert-olive-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-vert-olive-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-yasmine-vert-olive-4.jpg' }
+      ]
+    },
+    'kairouan-descente-oiseaux-paradis': {
+      name: 'Ensemble Descente de Lit « Oiseaux du Paradis » Kairouan Finesse Royale (3 Pièces)',
+      price: 2100,
+      description: "Un joyau du patrimoine artisanal kairouanais qui insuffle poésie et élégance dans la chambre à coucher. Cet ensemble de 3 pièces met en valeur le motif emblématique « Oiseaux du Paradis » avec une précision d'exécution remarquable de 30x30 nœuds au décimètre carré (1er Choix). Tissé entièrement à la main en pure laine de qualité supérieure, il marie un fond bleuté apaisant à une frise géométrique riche en détails figuratifs (oiseaux, motifs floraux) aux tons ocre, ivoire et terre cuite. Cet ensemble offre une douceur veloutée au réveil et un prestige inégalé à votre espace nuit.",
+      specs: [
+        { label: 'Contenu du set', value: '1 tapis devant de lit + 2 descentes de lit assorties' },
+        { label: 'Tapis devant de lit', value: '95 x 160 cm' },
+        { label: 'Descentes de lit (x2)', value: '70 x 150 cm (chacune)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Extrême Royale — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-descente-oiseaux-paradis-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-oiseaux-paradis-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-oiseaux-paradis-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-descente-oiseaux-paradis-4.jpg' }
+      ]
+    },
+    'kairouan-berbere-sidi-bou-said': {
+      name: 'Tapis Berbère Kairouan « Sidi Bou Saïd » — Grand Salon',
+      price: 1600,
+      description: "Une création artisanale raffinée qui marie le savoir-faire berbère de Kairouan au charme méditerranéen de Sidi Bou Saïd. Issu de la collection 2026, ce grand tapis de salon se distingue par son design minimaliste et épuré. Tissé à la main en pure laine traditionnelle avec une densité de 20x20 nœuds au décimètre carré (1er Choix), il présente un vaste champ écru naturel d'une grande douceur, subtilement rehaussé de motifs géométriques berbères aux angles en tons bleu roi et azur. Ce tapis apporte clarté, sérénité et une chaleur incomparable à votre espace de vie.",
+      specs: [
+        { label: 'Dimensions', value: '170 x 240 cm' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine traditionnelle de Kairouan tissée à la main' },
+        { label: 'Style', value: 'Berbère Contemporain / Inspiration Sidi Bou Saïd' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'video', src: 'images/margoum/kairouan-berbere-sidi-bou-said.mp4', poster: 'images/margoum/kairouan-berbere-sidi-bou-said-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-berbere-sidi-bou-said-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-berbere-sidi-bou-said-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-berbere-sidi-bou-said-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-berbere-sidi-bou-said-4.jpg' }
+      ]
+    },
+    'kairouan-berbere-ecru-naturel': {
+      name: 'Tapis Berbère Kairouan Écru Naturel — Grand Salon',
+      price: 1600,
+      description: "L'essence même du luxe épuré et du confort artisanal. Issu de la collection 2026, ce grand tapis de salon met en valeur la beauté brute et authentique de la pure laine de Kairouan dans sa nuance écru naturel la plus noble. Tissé entièrement à la main avec une densité de 20x20 nœuds au décimètre carré (1er Choix), il offre une texture moelleuse, digne des plus beaux intérieurs. Sans aucun motif ni bordure, ce tapis apporte une luminosité exceptionnelle, une sensation d'espace et une sérénité intemporelle à votre salon.",
+      specs: [
+        { label: 'Dimensions', value: '170 x 240 cm' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine traditionnelle de Kairouan tissée à la main' },
+        { label: 'Style', value: 'Berbère Minimaliste / Écru Naturel' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-berbere-ecru-naturel-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-berbere-ecru-naturel-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-berbere-ecru-naturel-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-berbere-ecru-naturel-4.jpg' }
+      ]
     }
   };
 
