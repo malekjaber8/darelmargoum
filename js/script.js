@@ -561,6 +561,119 @@ document.addEventListener('DOMContentLoaded', () => {
       media: [
         { type: 'image', src: 'images/table/table-appoint-blenz-1.jpg' }
       ]
+    },
+    'fauteuil-signature-margoum': {
+      name: 'Fauteuil Signature en Margoum Tissé Main',
+      price: 950,
+      description: "Une pièce maîtresse d'une élégance rare, alliance parfaite entre le design contemporain et le savoir-faire artisanal tunisien. Entièrement revêtu d'un tapis Margoum tissé à la main en pure laine, ce fauteuil chauffeuse séduit par son contraste de couleurs vibrant (vert émeraude, jaune moutarde et touches de magenta) et ses motifs ethniques raffinés. Son assise généreuse et son dossier incliné vous offrent un confort absolu, parfait pour sublimer un coin lecture ou un salon de caractère.",
+      specs: [
+        { label: 'Revêtement', value: '100% Pure laine tissée à la main (Margoum Tunisien Haute Qualité)' },
+        { label: 'Piètement', value: 'Bois naturel robuste au design épuré' },
+        { label: 'Confort', value: 'Mousse haute densité à forte résilience' },
+        { label: 'Exclusivité', value: 'Pièce unique réalisée à la main' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé ou soin spécial laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/fouteulle/fauteuil-signature-margoum-1.jpg' },
+        { type: 'image', src: 'images/fouteulle/fauteuil-signature-margoum-2.jpg' }
+      ]
+    },
+    'ensemble-relax-fauteuil-repose-pieds': {
+      name: 'Ensemble Relax Signature Fauteuil & Repose-Pieds en Margoum Tunisien',
+      price: 1350,
+      description: "L'expérience ultime du confort associée à l'élégance du patrimoine tunisien. Cet ensemble comprend un fauteuil chauffeuse et son tabouret repose-pieds assorti, tous deux entièrement recouverts d'un Margoum en pure laine tissé à la main. Le jeu des rayures multicolores dynamiques (jaune moutarde, violet, rouge carmin, vert et bleu) apporte une touche artistique unique à votre espace. Un duo d'exception pour créer un coin lecture élégant ou sublimer votre salon.",
+      specs: [
+        { label: 'Contenu', value: '1 Fauteuil + 1 Tabouret repose-pieds' },
+        { label: 'Revêtement', value: '100% Pure laine tissée à la main (Margoum Tunisien Traditionnel)' },
+        { label: 'Piètement', value: 'Bois naturel robuste au style scandinave' },
+        { label: 'Confort', value: 'Assise et dossier rembourrés en mousse haute densité' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé ou soin spécial laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/fouteulle/ensemble-relax-fauteuil-repose-pieds-1.jpg' },
+        { type: 'image', src: 'images/fouteulle/ensemble-relax-fauteuil-repose-pieds-2.jpg' },
+        { type: 'image', src: 'images/fouteulle/ensemble-relax-fauteuil-repose-pieds-3.jpg' }
+      ]
+    },
+    'chaise-blenz-noir-blanc': {
+      name: 'Chaise « Blenz » Noir & Blanc Artisanal',
+      price: 850,
+      description: "Un contraste saisissant entre le minimalisme contemporain et le raffinement du patrimoine tunisien. Cette chaise fauteuil au style « Blenz » se distingue par sa structure en bois massif laqué blanc aux lignes arrondies et enveloppantes. Son assise est magnifiquement rembourrée et tapissée d'un tissage fait main inspiré du savoir-faire de Gafsa, arborant des motifs géométriques ethniques noirs et blancs. Une pièce maîtresse pour sublimer une table à manger de prestige, un bureau ou un coin salon.",
+      specs: [
+        { label: 'Structure', value: 'Bois massif robuste, finition laquée blanc mat/satiné' },
+        { label: 'Assise', value: '100% Pure laine tissée à la main (Motifs traditionnels de Gafsa)' },
+        { label: 'Design', value: 'Dossier enveloppant avec accoudoirs intégrés (Style Blenz)' },
+        { label: 'Entretien', value: 'Structure en bois facile à nettoyer. Assise nettoyable à sec' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-blenz-noir-blanc-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-blenz-noir-blanc-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-blenz-noir-blanc-3.jpg' }
+      ]
+    },
+    'chaise-aurora-blenz': {
+      name: 'Chaise « Aurora » en Bois Blenz & Margoum Artisanal',
+      price: 480,
+      description: "Un mariage parfait entre la modernité des formes et la richesse du patrimoine tunisien. Cette chaise se distingue par son dossier arqué et évidé en son centre, offrant une allure aérienne et un confort enveloppant. Sa structure est réalisée en bois Blenz naturel avec des pieds travaillés avec soin. L'ensemble est revêtu d'un magnifique tapis Margoum tissé à la main en 100% pure laine, mêlant des teintes vibrantes et des motifs géométriques berbères.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel de haute qualité' },
+        { label: 'Assise & Dossier', value: '100% Pure laine tissée main (Margoum Tunisien)' },
+        { label: 'Design', value: 'Dossier enveloppant à ouverture circulaire (Style Médaillon Moderne)' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois avec un chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-aurora-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-aurora-blenz-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-aurora-blenz-3.jpg' }
+      ]
+    },
+    'chaise-elissa-blenz': {
+      name: 'Chaise « Elissa » en Bois Blenz & Margoum Losanges',
+      price: 480,
+      description: "Une silhouette moderne et audacieuse qui élève l'art du Margoum. La chaise « Elissa » se distingue par son dossier incurvé avec ouverture inférieure et son revêtement intégral en pure laine tissée à la main. Son motif à losanges multicolores (rouge, vert, bleu et jaune) apporte une dynamique visuelle unique, magnifiquement soutenue par un piètement travaillé en bois Blenz naturel. Idéale pour apporter du caractère à une table à manger ou un espace bureau raffiné.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel robuste avec finition soignée' },
+        { label: 'Assise & Dossier', value: '100% Pure laine tissée main (Margoum motif losanges)' },
+        { label: 'Design', value: 'Dossier enveloppant à découpe inférieure (Style Arqué)' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour le tissu et dépoussiérage du bois au chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-elissa-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-elissa-blenz-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-elissa-blenz-3.jpg' }
+      ]
+    },
+    'chaise-ajmal-blenz': {
+      name: 'Chaise « Ajmal » en Bois Blenz & Margoum Artisanal',
+      price: 480,
+      description: "Une création chaleureuse et raffinée qui incarne la beauté de l'artisanat tunisien. La chaise « Ajmal » se distingue par son dossier incurvé à ouverture inférieure et son revêtement complet en pure laine tissée à la main. Dominée par une nuance orange très tendance, elle est sublimée par des motifs géométriques traditionnels jaunes, bleus et roses. Son piètement sculpté en bois Blenz naturel apporte élégance et stabilité, parfait pour habiller une table à manger ou un coin bureau.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel robuste' },
+        { label: 'Assise & Dossier', value: '100% Pure laine tissée main (Margoum teinte orange)' },
+        { label: 'Design', value: 'Dossier enveloppant à découpe circulaire (Style Arqué)' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois avec un chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-ajmal-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-ajmal-blenz-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-ajmal-blenz-3.jpg' }
+      ]
+    },
+    'chaise-arc-en-ciel-blenz': {
+      name: 'Chaise « Arc-en-Ciel » en Bois Blenz & Margoum Artisanal',
+      price: 480,
+      description: "Une création pétillante et dynamique qui apporte une explosion de couleurs à votre intérieur. La chaise « Arc-en-Ciel » se distingue par son dossier incurvé à découpe circulaire et son revêtement intégral en pure laine tissée à la main. Arborant de magnifiques rayures verticales multicolores (rose fuchsia, orange, vert et bleu indigo), elle repose sur un piètement robuste en bois Blenz naturel. Un choix parfait pour dynamiser une table à manger contemporaine ou un espace bureau élégant.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel robuste' },
+        { label: 'Assise & Dossier', value: '100% Pure laine tissée main (Margoum à rayures multicolores)' },
+        { label: 'Design', value: 'Dossier enveloppant à découpe inférieure (Style Arqué)' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois avec un chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-arc-en-ciel-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-arc-en-ciel-blenz-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-arc-en-ciel-blenz-3.jpg' }
+      ]
     }
   };
 
