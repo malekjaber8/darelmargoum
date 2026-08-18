@@ -674,6 +674,122 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'images/chaise/chaise-arc-en-ciel-blenz-2.jpg' },
         { type: 'image', src: 'images/chaise/chaise-arc-en-ciel-blenz-3.jpg' }
       ]
+    },
+    'fauteuil-ambassadeur-margoum': {
+      name: 'Chaise Fauteuil « Ambassadeur » Mosaïque en Margoum',
+      price: 650,
+      description: "Une allure majestueuse et un confort inégalé. La chaise « Ambassadeur » se distingue par son haut dossier majestueux et ses accoudoirs intégrés qui vous enveloppent avec élégance. Entièrement tapissée d'un tapis Margoum en pure laine tissé à la main, elle arbore une mosaïque de losanges géométriques aux couleurs éclatantes (jaune moutarde, rouge, violet et bleu). Portée par un piètement robuste en bois Blenz naturel, c'est la pièce maîtresse idéale pour sublimer un bout de table à manger, un bureau de prestige ou un coin salon raffiné.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel haute résistance' },
+        { label: 'Assise, Accoudoirs & Dossier', value: '100% Pure laine tissée main (Margoum motifs géométriques)' },
+        { label: 'Design', value: 'Dossier haut majestueux avec accoudoirs ergonomiques' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois au chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/fauteuil-ambassadeur-margoum-1.jpg' },
+        { type: 'image', src: 'images/chaise/fauteuil-ambassadeur-margoum-2.jpg' },
+        { type: 'image', src: 'images/chaise/fauteuil-ambassadeur-margoum-3.jpg' }
+      ]
+    },
+    'fauteuil-agadir-margoum': {
+      name: 'Chaise Fauteuil « Agadir » en Margoum Artisanal',
+      price: 650,
+      description: "Une prestance royale et un confort exceptionnel. La chaise « Agadir » impose son style grâce à son haut dossier enveloppant et ses accoudoirs intégrés. Entièrement tapissée d'un Margoum en pure laine tissé à la main, elle se distingue par un fond bleu indigo profond au niveau du dossier, rehaussé de symboles berbères traditionnels et de touches multicolores vibrantes. Portée par un piètement robuste en bois Blenz naturel, c'est la pièce maîtresse parfaite pour un bout de table de caractère, un bureau de prestige ou un coin salon raffiné.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel haute résistance' },
+        { label: 'Assise, Accoudoirs & Dossier', value: '100% Pure laine tissée main (Margoum motifs indigo & symboles)' },
+        { label: 'Design', value: 'Dossier haut majestueux avec accoudoirs intégrés' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois au chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/fauteuil-agadir-margoum-1.jpg' },
+        { type: 'image', src: 'images/chaise/fauteuil-agadir-margoum-2.jpg' },
+        { type: 'image', src: 'images/chaise/fauteuil-agadir-margoum-3.jpg' }
+      ]
+    },
+    'fauteuil-atlas-margoum': {
+      name: 'Chaise Fauteuil « Atlas » Mosaïque & Rayures en Margoum',
+      price: 650,
+      description: "Une allure majestueuse et une véritable explosion de couleurs artisanales. La chaise « Atlas » se distingue par son haut dossier imposant et ses accoudoirs ergonomiques. Son design unique associe avec audace des carrés tissés de symboles berbères traditionnels sur le dossier et les côtés à une assise aux rayures multicolores vibrantes. Entièrement revêtue d'un Margoum en pure laine fait main et portée par des pieds en bois Blenz naturel, c'est la pièce maîtresse parfaite pour votre salle à manger, bureau de prestige ou salon.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel haute résistance' },
+        { label: 'Assise, Accoudoirs & Dossier', value: '100% Pure laine tissée main (Margoum motif patchwork & rayures)' },
+        { label: 'Design', value: 'Dossier haut majestueux avec accoudoirs intégrés' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois au chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/fauteuil-atlas-margoum-1.jpg' },
+        { type: 'image', src: 'images/chaise/fauteuil-atlas-margoum-2.jpg' },
+        { type: 'image', src: 'images/chaise/fauteuil-atlas-margoum-3.jpg' }
+      ]
+    },
+    'chaise-odyssee-blenz': {
+      name: 'Chaise « Odyssée » en Bois Blenz & Margoum Losanges',
+      price: 480,
+      description: "Une silhouette contemporaine et un équilibre géométrique parfait. La chaise « Odyssée » se distingue par son dossier incurvé en arc à découpe inférieure et son revêtement intégral en Margoum pure laine tissé à la main. Sublimée par des motifs de losanges traditionnels aux teintes harmonieuses (rouge corail, bleu ciel, violet et blanc ivoire), elle repose sur un piètement robuste en bois Blenz naturel. Un choix parfait pour apporter de la chaleur, de l'élégance et une touche artistique à votre salle à manger ou espace bureau.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel haute résistance' },
+        { label: 'Assise & Dossier', value: '100% Pure laine tissée main (Margoum motifs losanges)' },
+        { label: 'Design', value: 'Dossier enveloppant en arc à découpe circulaire' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois avec un chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-odyssee-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-odyssee-blenz-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-odyssee-blenz-3.jpg' }
+      ]
+    },
+    'chaise-allegria-blenz': {
+      name: 'Chaise « Allégria » en Bois Blenz & Margoum Artisanal',
+      price: 480,
+      description: "Une pièce lumineuse et audacieuse qui marie à la perfection modernité et tradition. La chaise « Allégria » se distingue par son dossier incurvé en arc à découpe inférieure et son assise éclatante en Margoum rose fuchsia à rayures verticales. Le dossier est sublimé par une mosaïque géométrique de losanges en pure laine tissée à la main aux teintes vert, bleu et jaune. Reposant sur un piètement robuste en bois Blenz naturel, elle apporte une touche pétillante et élégante à votre intérieur.",
+      specs: [
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel haute résistance' },
+        { label: 'Assise & Dossier', value: '100% Pure laine tissée main (Margoum assise fuchsia & dossier losanges)' },
+        { label: 'Design', value: 'Dossier enveloppant en arc à découpe circulaire' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois avec un chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-allegria-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-allegria-blenz-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-allegria-blenz-3.jpg' }
+      ]
+    },
+    'chaise-sindbad-blenz': {
+      name: 'Chaise « Sindbad » Enveloppante Margoum Artisanal',
+      price: 520,
+      description: "Un design enveloppant au charme irrésistible. La chaise « Sindbad » se distingue par son dossier semi-circulaire arrondi qui épouse parfaitement le dos pour un confort optimal. Entièrement habillée d'un Margoum en pure laine tissé à la main, elle arbore une mosaïque de losanges et symboles traditionnels aux couleurs éclatantes (rose fuchsia, vert émeraude, jaune et rouge). Reposant sur des pieds évasés en bois Blenz naturel, elle apporte une touche chaleureuse, chic et authentique à votre intérieur.",
+      specs: [
+        { label: 'Tarif', value: '520 TND l’unité — Offre Spéciale Duo : 850 TND les 2 pièces' },
+        { label: 'Structure & Piètement', value: 'Bois Blenz naturel haute résistance' },
+        { label: 'Assise & Dossier', value: '100% Pure laine tissée main (Margoum mosaïque géométrique)' },
+        { label: 'Design', value: 'Dossier arrondi enveloppant (Style Crapaud moderne)' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois au chiffon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-sindbad-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-sindbad-blenz-2.jpg' }
+      ]
+    },
+    'chaise-ulysse-blenz': {
+      name: 'Chaise « Ulysse » Design & Margoum Laine Brute',
+      price: 690,
+      description: "L'alliance parfaite entre le design contemporain pur et l'authenticité textile. La chaise « Ulysse » se distingue par sa structure architecturale aux lignes droites en bois Blenz massif et son dossier cylindrique incurvé pour un maintien impeccable. Elle est habillée d'un Margoum en pure laine brute non teinte (nuances beige et gris naturel), sublimé par de fins symboles traditionnels tissés en blanc ivoire. Une pièce d'exception pour sublimer une table à manger haut de gamme, un bureau de prestige ou un salon contemporain.",
+      specs: [
+        { label: 'Tarif', value: '690 TND l’unité — Offre Spéciale Duo : 1190 TND les 2 pièces' },
+        { label: 'Structure & Piètement', value: 'Bois Blenz massif naturel finition raffinée' },
+        { label: 'Assise & Dossier', value: '100% Pure laine brute tissée main (Margoum teintes naturelles)' },
+        { label: 'Design', value: 'Structure géométrique avec dossier rouleau ergonomique' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine et dépoussiérage du bois au chiffon doux' }
+      ],
+      media: [
+        { type: 'video', src: 'images/chaise/chaise-ulysse-blenz.mp4', poster: 'images/chaise/chaise-ulysse-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-ulysse-blenz-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-ulysse-blenz-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-ulysse-blenz-3.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-ulysse-blenz-4.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-ulysse-blenz-5.jpg' }
+      ]
     }
   };
 
