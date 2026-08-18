@@ -473,6 +473,94 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'images/chaise/ensemble-coin-the-duo-tradition-design-2.jpg' },
         { type: 'image', src: 'images/chaise/ensemble-coin-the-duo-tradition-design-3.jpg' }
       ]
+    },
+    'chaise-signee-bois-margoum': {
+      name: 'Chaise Signée en Bois & Margoum Artisanal',
+      price: 450,
+      description: "Une chaise d'appoint au caractère unique qui réinvente le mobilier artisanal. Fabriquée à partir d'une structure solide en bois massif aux lignes épurées et modernes, elle se distingue par son assise rembourrée recouverte d'un véritable tapis Margoum/Kilim tissé à la main en pure laine. Une pièce de créateur idéale pour apporter une touche d'authenticité et de couleur à un bureau, une coiffeuse, une salle à manger ou un coin lecture.",
+      specs: [
+        { label: 'Vente', value: 'À l’unité' },
+        { label: 'Dimensions', value: 'Taille standard (hauteur assise ~45 cm / hauteur totale ~90 cm)' },
+        { label: 'Structure', value: 'Bois naturel noble et résistant' },
+        { label: 'Assise', value: 'Mousse haute densité recouverte de 100% pure laine tissée à la main' },
+        { label: 'Finition du bois', value: 'Aspect naturel poli et vernis protecteur' },
+        { label: 'Exclusivité', value: 'Chaque pièce a un motif de tapis unique' },
+        { label: 'Entretien', value: 'Bois à dépoussiérer au chiffon doux ; assise nettoyable à sec ou au chiffon très légèrement humide avec savon doux' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/chaise-signee-bois-margoum-1.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-signee-bois-margoum-2.jpg' },
+        { type: 'image', src: 'images/chaise/chaise-signee-bois-margoum-3.jpg' }
+      ]
+    },
+    'pouf-cylindrique-margoum': {
+      name: 'Pouf Cylindrique en Margoum Tissé Main',
+      price: 350,
+      description: "Une assise d'appoint à la fois pratique et hautement décorative, tissée à la main en pure laine selon les traditions du Margoum tunisien. Avec sa palette de couleurs vives (orange brûlé, vert olive, jaune moutarde et rouge carmin) et ses motifs géométriques ethniques, ce pouf apporte une touche chaleureuse et un esprit Boho-Chic irrésistible à votre salon ou coin détente.",
+      specs: [
+        { label: 'Dimensions', value: 'Diamètre 50 cm | hauteur 50 cm' },
+        { label: 'Revêtement', value: '100% pure laine tissée à la main (Margoum / Kilim, qualité supérieure)' },
+        { label: 'Garnissage', value: 'Mousse haute densité pour une excellente tenue et un confort optimal' },
+        { label: 'Entretien', value: 'Nettoyage à sec ou avec un chiffon doux légèrement humide' }
+      ],
+      media: [
+        { type: 'image', src: 'images/pouffe/pouf-cylindrique-margoum-1.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-cylindrique-margoum-2.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-cylindrique-margoum-3.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-cylindrique-margoum-4.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-cylindrique-margoum-5.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-cylindrique-margoum-6.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-cylindrique-margoum-7.jpg' }
+      ]
+    },
+    'tabouret-design-bois-kilim': {
+      name: 'Tabouret Design en Bois Naturel & Kilim Artisanal',
+      price: 290,
+      description: "L'alliance parfaite entre le minimalisme du bois brut et la richesse des couleurs du patrimoine tunisien. Ce tabouret se compose d'une structure solide en bois naturel aux lignes épurées et d'une assise confortablement rembourrée, tapissée d'un véritable Margoum tissé à la main en pure laine. Une pièce déco polyvalente et tendance pour sublimer une coiffeuse, un salon ou un coin bureau.",
+      specs: [
+        { label: 'Dimensions', value: '45 cm (hauteur) × 45 cm (largeur) × 45 cm (longueur)' },
+        { label: 'Structure', value: 'Bois naturel clair robuste avec finition soignée' },
+        { label: 'Assise', value: 'Mousse haute densité recouverte de 100% pure laine tissée à la main' },
+        { label: 'Exclusivité', value: 'Chaque motif de margoum est unique' },
+        { label: 'Entretien', value: 'Structure en bois facile à dépoussiérer ; assise nettoyable à sec ou avec un chiffon doux légèrement humide' }
+      ],
+      media: [
+        { type: 'image', src: 'images/tabouret/tabouret-design-bois-kilim-1.jpg' },
+        { type: 'image', src: 'images/tabouret/tabouret-design-bois-kilim-2.jpg' },
+        { type: 'image', src: 'images/tabouret/tabouret-design-bois-kilim-3.jpg' },
+        { type: 'image', src: 'images/tabouret/tabouret-design-bois-kilim-4.jpg' }
+      ]
+    },
+    'coussin-kilim-traditionnel': {
+      name: 'Coussin Décoratif en Kilim Traditionnel',
+      price: 75,
+      description: "Apportez une touche d'authenticité et de couleur à votre intérieur avec nos coussins en Kilim tunisien tissés à la main. Fabriqués en 100% pure laine, ils se distinguent par leurs motifs géométriques ethniques et leurs teintes vibrantes. Idéals pour habiller un canapé, un fauteuil en bois ou un lit avec élégance et caractère.",
+      specs: [
+        { label: 'Dimensions', value: '45 × 45 cm' },
+        { label: 'Tarif', value: '75 TND la pièce — 140 TND le duo' },
+        { label: 'Matière', value: '100% pure laine tissée main (Kilim traditionnel)' },
+        { label: 'Fermeture', value: 'Fermeture éclair intégrée pour un déhoussage facile' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé ou lavage doux à la main' }
+      ],
+      media: [
+        { type: 'image', src: 'images/coussin/coussin-kilim-traditionnel-1.jpg' },
+        { type: 'image', src: 'images/coussin/coussin-kilim-traditionnel-2.jpg' },
+        { type: 'image', src: 'images/coussin/coussin-kilim-traditionnel-3.jpg' }
+      ]
+    },
+    'table-appoint-blenz': {
+      name: 'Table Appoint / Bout de Canapé Style Blenz',
+      price: 190,
+      description: "Un chef-d'œuvre du mobilier traditionnel tunisien réinventé. Cette table d'appoint octogonale au style « Blenz » est entièrement façonnée en bois naturel, arborant des lattes verticales soigneusement assemblées. Avec sa teinte chaleureuse et ses lignes géométriques élégantes, elle s'intègre parfaitement à côté d'un canapé ou au cœur d'un salon traditionnel et contemporain.",
+      specs: [
+        { label: 'Dimensions', value: 'Diamètre 45 cm | hauteur 45 cm' },
+        { label: 'Matière', value: 'Bois naturel de qualité avec finition vernie protectrice' },
+        { label: 'Forme', value: 'Octogonale (style Blenz)' },
+        { label: 'Entretien', value: 'Dépoussiérage facile avec un chiffon doux ou légèrement humide' }
+      ],
+      media: [
+        { type: 'image', src: 'images/table/table-appoint-blenz-1.jpg' }
+      ]
     }
   };
 
