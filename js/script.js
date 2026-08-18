@@ -790,6 +790,180 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'images/chaise/chaise-ulysse-blenz-4.jpg' },
         { type: 'image', src: 'images/chaise/chaise-ulysse-blenz-5.jpg' }
       ]
+    },
+    'pouf-oasis-lounge-margoum': {
+      name: 'Pouf Chauffeuse Lounge « Oasis » Margoum Pure Laine',
+      price: 480,
+      description: "L'art de vivre et du cocooning à la tunisienne. Le pouf chauffeuse « Oasis » se caractérise par son assise allongée et sa silhouette basse ergonomique, offrant un soutien parfait pour vos moments de détente. Entièrement habillé d'un tapis Margoum en pure laine tissé à la main, chaque modèle est une pièce unique arborant des motifs géométriques et des teintes vibrantes (rouge corail, bleu turquoise, fuchsia et jaune). Garnie d'une mousse haute densité pour un maintien durable, c'est la pièce idéale pour créer un coin salon lounge, convivial et chaleureux.",
+      specs: [
+        { label: 'Tarif', value: '480 TND l’unité — Offre Spéciale : 1240 TND les 3 pièces' },
+        { label: 'Revêtement', value: '100% Pure laine tissée main (Margoum motifs géométriques authentiques)' },
+        { label: 'Garnissage', value: 'Mousse haute densité ferme et confortable' },
+        { label: 'Design', value: 'Chauffeuse de sol allongée (Style Lounge)' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour la laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/pouffe/pouf-oasis-lounge-margoum-1.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-oasis-lounge-margoum-2.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-oasis-lounge-margoum-3.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-oasis-lounge-margoum-4.jpg' },
+        { type: 'image', src: 'images/pouffe/pouf-oasis-lounge-margoum-5.jpg' }
+      ]
+    },
+    'coussin-sol-geant-atmosphere': {
+      name: 'Coussin de Sol Géant « Atmosphère » 80x80 cm en Pure Laine',
+      price: 190,
+      description: "L'union parfaite entre l'authenticité du textile traditionnel et le confort absolu. Ce coussin de sol géant au format XXL (80x80 cm) est entièrement tissé à la main en pure laine selon l'art authentique du Margoum. Arborant des motifs géométriques berbères riches en couleurs (teintes bordeaux, turquoise, fuchsia et vert), il offre une assise moelleuse, ferme et ultra-confortable grâce à son garnissage haute densité. Idéal pour créer un coin lecture douillet, habiller un salon moderne ou aménager un espace lounge chaleureux.",
+      specs: [
+        { label: 'Dimensions', value: '80 x 80 cm (Format Géant XXL)' },
+        { label: 'Composition', value: '100% Pure laine tissée main (Margoum artisanal)' },
+        { label: 'Garnissage', value: 'Mousse et fibres haute densité pour un maintien parfait' },
+        { label: 'Entretien', value: 'Nettoyage à sec recommandé pour préservation de la laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/coussin/coussin-sol-geant-atmosphere-1.jpg' },
+        { type: 'image', src: 'images/coussin/coussin-sol-geant-atmosphere-2.jpg' },
+        { type: 'image', src: 'images/coussin/coussin-sol-geant-atmosphere-3.jpg' },
+        { type: 'image', src: 'images/coussin/coussin-sol-geant-atmosphere-4.jpg' }
+      ]
+    },
+    'kairouan-yasmine-jardin': {
+      name: 'Tapis d’Art « Yasmine » Kairouan — Édition 2026',
+      price: 3800,
+      description: "Un chef-d'œuvre de l'artisanat tunisien représentant l'excellence du tapis de Kairouan. Issue de la toute nouvelle collection 2026, la pièce « Yasmine » se distingue par un tissage d'une finesse rare de 20x20 nœuds au décimètre carré (1er Choix), offrant une densité exceptionnelle et un toucher velouté incomparable. Son champ central crème s'épanouit dans un entrelacs floral délicat évoquant les jardins de jasmin, magnifiquement encadré par des bordures géométriques aux nuances bordeaux, violettes et bleu nuit. Avec un poids noble de 22,4 kg garantissant sa durabilité sur des générations, ce tapis constitue une pièce de collection d'une élégance intemporelle pour les intérieurs les plus prestigieux.",
+      specs: [
+        { label: 'Prix au m²', value: '650 TND / m²' },
+        { label: 'Dimensions', value: '197 x 295 cm (Surface : 5,81 m²)' },
+        { label: 'Poids', value: '22,400 kg (Pure laine dense)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-jardin-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-jardin-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-jardin-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-jardin-4.jpg' }
+      ]
+    },
+    'kairouan-yasmine-brise': {
+      name: 'Tapis d’Art « Brise de Yasmine » Kairouan — Édition 2026',
+      price: 3990,
+      description: "Une déclinaison chromatique et monumentale du motif emblématique « Yasmine », issue de la prestigieuse collection 2026. Ce tapis majestueux de 2,00 x 3,10 m témoigne du savoir-faire séculaire de Kairouan avec son tissage d'une extrême finesse de 20x20 nœuds au décimètre carré (1er Choix). Son champ ivoire accueille une symphonie florale raffinée aux nuances retravaillées, délicatement encadrée par des bordures géométriques bordeaux et violettes. Affichant un poids noble de 21,50 kg, cette pièce unique combine confort velouté, durabilité exceptionnelle et élégance intemporelle pour sublimer les intérieurs les plus raffinés.",
+      specs: [
+        { label: 'Prix au m²', value: '650 TND / m²' },
+        { label: 'Dimensions', value: '200 x 310 cm (Surface : 6,20 m²)' },
+        { label: 'Poids', value: '21,500 kg (Pure laine dense)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-brise-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-brise-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-brise-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-brise-4.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-brise-5.jpg' }
+      ]
+    },
+    'kairouan-jasmin-royal': {
+      name: 'Tapis Fait Main « Jasmin » de Kairouan — Qualité Royale 1ère Choix',
+      price: 3800,
+      description: "Un chef-d'œuvre textile incarnant le sommet de l'artisanat et du luxe kairouanais. Le tapis « Jasmin » se distingue par son fond ivoire lumineux, orné de motifs floraux d'une finesse remarquable inspirés des fleurs de jasmin tunisien, le tout encadré par une bordure royale aux teintes corail chaleureuses. Tissé à la main avec une densité exceptionnelle de nœuds (30 x 30), il offre un toucher soyeux, une douceur inégalée et une élégance intemporelle pour sublimer vos salons d'apparat. Investissement patrimonial : bien plus qu'un élément de décoration, un trésor de l'artisanat dont la valeur s'accroît au fil des années.",
+      specs: [
+        { label: 'Prix au m²', value: '850 TND / m²' },
+        { label: 'Dimensions', value: '175 x 260 cm (Surface : 4,55 m²)' },
+        { label: 'Densité du nouage', value: '30 x 30 nœuds / m² (90 000 nœuds/m² — nouage extra-fin de très haute précision)' },
+        { label: 'Composition', value: '100% Pure laine sélectionnée (1er Choix — Qualité Supérieure A1)' },
+        { label: 'Certification', value: 'Tapis noué main certifié 1ère choix par l’Office National de l’Artisanat Tunisien' },
+        { label: 'Entretien', value: 'Laine haute qualité traitée, facile à aspirer et à entretenir' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-jasmin-royal-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-jasmin-royal-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-jasmin-royal-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-jasmin-royal-4.jpg' }
+      ]
+    },
+    'kairouan-yasmine-all-over': {
+      name: 'Tapis d’Exception « Fleur de Yasmine » Kairouan All-Over — Édition 2026',
+      price: 2790,
+      description: "Une relecture moderne et audacieuse du motif emblématique « Yasmine ». Libéré des bordures traditionnelles, ce tapis d'art adopte un motif continu (all-over) où les rinceaux floraux et les bourgeons de jasmin s'épanouissent sur toute la surface ivoire. Issu de la collection 2026, il bénéficie d'un tissage d'une extrême finesse de 20x20 nœuds au décimètre carré (1er Choix). Ses nuances de bordeaux, prune et vert olive apportent une touche de fraîcheur et de poésie — la pièce parfaite pour agrandir visuellement un espace et offrir une élégance contemporaine à votre intérieur.",
+      specs: [
+        { label: 'Prix au m²', value: '650 TND / m²' },
+        { label: 'Dimensions', value: '173 x 248 cm (Surface : ~4,29 m²)' },
+        { label: 'Poids', value: '12,00 kg (Pure laine dense)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif All-over)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-all-over-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-all-over-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-all-over-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-all-over-4.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-all-over-5.jpg' }
+      ]
+    },
+    'kairouan-yasmine-bordure-corail': {
+      name: 'Tapis d’Art « Yasmine » Bordure Corail Kairouan — Édition 2026',
+      price: 2750,
+      description: "L'élégance classique du tapis de Kairouan dans toute sa splendeur. Issu de la collection exclusive 2026, ce modèle combine la délicatesse d'un champ central ivoire aux motifs floraux de jasmin avec l'intensité d'une large bordure encadrante teinte en rouge corail et terre cuite. Tissé avec une extrême précision de 20x20 nœuds au décimètre carré (1er Choix), il offre une densité parfaite et un velouté incomparable — une pièce majestueuse qui apporte chaleur, prestige et authenticité aux salons et espaces de réception les plus raffinés.",
+      specs: [
+        { label: 'Prix au m²', value: '650 TND / m²' },
+        { label: 'Dimensions', value: '174 x 245 cm (Surface : ~4,26 m²)' },
+        { label: 'Poids', value: '16,00 kg (Pure laine dense)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bordure-corail-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bordure-corail-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bordure-corail-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bordure-corail-4.jpg' }
+      ]
+    },
+    'kairouan-yasmine-bordure-doree': {
+      name: 'Tapis d’Art « Yasmine » Bordure Dorée de Kairouan — Édition 2026',
+      price: 2700,
+      description: "Une déclinaison chromatique noble et chaleureuse du légendaire motif « Yasmine », issue de la collection 2026. Ce tapis d'art se distingue par l'harmonie parfaite entre son champ central ivoire aux rinceaux floraux ambrés et sa majestueuse bordure dans les tons brun doré, miel et ébène. Tissé à la main avec une finesse exceptionnelle de 20x20 nœuds au décimètre carré (1er Choix), il offre un velouté incomparable et une densité remarquable — une pièce qui apporte une atmosphère feutrée, prestigieuse et intemporelle aux intérieurs les plus raffinés.",
+      specs: [
+        { label: 'Prix au m²', value: '650 TND / m²' },
+        { label: 'Dimensions', value: '178 x 238 cm (Surface : ~4,23 m²)' },
+        { label: 'Poids', value: '14,00 kg (Pure laine dense)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bordure-doree-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bordure-doree-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bordure-doree-3.jpg' }
+      ]
+    },
+    'kairouan-yasmine-sidi-bou-said': {
+      name: 'Tapis d’Art « Yasmine Bleu Sidi Bou Saïd » Kairouan — Finesse Royale',
+      price: 3800,
+      description: "Une ode magistrale à la Méditerranée et au légendaire village de Sidi Bou Saïd. Issu de la prestigieuse collection 2026, ce tapis se distingue par une finesse de tissage extrême et rarissime de 30x30 nœuds au décimètre carré (90 000 nœuds/m² — 1er Choix). Son champ ivoire éclatant accueille les rinceaux floraux du jasmin déclinés dans une palette de bleus intenses et azurs, magnifiquement rehaussés par une double bordure bleu nuit. Ce chef-d'œuvre apporte une fraîcheur prestigieuse, une douceur incomparable et une élégance intemporelle aux intérieurs les plus raffinés.",
+      specs: [
+        { label: 'Prix au m²', value: '750 TND / m²' },
+        { label: 'Dimensions', value: '175 x 265 cm (Surface : ~4,63 m²)' },
+        { label: 'Poids', value: '12,00 kg (Pure laine extra-fine)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Extrême Royale — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Édition limitée)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-2.jpg' }
+      ]
     }
   };
 
