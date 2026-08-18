@@ -456,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'ensemble-coin-the-duo-tradition-design': {
-      name: 'Ensemble Duo Tradition & Design (2 Chaises + Table Octogonale en Bois)',
+      name: 'Ensemble Coin Thé Authentique – 2 Chaises + Table Octogonale',
       price: 1200,
       description: "Un ensemble raffiné qui marie le design scandinave moderne à l'authenticité du Margoum tunisien tissé à la main. Il se compose de deux chaises en bois massif aux assises rembourrées d'un tissu Margoum coloré aux motifs berbères, accompagnées d'une table basse octogonale au charme unique. Cet ensemble apporte une note chaleureuse et un caractère affirmé à vos coins lecture, salons ou espaces d'accueil.",
       specs: [
