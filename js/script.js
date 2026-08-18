@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---------- Product quick-view modal (gallery + full specs) ----------
-  const TAPIS_DETAILS = {
+  const PRODUCT_DETAILS = {
     'kairouan-royal-bleu-sidi-bou-said': {
       name: 'Margoum Kairouan Royal – Bleu Sidi Bou Saïd',
       price: 1500,
@@ -454,6 +454,25 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'images/margoum/ensemble-chambre-sidi-bou-said-1.jpg' },
         { type: 'image', src: 'images/margoum/ensemble-chambre-sidi-bou-said-2.jpg' }
       ]
+    },
+    'ensemble-coin-the-duo-tradition-design': {
+      name: 'Ensemble Duo Tradition & Design (2 Chaises + Table Octogonale en Bois)',
+      price: 1200,
+      description: "Un ensemble raffiné qui marie le design scandinave moderne à l'authenticité du Margoum tunisien tissé à la main. Il se compose de deux chaises en bois massif aux assises rembourrées d'un tissu Margoum coloré aux motifs berbères, accompagnées d'une table basse octogonale au charme unique. Cet ensemble apporte une note chaleureuse et un caractère affirmé à vos coins lecture, salons ou espaces d'accueil.",
+      specs: [
+        { label: 'Contenu du pack', value: '2 chaises en bois naturel rembourrées + 1 table basse octogonale en bois' },
+        { label: 'Structure', value: 'Bois naturel robuste, finition lisse et chaleureuse' },
+        { label: 'Assise', value: '100% pure laine tissée à la main (Margoum / Kilim traditionnel — qualité A1)' },
+        { label: 'Couleur du bois', value: 'Teinte bois naturel clair' },
+        { label: 'Couleurs des assises', value: 'Palette multicolore (rouge, jaune, bleu, vert), motifs géométriques ethniques' },
+        { label: 'Utilisation conseillée', value: 'Coin café/thé, espace lecture, bureau, ou salon au style Boho-Chic et méditerranéen' },
+        { label: 'Entretien', value: 'Bois à dépoussiérer avec un chiffon doux ; assises nettoyables à sec ou à l’éponge légèrement humide en cas de tache' }
+      ],
+      media: [
+        { type: 'image', src: 'images/chaise/ensemble-coin-the-duo-tradition-design-1.jpg' },
+        { type: 'image', src: 'images/chaise/ensemble-coin-the-duo-tradition-design-2.jpg' },
+        { type: 'image', src: 'images/chaise/ensemble-coin-the-duo-tradition-design-3.jpg' }
+      ]
     }
   };
 
@@ -476,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function openQuickview(id) {
-    const product = TAPIS_DETAILS[id];
+    const product = PRODUCT_DETAILS[id];
     if (!product || !quickviewModal) return;
 
     quickviewTitle.textContent = product.name;
