@@ -150,6 +150,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---------- Discover section: auto-advancing carousel ----------
+  const discoverTrack = document.getElementById('discoverTrack');
+  if (discoverTrack && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let discoverTimer = null;
+    const discoverAdvance = () => {
+      const card = discoverTrack.querySelector(':scope > *');
+      const amount = card ? card.getBoundingClientRect().width + 20 : 240;
+      const atEnd = discoverTrack.scrollLeft + discoverTrack.clientWidth >= discoverTrack.scrollWidth - 4;
+      discoverTrack.scrollTo({ left: atEnd ? 0 : discoverTrack.scrollLeft + amount, behavior: 'smooth' });
+    };
+    const startDiscoverAutoplay = () => { stopDiscoverAutoplay(); discoverTimer = setInterval(discoverAdvance, 3200); };
+    function stopDiscoverAutoplay() { if (discoverTimer) clearInterval(discoverTimer); }
+    startDiscoverAutoplay();
+    const discoverWrap = discoverTrack.closest('.carousel-wrap');
+    if (discoverWrap) {
+      discoverWrap.addEventListener('mouseenter', stopDiscoverAutoplay);
+      discoverWrap.addEventListener('mouseleave', startDiscoverAutoplay);
+      discoverWrap.querySelectorAll('.carousel-arrow').forEach(btn => {
+        btn.addEventListener('click', startDiscoverAutoplay);
+      });
+    }
+  }
+
   // ---------- Wishlist (localStorage) ----------
   const WISH_KEY = 'margoum_wishlist';
   const getWishlist = () => JSON.parse(localStorage.getItem(WISH_KEY) || '[]');
