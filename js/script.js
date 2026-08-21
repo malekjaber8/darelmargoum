@@ -1797,7 +1797,9 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.display = show ? '' : 'none';
         if (show) visible++;
       });
-      if (catCountEl) catCountEl.textContent = `${visible} pièce${visible > 1 ? 's' : ''}`;
+      if (catCountEl) catCountEl.textContent = visible === 0 ? 'Bientôt disponible' : `${visible} pièce${visible > 1 ? 's' : ''}`;
+      const catGridEmpty = document.getElementById('catGridEmpty');
+      if (catGridEmpty) catGridEmpty.hidden = visible !== 0;
       catFilterNavs.forEach(nav => {
         nav.querySelectorAll('a[data-filter]').forEach(a => a.classList.toggle('active', a.dataset.filter === filter));
       });
