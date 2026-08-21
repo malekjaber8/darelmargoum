@@ -1273,6 +1273,247 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-sans-bordure-3.jpg' },
         { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-sans-bordure-4.jpg' }
       ]
+    },
+    'kairouan-grand-makroudha-sidi-bou-said': {
+      name: 'Grand Tapis de Salon Kairouan « Makroudha Sidi Bou Saïd » 1er Choix',
+      price: 2700,
+      description: "Une pièce maîtresse de l'artisanat kairouanais qui célèbre le motif géométrique emblématique « Makroudha » dans le style méditerranéen de Sidi Bou Saïd. Issu de la collection 2026, ce grand tapis de 6 m² est tissé entièrement à la main en pure laine traditionnelle (1er Choix, 20x20 nœuds/dm²). Son réseau de losanges bleu nuit sur fond ivoire apporte un rythme visuel captivant et une élégance intemporelle. Avec son poids remarquable de 20 kg, il offre une tenue parfaite au sol, un confort extrêmement moelleux et un cachet authentique à votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '450 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Densité et épaisseur d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Bleu nuit et blanc (Style Sidi Bou Saïd)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-makroudha-sidi-bou-said-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-makroudha-sidi-bou-said-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-makroudha-sidi-bou-said-3.jpg' }
+      ]
+    },
+    'kairouan-grand-zarbia-sidi-bou-said': {
+      name: 'Grand Tapis de Salon Kairouan « Zarbia Royale Sidi Bou Saïd »',
+      price: 2700,
+      description: "Une interprétation majestueuse du tapis kairouanais classique (Zarbiyya) issu de la collection 2026. Ce grand tapis de 6 m² arbore un champ central ivoire orné de motifs géométriques et floraux symétriques, entouré d'une large bordure à losanges aux nuances captivantes de bleu nuit, bleu ciel et de subtiles touches violacées. Tissé entièrement à la main en pure laine traditionnelle (1er Choix, 20x20 nœuds/dm²), il affiche un poids remarquable de 20 kg. Cette pièce d'exception apporte structure, prestige et un confort douillet à votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '450 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Haute densité et excellente tenue au sol)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Bleu mer, bleu ciel, touches de violet et fond ivoire' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-zarbia-sidi-bou-said-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-zarbia-sidi-bou-said-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-zarbia-sidi-bou-said-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-zarbia-sidi-bou-said-4.jpg' }
+      ]
+    },
+    'kairouan-grand-makroudha-geante-sidi-bou-said': {
+      name: 'Grand Tapis de Salon Kairouan « Grande Makroudha Sidi Bou Saïd »',
+      price: 2700,
+      description: "Une interprétation spectaculaire et majestueuse du tapis kairouanais traditionnel issue de la collection 2026. Ce grand tapis de 6 m² met en scène un imposant losange central ivoire (Grande Makroudha) aux bordures escalonnées, agrémenté d'un médaillon floral raffiné sur un fond bleu nuit d'une grande profondeur. Une large bordure ornée d'étoiles et de motifs géométriques vient encadrer cette pièce maîtresse. Tissé entièrement à la main en pure laine (1er Choix, 20x20 nœuds/dm²), son poids exceptionnel de 20 kg garantit une tenue irréprochable au sol et un confort haut de gamme pour votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '450 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Haute densité, épaisseur et confort d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Bleu nuit, ivoire et détails noir/bleu' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-makroudha-geante-sidi-bou-said-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-makroudha-geante-sidi-bou-said-2.jpg' }
+      ]
+    },
+    'kairouan-grand-cinq-etoiles-sidi-bou-said': {
+      name: 'Grand Tapis de Salon Kairouan « Cinq Étoiles Sidi Bou Saïd »',
+      price: 2700,
+      description: "Une composition spectaculaire et emblématique de l'artisanat kairouanais. Ce grand tapis de 6 m² se distingue par son motif majestueux aux 5 médaillons (« Cinq Étoiles ») finement ouvragés, disposés en harmonie sur un champ central ivoire. Le cadre structuré en escalier (Mahrab) et la large bordure ornée d'étoiles traditionnelles en bleu nuit apportent un relief visuel saisissant. Tissé entièrement à la main en pure laine (1er Choix, 20x20 nœuds/dm²), son poids exceptionnel de 20 kg offre une tenue au sol irréprochable et un confort haut de gamme pour votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '450 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Haute densité, épaisseur et confort d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Bleu nuit, ivoire et détails bleu ciel' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-cinq-etoiles-sidi-bou-said-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-cinq-etoiles-sidi-bou-said-2.jpg' }
+      ]
+    },
+    'kairouan-grand-zarbia-vieux-rose-bleu': {
+      name: 'Grand Tapis de Salon Kairouan « Zarbia Royale Vieux Rose & Bleu »',
+      price: 2700,
+      description: "Une interprétation raffinée et chaleureuse du tapis kairouanais classique (Zarbiyya) issue de la collection 2026. Ce grand tapis de 6 m² met en valeur un champ central ivoire orné d'un médaillon floral délicat, encadré par un motif en escalier et de larges bordures aux nuances élégantes de bleu pétrole, de vieux rose et de terre cuite. Tissé entièrement à la main en pure laine traditionnelle de Kairouan (1er Choix, 20x20 nœuds/dm²), son poids exceptionnel de 20 kg garantit une tenue parfaite au sol, une excellente isolation et un prestige incontestable pour votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '450 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Haute densité, épaisseur et confort d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine traditionnelle de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Bleu pétrole, vieux rose, terracotta et fond ivoire' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-zarbia-vieux-rose-bleu-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-zarbia-vieux-rose-bleu-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-zarbia-vieux-rose-bleu-3.jpg' }
+      ]
+    },
+    'kairouan-grand-trone-royal-bleu-or': {
+      name: 'Grand Tapis de Salon Kairouan « Trône Royal Bleu & Or » 1er Choix',
+      price: 3600,
+      description: "Une œuvre d'art textile d'un prestige absolu issue de la collection exclusive 2026. Ce grand tapis de 6 m² arbore un champ central bleu saphir d'une grande profondeur, orné de deux médaillons centraux et de motifs géométriques finement ciselés en jaune or. Il est sublimé par une succession de bordures royales aux nuances d'ocre, de terracotta et de bleu nuit. Tissé entièrement à la main en pure laine de Kairouan d'une finesse exceptionnelle de 30x30 nœuds au décimètre carré (90 000 nœuds/m² — 1er Choix), il offre un velouté incomparable et une élégance aristocratique à votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '600 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '16 kg (Haute densité d’exécution et finesse)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Royale — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Bleu royal, jaune or, terracotta et bleu nuit' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-trone-royal-bleu-or-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-trone-royal-bleu-or-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-trone-royal-bleu-or-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-trone-royal-bleu-or-4.jpg' }
+      ]
+    },
+    'kairouan-grand-mosaique': {
+      name: 'Grand Tapis de Salon Kairouan « Mosaïque » — Pièce Unique',
+      price: 2700,
+      description: "Une pièce maîtresse exclusive et inédite (Pièce Unique) issue de la collection 2026, s'inspirant de la richesse des mosaïques méditerranéennes. Ce grand tapis de 6 m² présente un champ central ivoire rythmé par un médaillon géométrique et floral, bordé d'une succession de frises aux teintes harmonieuses d'ocre moutarde, de vert olive, de bleu ciel et de violet. Tissé entièrement à la main en pure laine traditionnelle de Kairouan (1er Choix, 20x20 nœuds/dm²), son poids exceptionnel de 20 kg garantit un confort douillet, une parfaite tenue au sol et un cachet artistique inégalé à votre intérieur.",
+      specs: [
+        { label: 'Prix au m²', value: '450 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Haute densité, épaisseur et confort d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Moutarde, vert olive, bleu ciel, violet et fond ivoire' },
+        { label: 'Exclusivité', value: 'Pièce unique' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-mosaique-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-mosaique-2.jpg' }
+      ]
+    },
+    'kairouan-grand-losanges-vert-olive': {
+      name: 'Grand Tapis de Salon Kairouan « Losanges Vert Olive » 1er Choix',
+      price: 2700,
+      description: "Une création géométrique d'une grande élégance issue de la collection 2026, alliant authenticité kairouanaise et esprit contemporain. Ce grand tapis de 6 m² présente un réseau fluide de losanges vert olive sur un fond ivoire lumineux, centré de symboles berbères finement tissés en bleu nuit. Tissé entièrement à la main en pure laine de qualité supérieure (1er Choix, 20x20 nœuds/dm²), son poids de 20 kg garantit une tenue parfaite au sol et apporte une touche sereine, naturelle et raffinée à votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '450 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Haute densité, épaisseur et confort d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de qualité supérieure tissée à la main' },
+        { label: 'Couleurs', value: 'Vert olive, ivoire et motifs bleu nuit' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-losanges-vert-olive-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-losanges-vert-olive-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-losanges-vert-olive-3.jpg' }
+      ]
+    },
+    'kairouan-grand-allousha-traditionnel': {
+      name: 'Grand Tapis de Salon Kairouan « Allousha Traditionnel »',
+      price: 3300,
+      description: "Le joyau incontestable de l'artisanat kairouanais dans sa version la plus noble issue de la collection 2026. Ce grand tapis de 6 m² met à l'honneur le célèbre style « Allousha », caractérisé par l'utilisation exclusive des teintes naturelles de la laine de mouton. Il présente un champ central ivoire orné de médaillons géométriques et floraux, encadré par des frises successives aux nuances miel, ocre et brun foncé. Tissé entièrement à la main en pure laine d'exception (1er Choix, 20x20 nœuds/dm²), son poids de 20 kg garantit une présence majestueuse, une excellente tenue au sol et une authenticité inégalée pour votre intérieur.",
+      specs: [
+        { label: 'Prix au m²', value: '550 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Haute densité, épaisseur et confort d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine naturelle d’Allousha tissée à la main' },
+        { label: 'Couleurs', value: 'Miel, ocre, brun foncé et fond ivoire (couleurs naturelles de laine)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-allousha-traditionnel-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-allousha-traditionnel-2.jpg' }
+      ]
+    },
+    'kairouan-grand-allousha-acajou-miel': {
+      name: 'Grand Tapis de Salon Kairouan « Allousha Teinte Acajou & Miel » 1er Choix',
+      price: 3300,
+      description: "L'excellence du tapis kairouanais « Allousha » sublimée par une palette de teintes chaudes et enveloppantes issue de la collection 2026. Ce grand tapis de 6 m² arbore un champ central couleur ocre acajou rehaussé de médaillons floraux complexes en chocolat foncé et blanc ivoire. Son cadre structuré en escalier (Mahrab) et ses bordures très élaborées apportent une profondeur visuelle remarquable. Tissé entièrement à la main en pure laine d'Allousha d'exception (1er Choix, 20x20 nœuds/dm²), son poids de 20 kg garantit une tenue irréprochable au sol et une ambiance chaleureuse et raffinée.",
+      specs: [
+        { label: 'Prix au m²', value: '550 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '20 kg (Haute densité, épaisseur et confort d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine naturelle d’Allousha tissée à la main' },
+        { label: 'Couleurs', value: 'Ocre acajou, miel, chocolat foncé et détails ivoire' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-allousha-acajou-miel-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-allousha-acajou-miel-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-allousha-acajou-miel-3.jpg' }
+      ]
+    },
+    'lanterne-suspendue-fer-forge': {
+      name: 'Lanterne de Table Suspendue en Fer Forgé Artisanal',
+      price: 490,
+      description: "Une pièce d'éclairage d'exception alliant la noblesse du fer forgé travaillé à la main et l'élégance des lignes orientales. Cette lanterne suspendue se distingue par son support en arc de cercle harmonieux fixé sur une base carrée robuste. Le petit fanal suspendu, doté de parois en verre et de détails finement ajourés, accueille une bougie pour diffuser une lumière douce, tamisée et chaleureuse. Un élément décoratif raffiné qui sublime vos consoles, tables de salon, ou coins de lecture.",
+      specs: [
+        { label: 'Matière', value: 'Fer forgé artisanal robuste et verre transparent' },
+        { label: 'Finition', value: 'Noir mat patiné' },
+        { label: 'Usage', value: 'Éclairage d’ambiance pour bougie traditionnelle ou LED' },
+        { label: 'Style', value: 'Rustique chic / Orientale raffiné' },
+        { label: 'Année de création', value: '2026 (Collection exclusive)' },
+        { label: 'Conseil déco', value: 'Idéal sur une console en bois massif, un buffet ou une table basse de salon' }
+      ],
+      media: [
+        { type: 'image', src: 'images/deco-fer-forge/lanterne-suspendue-fer-forge-1.jpg' },
+        { type: 'image', src: 'images/deco-fer-forge/lanterne-suspendue-fer-forge-2.jpg' }
+      ]
+    },
+    'lanterne-nuit-etoilee-fer-forge': {
+      name: 'Lanterne Artisanale « Nuit Étoilée » en Fer Forgé',
+      price: 390,
+      description: "Une lanterne d'ambiance féerique issue de la collection 2026, façonnée à la main en fer forgé. Son corps carré surmonté d'un toit pyramidal est finement perforé de motifs de croissants de lune et d'étoiles. Une fois la bougie allumée, elle projette un magnifique jeu d'ombres et de lumières orientales sur vos murs et meubles. Idéale pour créer une atmosphère chaleureuse, paisible et spirituelle dans votre salon, entrée ou coin lecture.",
+      specs: [
+        { label: 'Matière', value: 'Fer forgé artisanal robuste travaillé à la main' },
+        { label: 'Finition', value: 'Noir mat patiné' },
+        { label: 'Motifs', value: 'Découpes ajourées en forme d’étoiles et croissants de lune' },
+        { label: 'Usage', value: 'Éclairage d’ambiance pour bougie traditionnelle ou LED' },
+        { label: 'Style', value: 'Orientale chic / Rustique raffiné' },
+        { label: 'Année de création', value: '2026 (Collection exclusive)' },
+        { label: 'Conseil déco', value: 'À poser sur une table basse en bois, un buffet ou une console pour un effet chaleureux garanti' }
+      ],
+      media: [
+        { type: 'image', src: 'images/deco-fer-forge/lanterne-nuit-etoilee-fer-forge-1.jpg' },
+        { type: 'image', src: 'images/deco-fer-forge/lanterne-nuit-etoilee-fer-forge-2.jpg' }
+      ]
+    },
+    'applique-murale-andalou-fer-forge': {
+      name: 'Applique Murale Style Andalou en Fer Forgé',
+      price: 350,
+      description: "Une magnifique applique murale d'inspiration architecturale tunisienne issue de la collection 2026. Fabriquée en fer forgé noir mat, elle arbore de superbes volutes métalliques façonnées à la main. Ses parois en verre dépoli diffusent une lumière douce, chaleureuse et sans éblouissement. Parfaite pour sublimer un mur en pierre, un patio, un couloir ou une entrée élégante.",
+      specs: [
+        { label: 'Matière', value: 'Fer forgé artisanal et verre dépoli opaque' },
+        { label: 'Finition', value: 'Noir mat avec traitement anti-corrosion' },
+        { label: 'Fixation', value: 'Applique murale pour éclairage intérieur ou extérieur couvert' },
+        { label: 'Style', value: 'Néoclassique / Orientale raffiné / Néo-tunisien' },
+        { label: 'Année de création', value: '2026 (Collection exclusive)' },
+        { label: 'Conseil déco', value: 'Sublimera vos murs en pierre naturelle, arches et vérandas' }
+      ],
+      media: [
+        { type: 'image', src: 'images/deco-fer-forge/applique-murale-andalou-fer-forge-1.jpg' },
+        { type: 'image', src: 'images/deco-fer-forge/applique-murale-andalou-fer-forge-2.jpg' }
+      ]
     }
   };
 
