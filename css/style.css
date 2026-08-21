@@ -890,8 +890,18 @@ section { padding: 100px 0; position: relative; }
   background: var(--terracotta); color: var(--dark);
   font-size: 0.84rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
   transition: background 0.3s ease;
+  position: relative; z-index: 1;
 }
 .universe-card:hover .universe-card-btn { background: var(--gold); }
+.universe-card-bg { position: absolute; inset: 0; z-index: 0; display: block; }
+.universe-card-sublinks {
+  display: flex; flex-wrap: wrap; align-items: center;
+  margin: 0 0 18px; padding: 0; list-style: none; max-width: 270px;
+  position: relative; z-index: 1;
+}
+.universe-card-sublinks li:not(:first-child)::before { content: '·'; margin: 0 7px; color: rgba(253,251,247,0.45); }
+.universe-card-sublinks a { font-size: 0.82rem; color: rgba(253,251,247,0.78); transition: color 0.25s ease; }
+.universe-card-sublinks a:hover { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .universe-trust { padding-top: 30px; border-top: 1px solid var(--cream-line); }
 .universe-section { padding-bottom: 60px; }
 .best-sellers-section { padding-top: 60px; }
