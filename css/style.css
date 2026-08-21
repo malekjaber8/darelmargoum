@@ -1586,6 +1586,11 @@ section { padding: 100px 0; position: relative; }
 .tapis-card-placeholder-icon { display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--ink-soft); opacity: 0.55; }
 .tapis-card-placeholder-icon span { font-size: 0.78rem; }
 
+.cat-grid-empty { grid-column: 1 / -1; text-align: center; padding: 70px 20px; color: var(--ink-soft); }
+.cat-grid-empty svg { opacity: 0.4; margin-bottom: 16px; }
+.cat-grid-empty p { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--dark); margin-bottom: 8px; }
+.cat-grid-empty span { display: block; font-size: 0.92rem; max-width: 380px; margin: 0 auto; line-height: 1.5; }
+
 @media (max-width: 980px) {
   .cat-hero-v2-inner { grid-template-columns: 1fr; gap: 34px; padding: 30px; }
   .cat-hero-v2-media { order: -1; }
