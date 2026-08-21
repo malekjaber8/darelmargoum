@@ -1834,7 +1834,7 @@ document.addEventListener('DOMContentLoaded', () => {
       [...catGrid.children].forEach(card => {
         const show = filter === 'all' || card.dataset.filterCat === filter;
         card.style.display = show ? '' : 'none';
-        if (show) visible++;
+        if (show) { visible++; card.classList.add('aos-animate'); }
       });
       if (catCountEl) catCountEl.textContent = visible === 0 ? 'Bientôt disponible' : `${visible} pièce${visible > 1 ? 's' : ''}`;
       const catGridEmpty = document.getElementById('catGridEmpty');
