@@ -1702,21 +1702,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---------- Newsletter form (front-end only) ----------
+  // ---------- Newsletter form (redirects to WhatsApp — no email backend on this site) ----------
   const newsletterForm = document.getElementById('newsletterForm');
   const newsletterStatus = document.getElementById('newsletterStatus');
   if (newsletterForm) newsletterForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    newsletterStatus.textContent = 'Merci pour votre inscription !';
+    const email = newsletterForm.querySelector('input[type="email"]').value;
+    window.open(buildWhatsAppLink(`Bonjour, je souhaite être informé(e) des nouveautés Margoum Tunisia. Mon email : ${email}`), '_blank', 'noopener');
+    newsletterStatus.textContent = 'Redirection vers WhatsApp…';
     newsletterForm.reset();
   });
 
-  // ---------- Contact form (front-end only, only on pages that have it) ----------
+  // ---------- Contact form (redirects to WhatsApp — no email backend on this site) ----------
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
   if (form) form.addEventListener('submit', (e) => {
     e.preventDefault();
-    status.textContent = 'Merci, votre demande a bien été préparée ! (branchez un backend/service email pour l\'envoi réel)';
+    const name = form.querySelector('#name').value;
+    const email = form.querySelector('#email').value;
+    const piece = form.querySelector('#piece').value;
+    const message = form.querySelector('#message').value;
+    const text = `Bonjour, je souhaite une pièce sur-mesure.\nNom : ${name}\nEmail : ${email}\nPièce souhaitée : ${piece || 'non précisé'}\nMessage : ${message}`;
+    window.open(buildWhatsAppLink(text), '_blank', 'noopener');
+    status.textContent = 'Redirection vers WhatsApp…';
     form.reset();
   });
 
