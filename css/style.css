@@ -926,6 +926,14 @@ section { padding: 100px 0; position: relative; }
 .tapis-card-soon .tapis-card-media { opacity: 0.9; }
 .tapis-card-media video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .tapis-card-media-video { position: relative; }
+.tapis-card-media-alt {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.tapis-card:hover .tapis-card-media-alt { opacity: 1; }
 .tapis-card-view-btn {
   position: absolute; z-index: 1;
   left: 14px; bottom: 14px;

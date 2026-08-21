@@ -1578,6 +1578,22 @@ document.addEventListener('DOMContentLoaded', () => {
       openQuickview(trigger.dataset.quickview);
     });
   });
+
+  // Hover preview: swap in a second product photo on card hover, when one exists
+  document.querySelectorAll('.tapis-card-media[data-quickview]').forEach(media => {
+    const product = PRODUCT_DETAILS[media.dataset.quickview];
+    if (!product || !product.media || product.media.length < 2) return;
+    const primary = product.media[0];
+    const posterSrc = primary.poster || primary.src;
+    const alt = product.media.find(m => m.type === 'image' && m.src !== posterSrc && m.src !== primary.src);
+    if (!alt) return;
+    const img = document.createElement('img');
+    img.className = 'tapis-card-media-alt';
+    img.src = alt.src;
+    img.alt = '';
+    img.loading = 'lazy';
+    media.appendChild(img);
+  });
   if (quickviewClose) quickviewClose.addEventListener('click', closeQuickview);
   if (quickviewOverlay) quickviewOverlay.addEventListener('click', closeQuickview);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeQuickview(); });
