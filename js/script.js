@@ -1115,6 +1115,164 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'image', src: 'images/margoum/kairouan-berbere-ecru-naturel-3.jpg' },
         { type: 'image', src: 'images/margoum/kairouan-berbere-ecru-naturel-4.jpg' }
       ]
+    },
+    'kairouan-grand-yasmine-classique': {
+      name: 'Grand Tapis de Salon Kairouan « Yasmine Classique » 1er Choix',
+      price: 3900,
+      description: "Un chef-d'œuvre monumental de l'artisanat kairouanais, conçu pour être la pièce maîtresse des salons de haut standing. Issu de la collection exclusive 2026, ce grand tapis de 6 m² décline le prestigieux motif « Yasmine » avec une finesse d'exécution extrême de 30x30 nœuds au décimètre carré (1er Choix). Tissé entièrement à la main en pure laine de qualité supérieure avec un poids généreux de 16 kg, il arbore une somptueuse bordure rose vieux rehaussée de nuances bleu ciel sur un champ central ivoire richement fleuri. Ce tapis d'art apporte une noblesse rare, un confort moelleux et une sérénité élégante à votre intérieur.",
+      specs: [
+        { label: 'Prix au m²', value: '650 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '16 kg (Densité et tenue d’exception)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Extrême Royale — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-classique-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-classique-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-classique-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-classique-4.jpg' }
+      ]
+    },
+    'kairouan-grand-yasmine-rose': {
+      name: 'Grand Tapis de Salon Kairouan « Yasmine Rose » 1er Choix',
+      price: 3900,
+      description: "Un chef-d'œuvre monumental de l'artisanat kairouanais, conçu pour être la pièce maîtresse des salons de haut standing. Issu de la collection exclusive 2026, ce grand tapis de 6 m² décline le prestigieux motif « Yasmine » avec une finesse d'exécution extrême de 30x30 nœuds au décimètre carré (1er Choix). Tissé entièrement à la main en pure laine de qualité supérieure avec un poids généreux de 16 kg, il arbore une somptueuse bordure rose vieux rehaussée de nuances bleu ciel sur un champ central ivoire richement fleuri. Ce tapis d'art apporte une noblesse rare, un confort moelleux et une sérénité élégante à votre intérieur.",
+      specs: [
+        { label: 'Prix au m²', value: '650 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '16 kg (Densité et tenue d’exception)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Extrême Royale — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-rose-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-rose-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-rose-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-rose-4.jpg' }
+      ]
+    },
+    'kairouan-grand-arbre-de-vie': {
+      name: 'Grand Tapis de Salon Kairouan « Arbre de Vie » 1er Choix',
+      price: 4200,
+      description: "Une œuvre d'art textile monumentale et majestueuse, directement inspirée du motif mythique de l'Arbre de Vie. Issu de la collection exclusive 2026, ce grand tapis de 6 m² incarne le sommet de l'artisanat kairouanais avec une finesse d'exécution extrême de 30x30 nœuds au décimètre carré (1er Choix). Tissé entièrement à la main en pure laine de qualité supérieure avec un poids généreux de 16 kg, il présente un médaillon central entouré de rinceaux végétaux complexes, associant un bleu nuit profond, un ocre miel chaleureux et des accents rose poudré sur fond ivoire. Ce tapis d'exception apporte une noblesse rare, un confort moelleux et un prestige inégalé à votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '700 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '16 kg (Densité et tenue d’exception)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Extrême Royale — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-arbre-de-vie-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-arbre-de-vie-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-arbre-de-vie-3.jpg' }
+      ]
+    },
+    'kairouan-oiseaux-paradis-soie-laine': {
+      name: 'Tapis d’Art & de Collection « Oiseaux du Paradis » Soie & Laine (40x40 Nœuds)',
+      price: 7200,
+      description: "Une pièce d'art textile monumentale et d'une rareté absolue, conçue pour les connaisseurs et les intérieurs les plus prestigieux. Issu de la collection d'exception 2026, ce chef-d'œuvre de 6 m² associe la noblesse de la soie naturelle à la douceur de la pure laine, tissé avec une précision impériale inégalée de 40x40 nœuds au décimètre carré (160 000 nœuds/m² — 1er Choix). Il met en scène le motif emblématique « Oiseaux du Paradis » dans une palette féerique bordeaux-rosé, sublimée par des touches bleu nuit et ivoire doré. La soie apporte des reflets lumineux changeants et une douceur soyeuse incomparable au toucher.",
+      specs: [
+        { label: 'Prix au m²', value: '1 200 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '12 kg (Finesse extrême et densité d’artisanat d’art)' },
+        { label: 'Densité', value: '40 x 40 Nœuds / dm² (Finesse Impériale Extrême — 160 000 nœuds/m²)' },
+        { label: 'Composition', value: 'Mélange noble de Soie Naturelle & Pure Laine tissé à la main' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en soie et laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-oiseaux-paradis-soie-laine-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-oiseaux-paradis-soie-laine-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-oiseaux-paradis-soie-laine-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-oiseaux-paradis-soie-laine-4.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-oiseaux-paradis-soie-laine-5.jpg' }
+      ]
+    },
+    'kairouan-grand-oiseaux-paradis-bleu-royal': {
+      name: 'Grand Tapis de Salon Kairouan « Oiseaux du Paradis » Bleu Royal 1er Choix',
+      price: 4500,
+      description: "Une œuvre d'art textile d'une finesse remarquable, mettant en valeur le célèbre motif patrimonial « Oiseaux du Paradis ». Ce grand tapis de 6 m² est tissé entièrement à la main en pure laine de Kairouan de qualité supérieure avec une densité d'exécution de 30x30 nœuds au décimètre carré (1er Choix). Son champ d'un bleu royal majestueux est rythmé par des frises géométriques et des motifs d'oiseaux stylisés aux nuances ivoire, corail et ocre. Avec son poids généreux de 16 kg, il offre une excellente tenue au sol, un confort moelleux et un prestige incomparable à votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '750 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '16 kg (Densité et tenue d’exception)' },
+        { label: 'Densité', value: '30 x 30 Nœuds / dm² (Finesse Royale — 90 000 nœuds/m² — 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-oiseaux-paradis-bleu-royal-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-oiseaux-paradis-bleu-royal-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-oiseaux-paradis-bleu-royal-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-oiseaux-paradis-bleu-royal-4.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-oiseaux-paradis-bleu-royal-5.jpg' }
+      ]
+    },
+    'kairouan-grand-yasmine-bleu-mer': {
+      name: 'Grand Tapis de Salon Kairouan « Yasmine Bleu » 1er Choix',
+      price: 3600,
+      description: "Une magnifique pièce d'artisanat kairouanais qui sublime le motif emblématique « Yasmine ». Issu de la collection 2026, ce grand tapis de 6 m² est tissé entièrement à la main en pure laine traditionnelle de qualité supérieure (1er Choix, 20x20 nœuds/dm²). Son fond d'un bleu mer profond met en valeur un maillage végétal ivoire d'une grande élégance. Avec son poids généreux de 18 kg, il offre une densité remarquable, un confort moelleux au pied et une excellente tenue au sol pour votre salon.",
+      specs: [
+        { label: 'Prix au m²', value: '600 TND / m²' },
+        { label: 'Dimensions', value: '2,00 m x 3,00 m (Surface : 6 m²)' },
+        { label: 'Poids', value: '18 kg (Densité et épaisseur d’exception)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-bleu-mer-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-bleu-mer-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-bleu-mer-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-grand-yasmine-bleu-mer-4.jpg' }
+      ]
+    },
+    'kairouan-yasmine-bleu-ciel-marine': {
+      name: 'Tapis de Salon Kairouan « Yasmine Bleu Ciel & Marine » 1er Choix',
+      price: 2400,
+      description: "Une magnifique pièce d'artisanat kairouanais qui insuffle fraîcheur et élégance dans votre intérieur. Issu de la collection 2026, ce tapis de salon met en valeur le motif floral « Yasmine » sur un fond bleu ciel lumineux, entrelacé de maillages ivoire et de détails bleu marine profond. Tissé entièrement à la main en pure laine traditionnelle de qualité supérieure (1er Choix, 20x20 nœuds/dm²), il affiche un poids généreux de 12,8 kg qui lui confère une excellente tenue au sol et une douceur veloutée incomparable.",
+      specs: [
+        { label: 'Dimensions', value: '165 x 250 cm (Surface : 4,12 m²)' },
+        { label: 'Poids', value: '12,8 kg (Densité et confort remarquables)' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Bleu ciel, noir et bleu marine' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bleu-ciel-marine-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bleu-ciel-marine-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bleu-ciel-marine-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-bleu-ciel-marine-4.jpg' }
+      ]
+    },
+    'kairouan-yasmine-sidi-bou-said-sans-bordure': {
+      name: 'Tapis de Salon Kairouan « Yasmine Sidi Bou Saïd » Sans Bordure — 1er Choix',
+      price: 2700,
+      description: "Une création inédite et moderne issue de la collection 2026, revisitant le motif patrimonial « Yasmine » dans l'esprit méditerranéen de Sidi Bou Saïd. La grande originalité de ce tapis réside dans son design Sans Bordure, offrant une continuité visuelle élégante où le maillage floral bleu ciel et bleu nuit s'épanouit librement sur un fond ivoire lumineux. Tissé entièrement à la main en pure laine traditionnelle de qualité supérieure (1er Choix, 20x20 nœuds/dm²), il apporte une touche contemporaine, de la clarté et une sérénité raffinée à votre espace de vie.",
+      specs: [
+        { label: 'Prix au m²', value: '600 TND / m²' },
+        { label: 'Format Medium', value: '176 x 256 cm — Poids 13 kg — 2 700 TND' },
+        { label: 'Grand Format', value: '200 x 300 cm — 3 900 TND' },
+        { label: 'Densité', value: '20 x 20 Nœuds / dm² (Qualité Supérieure 1er Choix)' },
+        { label: 'Composition', value: '100% Pure laine de Kairouan tissée à la main' },
+        { label: 'Couleurs', value: 'Ivoire, bleu ciel et bleu nuit (Style Sidi Bou Saïd)' },
+        { label: 'Année de création', value: '2026 (Modèle exclusif)' },
+        { label: 'Entretien', value: 'Nettoyage à sec spécialisé pour tapis d’art en laine' }
+      ],
+      media: [
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-sans-bordure-1.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-sans-bordure-2.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-sans-bordure-3.jpg' },
+        { type: 'image', src: 'images/margoum/kairouan-yasmine-sidi-bou-said-sans-bordure-4.jpg' }
+      ]
     }
   };
 
