@@ -73,6 +73,14 @@
       <a href="index.html#contact" class="nav-link">Contact</a>
     </nav>
     <div class="header-actions">
+      <div class="currency-switcher" id="currencySwitcher">
+        <button type="button" class="currency-toggle" id="currencyToggle" data-cursor="big" aria-label="Devise">TND</button>
+        <div class="currency-menu" id="currencyMenu">
+          <button type="button" data-currency="TND">TND</button>
+          <button type="button" data-currency="EUR">EUR €</button>
+          <button type="button" data-currency="USD">USD $</button>
+        </div>
+      </div>
       <div class="header-search" id="headerSearch">
         <button type="button" class="search-toggle" id="searchToggle" data-cursor="big" aria-label="Rechercher">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -207,7 +215,7 @@
             <div class="tapis-card-body">
               <h3>Ensemble Coin Thé Authentique</h3>
               <p>2 chaises margoum + table octogonale en bois</p>
-              <div class="tapis-card-price-row"><strong class="price">1 200 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="1200">1 200 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="ensemble-coin-the-duo-tradition-design" data-name="Ensemble Coin Thé Authentique – 2 Chaises + Table Octogonale" data-img="images/chaise/ensemble-coin-the-duo-tradition-design-1.jpg" data-price="1200" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Ensemble%20Coin%20Th%C3%A9%20Authentique%20%E2%80%93%202%20Chaises%20%2B%20Table%20Octogonale" target="_blank" rel="noopener" data-cursor="big">
@@ -225,7 +233,7 @@
             <div class="tapis-card-body">
               <h3>Chaise Signée en Bois &amp; Margoum Artisanal</h3>
               <p>Bois massif, assise 100% laine tissée main — pièce unique</p>
-              <div class="tapis-card-price-row"><strong class="price">450 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="450">450 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-signee-bois-margoum" data-name="Chaise Signée en Bois &amp; Margoum Artisanal" data-img="images/chaise/chaise-signee-bois-margoum-1.jpg" data-price="450" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Sign%C3%A9e%20en%20Bois%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -243,7 +251,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Blenz » Noir &amp; Blanc Artisanal</h3>
               <p>Bois laqué blanc, assise tissée main motifs de Gafsa</p>
-              <div class="tapis-card-price-row"><strong class="price">850 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="850">850 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-blenz-noir-blanc" data-name="Chaise « Blenz » Noir &amp; Blanc Artisanal" data-img="images/chaise/chaise-blenz-noir-blanc-1.jpg" data-price="850" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Blenz%20%C2%BB%20Noir%20%26%20Blanc%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -261,7 +269,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Aurora » en Bois Blenz &amp; Margoum Artisanal</h3>
               <p>Dossier médaillon évidé, margoum tissé main pure laine</p>
-              <div class="tapis-card-price-row"><strong class="price">480 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-aurora-blenz" data-name="Chaise « Aurora » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-aurora-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Aurora%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -279,7 +287,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Elissa » en Bois Blenz &amp; Margoum Losanges</h3>
               <p>Dossier arqué, margoum motif losanges tissé main</p>
-              <div class="tapis-card-price-row"><strong class="price">480 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-elissa-blenz" data-name="Chaise « Elissa » en Bois Blenz &amp; Margoum Losanges" data-img="images/chaise/chaise-elissa-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Elissa%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Losanges" target="_blank" rel="noopener" data-cursor="big">
@@ -297,7 +305,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Ajmal » en Bois Blenz &amp; Margoum Artisanal</h3>
               <p>Dossier évidé, margoum teinte orange tissé main</p>
-              <div class="tapis-card-price-row"><strong class="price">480 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-ajmal-blenz" data-name="Chaise « Ajmal » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-ajmal-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Ajmal%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -315,7 +323,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Arc-en-Ciel » en Bois Blenz &amp; Margoum Artisanal</h3>
               <p>Dossier évidé, margoum rayures multicolores tissé main</p>
-              <div class="tapis-card-price-row"><strong class="price">480 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-arc-en-ciel-blenz" data-name="Chaise « Arc-en-Ciel » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-arc-en-ciel-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Arc-en-Ciel%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -333,7 +341,7 @@
             <div class="tapis-card-body">
               <h3>Chaise Fauteuil « Ambassadeur » Mosaïque en Margoum</h3>
               <p>Dossier haut majestueux, accoudoirs intégrés, margoum mosaïque</p>
-              <div class="tapis-card-price-row"><strong class="price">650 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="650">650 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="fauteuil-ambassadeur-margoum" data-name="Chaise Fauteuil « Ambassadeur » Mosaïque en Margoum" data-img="images/chaise/fauteuil-ambassadeur-margoum-1.jpg" data-price="650" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Fauteuil%20%C2%AB%20Ambassadeur%20%C2%BB%20Mosa%C3%AFque%20en%20Margoum" target="_blank" rel="noopener" data-cursor="big">
@@ -351,7 +359,7 @@
             <div class="tapis-card-body">
               <h3>Chaise Fauteuil « Agadir » en Margoum Artisanal</h3>
               <p>Dossier haut enveloppant, margoum indigo &amp; symboles berbères</p>
-              <div class="tapis-card-price-row"><strong class="price">650 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="650">650 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="fauteuil-agadir-margoum" data-name="Chaise Fauteuil « Agadir » en Margoum Artisanal" data-img="images/chaise/fauteuil-agadir-margoum-1.jpg" data-price="650" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Fauteuil%20%C2%AB%20Agadir%20%C2%BB%20en%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -369,7 +377,7 @@
             <div class="tapis-card-body">
               <h3>Chaise Fauteuil « Atlas » Mosaïque &amp; Rayures en Margoum</h3>
               <p>Dossier haut imposant, margoum patchwork &amp; rayures</p>
-              <div class="tapis-card-price-row"><strong class="price">650 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="650">650 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="fauteuil-atlas-margoum" data-name="Chaise Fauteuil « Atlas » Mosaïque &amp; Rayures en Margoum" data-img="images/chaise/fauteuil-atlas-margoum-1.jpg" data-price="650" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Fauteuil%20%C2%AB%20Atlas%20%C2%BB%20Mosa%C3%AFque%20%26%20Rayures%20en%20Margoum" target="_blank" rel="noopener" data-cursor="big">
@@ -387,7 +395,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Odyssée » en Bois Blenz &amp; Margoum Losanges</h3>
               <p>Dossier arqué, margoum losanges tissé main</p>
-              <div class="tapis-card-price-row"><strong class="price">480 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-odyssee-blenz" data-name="Chaise « Odyssée » en Bois Blenz &amp; Margoum Losanges" data-img="images/chaise/chaise-odyssee-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Odyss%C3%A9e%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Losanges" target="_blank" rel="noopener" data-cursor="big">
@@ -405,7 +413,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Allégria » en Bois Blenz &amp; Margoum Artisanal</h3>
               <p>Dossier arqué, assise fuchsia, dossier losanges tissé main</p>
-              <div class="tapis-card-price-row"><strong class="price">480 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-allegria-blenz" data-name="Chaise « Allégria » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-allegria-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20All%C3%A9gria%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -423,7 +431,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Sindbad » Enveloppante Margoum Artisanal</h3>
               <p>Dossier arrondi style crapaud — 520 TND, duo 850 TND</p>
-              <div class="tapis-card-price-row"><strong class="price">520 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="520">520 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-sindbad-blenz" data-name="Chaise « Sindbad » Enveloppante Margoum Artisanal" data-img="images/chaise/chaise-sindbad-blenz-1.jpg" data-price="520" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Sindbad%20%C2%BB%20Enveloppante%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -441,7 +449,7 @@
             <div class="tapis-card-body">
               <h3>Chaise « Ulysse » Design &amp; Margoum Laine Brute</h3>
               <p>Dossier rouleau, laine brute naturelle — 690 TND, duo 1190 TND</p>
-              <div class="tapis-card-price-row"><strong class="price">690 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="690">690 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="chaise-ulysse-blenz" data-name="Chaise « Ulysse » Design &amp; Margoum Laine Brute" data-img="images/chaise/chaise-ulysse-blenz-1.jpg" data-price="690" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Ulysse%20%C2%BB%20Design%20%26%20Margoum%20Laine%20Brute" target="_blank" rel="noopener" data-cursor="big">

@@ -73,6 +73,14 @@
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
     <div class="header-actions">
+      <div class="currency-switcher" id="currencySwitcher">
+        <button type="button" class="currency-toggle" id="currencyToggle" data-cursor="big" aria-label="Devise">TND</button>
+        <div class="currency-menu" id="currencyMenu">
+          <button type="button" data-currency="TND">TND</button>
+          <button type="button" data-currency="EUR">EUR €</button>
+          <button type="button" data-currency="USD">USD $</button>
+        </div>
+      </div>
       <div class="header-search" id="headerSearch">
         <button type="button" class="search-toggle" id="searchToggle" data-cursor="big" aria-label="Rechercher">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -322,7 +330,7 @@
         <div class="tapis-card-body">
           <h3>Fauteuil Signature en Margoum Tissé Main</h3>
           <p>Assise pure laine tissée main — pièce unique</p>
-          <div class="tapis-card-price-row"><strong class="price">950 TND</strong></div>
+          <div class="tapis-card-price-row"><strong class="price" data-price-tnd="950">950 TND</strong></div>
           <div class="tapis-card-buttons">
             <button class="btn-order" data-id="fauteuil-signature-margoum" data-name="Fauteuil Signature en Margoum Tissé Main" data-img="images/fouteulle/fauteuil-signature-margoum-1.jpg" data-price="950" data-cursor="big">Commander</button>
             <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Fauteuil%20Signature%20en%20Margoum%20Tiss%C3%A9%20Main" target="_blank" rel="noopener" data-cursor="big">
@@ -337,7 +345,7 @@
         <div class="tapis-card-body">
           <h3>Margoum Kairouan Royal – Bleu Sidi Bou Saïd</h3>
           <p>100% laine pure, tissage artisanal — 2m × 3m</p>
-          <div class="tapis-card-price-row"><strong class="price">1 500 TND</strong></div>
+          <div class="tapis-card-price-row"><strong class="price" data-price-tnd="1500">1 500 TND</strong></div>
           <div class="tapis-card-buttons">
             <button class="btn-order" data-id="kairouan-royal-bleu-sidi-bou-said" data-name="Margoum Kairouan Royal – Bleu Sidi Bou Saïd" data-img="images/margoum/kairouan-royal-bleu-sidi-bou-said.jpg" data-price="1500" data-cursor="big">Commander</button>
             <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Margoum%20Kairouan%20Royal%20%E2%80%93%20Bleu%20Sidi%20Bou%20Sa%C3%AFd" target="_blank" rel="noopener" data-cursor="big">
@@ -352,7 +360,7 @@
         <div class="tapis-card-body">
           <h3>Pouf Chauffeuse Lounge « Oasis »</h3>
           <p>Assise basse allongée, style lounge</p>
-          <div class="tapis-card-price-row"><strong class="price">480 TND</strong></div>
+          <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
           <div class="tapis-card-buttons">
             <button class="btn-order" data-id="pouf-oasis-lounge-margoum" data-name="Pouf Chauffeuse Lounge « Oasis » Margoum Pure Laine" data-img="images/pouffe/pouf-oasis-lounge-margoum-1.jpg" data-price="480" data-cursor="big">Commander</button>
             <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Pouf%20Chauffeuse%20Lounge%20%C2%AB%20Oasis%20%C2%BB%20Margoum%20Pure%20Laine" target="_blank" rel="noopener" data-cursor="big">
@@ -367,7 +375,7 @@
         <div class="tapis-card-body">
           <h3>Chaise Fauteuil « Ambassadeur »</h3>
           <p>Dossier haut majestueux, margoum mosaïque</p>
-          <div class="tapis-card-price-row"><strong class="price">650 TND</strong></div>
+          <div class="tapis-card-price-row"><strong class="price" data-price-tnd="650">650 TND</strong></div>
           <div class="tapis-card-buttons">
             <button class="btn-order" data-id="fauteuil-ambassadeur-margoum" data-name="Chaise Fauteuil « Ambassadeur » Mosaïque en Margoum" data-img="images/chaise/fauteuil-ambassadeur-margoum-1.jpg" data-price="650" data-cursor="big">Commander</button>
             <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Fauteuil%20%C2%AB%20Ambassadeur%20%C2%BB%20Mosa%C3%AFque%20en%20Margoum" target="_blank" rel="noopener" data-cursor="big">
@@ -443,7 +451,7 @@
           <div class="tapis-card-body">
             <h3>Margoum Kairouan Classique – Beige Makroudha</h3>
             <p>100% laine pure, tissage artisanal</p>
-            <div class="tapis-card-price-row"><strong class="price">1 550 TND</strong></div>
+            <div class="tapis-card-price-row"><strong class="price" data-price-tnd="1550">1 550 TND</strong></div>
             <div class="tapis-card-buttons">
               <button class="btn-order" data-id="kairouan-beige-makroudha" data-name="Margoum Kairouan Classique – Beige Makroudha" data-img="images/margoum/kairouan-beige-makroudha-1.jpg" data-price="1550" data-cursor="big">Commander</button>
               <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Margoum%20Kairouan%20Classique%20%E2%80%93%20Beige%20Makroudha" target="_blank" rel="noopener" data-cursor="big">
@@ -461,7 +469,7 @@
           <div class="tapis-card-body">
             <h3>Margoum Kairouan Traditionnel – Rouge Royal</h3>
             <p>100% laine pure, tissage artisanal</p>
-            <div class="tapis-card-price-row"><strong class="price">1 650 TND</strong></div>
+            <div class="tapis-card-price-row"><strong class="price" data-price-tnd="1650">1 650 TND</strong></div>
             <div class="tapis-card-buttons">
               <button class="btn-order" data-id="kairouan-rouge-royal" data-name="Margoum Kairouan Traditionnel – Rouge Royal" data-img="images/margoum/kairouan-rouge-royal-1.jpg" data-price="1650" data-cursor="big">Commander</button>
               <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Margoum%20Kairouan%20Traditionnel%20%E2%80%93%20Rouge%20Royal" target="_blank" rel="noopener" data-cursor="big">
@@ -479,7 +487,7 @@
           <div class="tapis-card-body">
             <h3>Margoum Kairouan Design – Gris Contemporain</h3>
             <p>100% laine pure, tissage artisanal</p>
-            <div class="tapis-card-price-row"><strong class="price">1 350 TND</strong></div>
+            <div class="tapis-card-price-row"><strong class="price" data-price-tnd="1350">1 350 TND</strong></div>
             <div class="tapis-card-buttons">
               <button class="btn-order" data-id="kairouan-gris-contemporain" data-name="Margoum Kairouan Design – Gris Contemporain" data-img="images/margoum/kairouan-gris-contemporain-1.jpg" data-price="1350" data-cursor="big">Commander</button>
               <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Margoum%20Kairouan%20Design%20%E2%80%93%20Gris%20Contemporain" target="_blank" rel="noopener" data-cursor="big">
@@ -495,7 +503,7 @@
           <div class="tapis-card-body">
             <h3>Tapis d'Art « Yasmine » Kairouan — Édition 2026</h3>
             <p>20x20 nœuds, 1er choix — pièce d'exception</p>
-            <div class="tapis-card-price-row"><strong class="price">3 800 TND</strong></div>
+            <div class="tapis-card-price-row"><strong class="price" data-price-tnd="3800">3 800 TND</strong></div>
             <div class="tapis-card-buttons">
               <button class="btn-order" data-id="kairouan-yasmine-jardin" data-name="Tapis d'Art « Yasmine » Kairouan — Édition 2026" data-img="images/margoum/kairouan-yasmine-jardin-1.jpg" data-price="3800" data-cursor="big">Commander</button>
               <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Tapis%20d%27Art%20%C2%AB%20Yasmine%20%C2%BB%20Kairouan%20%E2%80%94%20%C3%89dition%202026" target="_blank" rel="noopener" data-cursor="big">
@@ -513,7 +521,7 @@
           <div class="tapis-card-body">
             <h3>Tapis Berbère Kairouan « Sidi Bou Saïd »</h3>
             <p>Champ écru, motifs berbères bleu roi &amp; azur</p>
-            <div class="tapis-card-price-row"><strong class="price">1 600 TND</strong></div>
+            <div class="tapis-card-price-row"><strong class="price" data-price-tnd="1600">1 600 TND</strong></div>
             <div class="tapis-card-buttons">
               <button class="btn-order" data-id="kairouan-berbere-sidi-bou-said" data-name="Tapis Berbère Kairouan « Sidi Bou Saïd » — Grand Salon" data-img="images/margoum/kairouan-berbere-sidi-bou-said-1.jpg" data-price="1600" data-cursor="big">Commander</button>
               <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Tapis%20Berb%C3%A8re%20Kairouan%20%C2%AB%20Sidi%20Bou%20Sa%C3%AFd%20%C2%BB%20%E2%80%94%20Grand%20Salon" target="_blank" rel="noopener" data-cursor="big">

@@ -73,6 +73,14 @@
       <a href="index.html#contact" class="nav-link">Contact</a>
     </nav>
     <div class="header-actions">
+      <div class="currency-switcher" id="currencySwitcher">
+        <button type="button" class="currency-toggle" id="currencyToggle" data-cursor="big" aria-label="Devise">TND</button>
+        <div class="currency-menu" id="currencyMenu">
+          <button type="button" data-currency="TND">TND</button>
+          <button type="button" data-currency="EUR">EUR €</button>
+          <button type="button" data-currency="USD">USD $</button>
+        </div>
+      </div>
       <div class="header-search" id="headerSearch">
         <button type="button" class="search-toggle" id="searchToggle" data-cursor="big" aria-label="Rechercher">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -203,7 +211,7 @@
             <div class="tapis-card-body">
               <h3>Coussin Décoratif en Kilim Traditionnel</h3>
               <p>100% laine tissée main — 45 × 45 cm</p>
-              <div class="tapis-card-price-row"><strong class="price">75 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="75">75 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="coussin-kilim-traditionnel" data-name="Coussin Décoratif en Kilim Traditionnel" data-img="images/coussin/coussin-kilim-traditionnel-1.jpg" data-price="75" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Coussin%20D%C3%A9coratif%20en%20Kilim%20Traditionnel" target="_blank" rel="noopener" data-cursor="big">
@@ -221,7 +229,7 @@
             <div class="tapis-card-body">
               <h3>Coussin de Sol Géant « Atmosphère » 80x80 cm</h3>
               <p>Format XXL, pure laine tissée main, garnissage haute densité</p>
-              <div class="tapis-card-price-row"><strong class="price">190 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="190">190 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="coussin-sol-geant-atmosphere" data-name="Coussin de Sol Géant « Atmosphère » 80x80 cm" data-img="images/coussin/coussin-sol-geant-atmosphere-1.jpg" data-price="190" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Coussin%20de%20Sol%20G%C3%A9ant%20%C2%AB%20Atmosph%C3%A8re%20%C2%BB%2080x80%20cm" target="_blank" rel="noopener" data-cursor="big">
@@ -239,7 +247,7 @@
             <div class="tapis-card-body">
               <h3>Lanterne de Table Suspendue en Fer Forgé</h3>
               <p>Fer forgé noir mat, verre transparent</p>
-              <div class="tapis-card-price-row"><strong class="price">490 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="490">490 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="lanterne-suspendue-fer-forge" data-name="Lanterne de Table Suspendue en Fer Forgé Artisanal" data-img="images/deco-fer-forge/lanterne-suspendue-fer-forge-1.jpg" data-price="490" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Lanterne%20de%20Table%20Suspendue%20en%20Fer%20Forg%C3%A9%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
@@ -257,7 +265,7 @@
             <div class="tapis-card-body">
               <h3>Lanterne « Nuit Étoilée » en Fer Forgé</h3>
               <p>Découpes ajourées croissants &amp; étoiles</p>
-              <div class="tapis-card-price-row"><strong class="price">390 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="390">390 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="lanterne-nuit-etoilee-fer-forge" data-name="Lanterne Artisanale « Nuit Étoilée » en Fer Forgé" data-img="images/deco-fer-forge/lanterne-nuit-etoilee-fer-forge-1.jpg" data-price="390" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Lanterne%20Artisanale%20%C2%AB%20Nuit%20%C3%89toil%C3%A9e%20%C2%BB%20en%20Fer%20Forg%C3%A9" target="_blank" rel="noopener" data-cursor="big">
@@ -275,7 +283,7 @@
             <div class="tapis-card-body">
               <h3>Applique Murale Style Andalou en Fer Forgé</h3>
               <p>Volutes fer forgé, verre dépoli</p>
-              <div class="tapis-card-price-row"><strong class="price">350 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="350">350 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="applique-murale-andalou-fer-forge" data-name="Applique Murale Style Andalou en Fer Forgé" data-img="images/deco-fer-forge/applique-murale-andalou-fer-forge-1.jpg" data-price="350" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Applique%20Murale%20Style%20Andalou%20en%20Fer%20Forg%C3%A9" target="_blank" rel="noopener" data-cursor="big">

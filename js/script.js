@@ -207,6 +207,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const WHATSAPP_NUMBER = '21629457597'; // client's primary number, +216 no leading 0 — swap freely if they prefer the other one
   const buildWhatsAppLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
+  // ---------- Currency display (fixed indicative rates, browsing convenience only — orders/WhatsApp always stay in TND) ----------
+  const CURRENCY_RATES = { TND: 1, EUR: 1 / 3.40, USD: 1 / 3.15 }; // update manually if rates drift
+  const CURRENCY_SYMBOLS = { TND: 'TND', EUR: '€', USD: '$' };
+  const CURRENCY_KEY = 'margoum_currency';
+  const getCurrency = () => localStorage.getItem(CURRENCY_KEY) || 'TND';
+  const setCurrency = (cur) => localStorage.setItem(CURRENCY_KEY, cur);
+  const formatPrice = (tnd, currency = getCurrency()) => {
+    const val = tnd * CURRENCY_RATES[currency];
+    if (currency === 'TND') return `${Math.round(val).toLocaleString('fr-FR')} TND`;
+    return `${CURRENCY_SYMBOLS[currency]}${val.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  };
+  function refreshDisplayedPrices() {
+    const cur = getCurrency();
+    document.querySelectorAll('[data-price-tnd]').forEach(el => {
+      el.textContent = formatPrice(parseFloat(el.dataset.priceTnd), cur);
+    });
+    document.querySelectorAll('.currency-toggle').forEach(btn => { btn.textContent = cur; });
+    document.querySelectorAll('.currency-menu button[data-currency]').forEach(b => {
+      b.classList.toggle('active', b.dataset.currency === cur);
+    });
+    if (typeof renderCart === 'function') renderCart();
+  }
+  document.querySelectorAll('.currency-switcher').forEach(sw => {
+    const toggle = sw.querySelector('.currency-toggle');
+    const menu = sw.querySelector('.currency-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', (e) => { e.stopPropagation(); sw.classList.toggle('open'); });
+    menu.querySelectorAll('button[data-currency]').forEach(b => {
+      b.addEventListener('click', () => {
+        setCurrency(b.dataset.currency);
+        sw.classList.remove('open');
+        refreshDisplayedPrices();
+      });
+    });
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.currency-switcher.open').forEach(sw => {
+      if (!sw.contains(e.target)) sw.classList.remove('open');
+    });
+  });
+
   // ---------- Cart (localStorage, functional add/remove/qty + drawer) ----------
   const CART_KEY = 'margoum_cart';
   const getCart = () => JSON.parse(localStorage.getItem(CART_KEY) || '[]');
@@ -255,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="cart-item-swatch"><img src="${item.img}" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="cart-item-body">
           <h4>${item.name}</h4>
-          <p>${item.price != null ? item.price + ' TND' : 'Prix sur demande'}</p>
+          <p>${item.price != null ? formatPrice(item.price) : 'Prix sur demande'}</p>
           <div class="cart-item-qty">
             <button type="button" data-action="dec" aria-label="Diminuer">−</button>
             <span>${item.qty}</span>
@@ -271,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (cartSubtotalEl) {
-      cartSubtotalEl.textContent = items.length === 0 ? '0 TND' : (hasUnpriced ? 'Sur demande' : total + ' TND');
+      cartSubtotalEl.textContent = items.length === 0 ? formatPrice(0) : (hasUnpriced ? 'Sur demande' : formatPrice(total));
     }
 
     const count = items.reduce((n, i) => n + i.qty, 0);
@@ -1563,7 +1604,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!product || !quickviewModal) return;
 
     quickviewTitle.textContent = product.name;
-    quickviewPrice.textContent = product.price.toLocaleString('fr-FR') + ' TND';
+    quickviewPrice.textContent = formatPrice(product.price);
     quickviewDesc.textContent = product.description;
     quickviewSpecs.innerHTML = product.specs.map(s => `<li><strong>${s.label}</strong><span>${s.value}</span></li>`).join('');
 
@@ -1639,6 +1680,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   renderCart();
+  refreshDisplayedPrices();
 
   // ---------- Auto-play video (play/pause + mute, autoplay-on-scroll-into-view) ----------
   function setupAutoVideo({ videoId, bgId, playBtnId, muteBtnId, muteOnId, muteOffId }) {

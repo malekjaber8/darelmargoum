@@ -324,6 +324,38 @@ a { text-decoration: none; color: inherit; }
 }
 .account-toggle:hover { background: var(--terracotta); color: var(--dark); transform: translateY(-2px); }
 
+/* ===================== Currency switcher ===================== */
+.currency-switcher { position: relative; }
+.currency-toggle {
+  display: flex; align-items: center; gap: 4px;
+  height: 40px; padding: 0 14px;
+  border-radius: 999px;
+  background: var(--cream);
+  border: 1px solid var(--cream-line);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em;
+  transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s var(--ease);
+}
+.currency-toggle:hover { border-color: var(--terracotta); color: var(--terracotta); transform: translateY(-2px); }
+.currency-menu {
+  position: absolute; top: calc(100% + 10px); left: 0;
+  background: var(--cream); border: 1px solid var(--cream-line); border-radius: var(--radius);
+  box-shadow: 0 20px 40px -20px rgba(28,26,23,0.4);
+  padding: 6px; min-width: 100px;
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 20;
+}
+.currency-switcher.open .currency-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.currency-menu button {
+  display: block; width: 100%; text-align: left;
+  padding: 8px 10px; border-radius: 6px;
+  font-size: 0.85rem; color: var(--ink);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.currency-menu button:hover, .currency-menu button.active { background: var(--bg-soft); color: var(--terracotta); }
+
 .header-search-results {
   position: absolute;
   top: calc(100% + 12px);
@@ -1812,6 +1844,7 @@ section { padding: 100px 0; position: relative; }
   .header-cta { display: none; }
   .account-toggle { display: none; }
   .header-actions { gap: 8px; }
+  .currency-toggle { height: 36px; padding: 0 10px; font-size: 0.72rem; }
   .logo { gap: 10px; }
   .logo-icon { height: 56px; box-shadow: 0 0 0 2px var(--cream), 0 0 0 4px var(--terracotta); }
   .header.scrolled .logo-icon { height: 46px; }

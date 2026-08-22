@@ -73,6 +73,14 @@
       <a href="index.html#contact" class="nav-link">Contact</a>
     </nav>
     <div class="header-actions">
+      <div class="currency-switcher" id="currencySwitcher">
+        <button type="button" class="currency-toggle" id="currencyToggle" data-cursor="big" aria-label="Devise">TND</button>
+        <div class="currency-menu" id="currencyMenu">
+          <button type="button" data-currency="TND">TND</button>
+          <button type="button" data-currency="EUR">EUR €</button>
+          <button type="button" data-currency="USD">USD $</button>
+        </div>
+      </div>
       <div class="header-search" id="headerSearch">
         <button type="button" class="search-toggle" id="searchToggle" data-cursor="big" aria-label="Rechercher">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -207,7 +215,7 @@
             <div class="tapis-card-body">
               <h3>Table Appoint Style Blenz</h3>
               <p>Bois naturel, octogonale — Ø 45 cm, hauteur 45 cm</p>
-              <div class="tapis-card-price-row"><strong class="price">190 TND</strong></div>
+              <div class="tapis-card-price-row"><strong class="price" data-price-tnd="190">190 TND</strong></div>
               <div class="tapis-card-buttons">
                 <button class="btn-order" data-id="table-appoint-blenz" data-name="Table Appoint Style Blenz" data-img="images/table/table-appoint-blenz-1.jpg" data-price="190" data-cursor="big">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Table%20Appoint%20Style%20Blenz" target="_blank" rel="noopener" data-cursor="big">
