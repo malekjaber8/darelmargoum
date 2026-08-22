@@ -1,5 +1,134 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---------- i18n (French is authored directly in the HTML and captured live as the "fr" fallback — only "en" needs to be hand-translated below; Arabic is not wired yet) ----------
+  const I18N = { fr: {}, en: {
+    'nav.home': 'Home',
+    'nav.categories': 'Categories',
+    'nav.furniture': 'Furniture &amp; Seating',
+    'nav.armchairs': 'Armchairs',
+    'nav.chairs': 'Margoum Chairs',
+    'nav.roundChairs': 'Round Chairs',
+    'nav.poufs': 'Poufs &amp; Daybeds',
+    'nav.outdoor': 'Margoum Outdoor Lounge',
+    'nav.tables': 'Tables &amp; Accessories',
+    'nav.rugsHeading': 'Rugs &amp; Margoum',
+    'nav.allRugs': 'All rugs',
+    'nav.decoHeading': 'Décor &amp; Knives',
+    'nav.decoKnives': 'Knives &amp; Cushions',
+    'nav.about': 'About',
+    'nav.custom': 'Custom-Made',
+    'nav.contact': 'Contact',
+    'search.placeholder': 'Search…',
+    'breadcrumb.back': 'Back to home',
+    'cart.title': 'Your cart',
+    'cart.empty': 'Your cart is empty for now.',
+    'cart.subtotal': 'Subtotal',
+    'cart.checkout': 'Order via WhatsApp',
+    'cart.note': 'Online payment coming soon — we finalize your order together.',
+    'footer.tagline': 'Margoum is the union of wood and weaving to bring authenticity and refinement to your spaces.',
+    'footer.quickLinks': 'Quick links',
+    'footer.help': 'Need help?',
+    'footer.faq': 'FAQ',
+    'footer.shipping': 'Shipping &amp; returns',
+    'footer.care': 'Care',
+    'footer.terms': 'Terms of sale',
+    'footer.privacy': 'Privacy policy',
+    'footer.newsletter': 'Newsletter',
+    'footer.newsletterText': 'Get our new arrivals and inspiration first.',
+    'footer.newsletterPlaceholder': 'Your email',
+    'footer.newsletterBtn': 'Subscribe',
+    'footer.madeWith': 'Made with passion in Tunisia',
+    'quickview.badge': '100% handmade by our artisans in Tunisia — Premium A1 quality',
+    'quickview.careSummary': 'Care, shipping &amp; guarantees',
+    'quickview.care1': 'Dust regularly with a vacuum or a soft cloth.',
+    'quickview.care2': 'In case of a stain, clean immediately with a damp cloth and mild soap.',
+    'quickview.care3': 'Professional dry cleaning recommended if needed.',
+    'quickview.care4': 'Fast, securely packaged delivery across Tunisia.',
+    'quickview.care5': 'You can inspect the piece on delivery, before paying.',
+    'quickview.advice': 'Need help choosing? Send a photo of your room on WhatsApp →',
+    'quickview.order': 'Order',
+    'quickview.whatsapp': 'WhatsApp',
+    'quickview.badgeTapis': '100% handwoven by Kairouan artisans — Premium A1 quality',
+    'quickview.care1tapis': 'Dust regularly with a vacuum cleaner.',
+    'discover.chairsShort': 'Chairs',
+    'discover.poufsShort': 'Poufs',
+    'discover.tablesShort': 'Side Tables',
+    'cta.order': 'Order',
+    'cta.viewDetails': 'View details',
+    'cta.discover': 'Discover',
+    'cta.contactUs': 'Contact us',
+    'sort.label': 'Sort by',
+    'sort.default': 'Our favorites',
+    'sort.az': 'Name A-Z',
+    'sort.za': 'Name Z-A',
+    'sidebar.customTitle': 'A custom piece?',
+    'sidebar.customText': 'Choose the size and margoum pattern.',
+    'sidebar.customTextWood': 'Choose the wood, margoum pattern, and dimensions.',
+    'sidebar.customTextFinish': 'Choose the finish and margoum pattern.',
+    'sidebar.customTextStructure': 'Choose the structure and margoum pattern.',
+    'hero.title': '<span class="line"><span class="word">The</span> <span class="word">Elegance</span> <span class="word">of</span> <span class="word">Tunisian</span></span><span class="line"><span class="word">Craftsmanship</span> <span class="word">in</span> <span class="word">Your</span> <span class="word">Home</span></span>',
+    'hero.cta': 'Discover the Collection',
+    'trust.handmade': '100% Handmade &amp; Authentic',
+    'trust.shipping': 'Shipping across Tunisia 🇹🇳 and internationally ✈️',
+    'trust.custom': 'Custom-made available',
+    'universe.eyebrow': 'The Margoum Tunisia Universe',
+    'universe.subtitle': 'Discover our creations inspired by Tunisian craft heritage.',
+    'universe.furnitureTitle': 'Furniture<br>&amp; Seating',
+    'universe.furnitureDesc': 'Chairs, poufs, daybeds, tables &amp; lounges in Margoum.',
+    'universe.rugsTitle': 'Rugs<br>&amp; Margoum',
+    'universe.rugsDesc': 'Margoum from Kairouan, Oudhref, Gafsa, Kilim du Sud, Zarbia…',
+    'universe.explore': 'Explore the collection',
+    'universe.decoTitle': 'Décor<br>&amp; Crafts',
+    'universe.decoDesc': 'Cushions, handcrafted knives, accessories &amp; art objects.',
+  } };
+  const LANG_KEY = 'margoum_lang';
+  const getLang = () => localStorage.getItem(LANG_KEY) || 'fr';
+  const setLang = (l) => localStorage.setItem(LANG_KEY, l);
+  const UI_STRINGS = {
+    fr: { remove: 'Retirer', dec: 'Diminuer', inc: 'Augmenter', piece: 'pièce', pieces: 'pièces', comingSoon: 'Bientôt disponible', onRequest: 'Sur demande', priceOnRequest: 'Prix sur demande' },
+    en: { remove: 'Remove', dec: 'Decrease', inc: 'Increase', piece: 'item', pieces: 'items', comingSoon: 'Coming soon', onRequest: 'On request', priceOnRequest: 'Price on request' },
+  };
+  const t = () => UI_STRINGS[getLang()] || UI_STRINGS.fr;
+  function applyLanguage(lang) {
+    document.documentElement.lang = lang === 'en' ? 'en' : 'fr';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      const attr = el.dataset.i18nAttr;
+      const current = attr ? el.getAttribute(attr) : el.innerHTML;
+      if (I18N.fr[key] == null) I18N.fr[key] = current; // capture original French once, on first run
+      const val = (I18N[lang] && I18N[lang][key] != null) ? I18N[lang][key] : I18N.fr[key];
+      if (attr) el.setAttribute(attr, val); else el.innerHTML = val;
+    });
+    document.querySelectorAll('.lang-toggle').forEach(btn => { btn.textContent = lang.toUpperCase(); });
+    document.querySelectorAll('.lang-menu button[data-lang]').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    const catGridEl = document.getElementById('catGrid');
+    const catCountEl2 = document.querySelector('.cat-count');
+    if (catGridEl && catCountEl2) {
+      const visible = [...catGridEl.children].filter(c => c.style.display !== 'none').length;
+      catCountEl2.textContent = visible === 0 ? t().comingSoon : `${visible} ${visible > 1 ? t().pieces : t().piece}`;
+    }
+    if (typeof renderCart === 'function') renderCart();
+  }
+  document.querySelectorAll('.lang-switcher').forEach(sw => {
+    const toggle = sw.querySelector('.lang-toggle');
+    const menu = sw.querySelector('.lang-menu');
+    if (!toggle || !menu) return;
+    toggle.addEventListener('click', (e) => { e.stopPropagation(); sw.classList.toggle('open'); });
+    menu.querySelectorAll('button[data-lang]:not([disabled])').forEach(b => {
+      b.addEventListener('click', () => {
+        setLang(b.dataset.lang);
+        sw.classList.remove('open');
+        applyLanguage(b.dataset.lang);
+      });
+    });
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.lang-switcher.open').forEach(sw => {
+      if (!sw.contains(e.target)) sw.classList.remove('open');
+    });
+  });
+  applyLanguage(getLang());
+
   // ---------- Loader ----------
   const loader = document.getElementById('loader');
   window.addEventListener('load', () => {
@@ -296,13 +425,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="cart-item-swatch"><img src="${item.img}" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
         <div class="cart-item-body">
           <h4>${item.name}</h4>
-          <p>${item.price != null ? formatPrice(item.price) : 'Prix sur demande'}</p>
+          <p>${item.price != null ? formatPrice(item.price) : t().priceOnRequest}</p>
           <div class="cart-item-qty">
-            <button type="button" data-action="dec" aria-label="Diminuer">−</button>
+            <button type="button" data-action="dec" aria-label="${t().dec}">−</button>
             <span>${item.qty}</span>
-            <button type="button" data-action="inc" aria-label="Augmenter">+</button>
+            <button type="button" data-action="inc" aria-label="${t().inc}">+</button>
           </div>
-          <a href="#" class="cart-item-remove" data-action="remove">Retirer</a>
+          <a href="#" class="cart-item-remove" data-action="remove">${t().remove}</a>
         </div>
       `;
       row.querySelector('[data-action="dec"]').addEventListener('click', () => updateQty(item.id, -1));
@@ -312,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (cartSubtotalEl) {
-      cartSubtotalEl.textContent = items.length === 0 ? formatPrice(0) : (hasUnpriced ? 'Sur demande' : formatPrice(total));
+      cartSubtotalEl.textContent = items.length === 0 ? formatPrice(0) : (hasUnpriced ? t().onRequest : formatPrice(total));
     }
 
     const count = items.reduce((n, i) => n + i.qty, 0);
@@ -1886,7 +2015,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.display = show ? '' : 'none';
         if (show) { visible++; card.classList.add('aos-animate'); }
       });
-      if (catCountEl) catCountEl.textContent = visible === 0 ? 'Bientôt disponible' : `${visible} pièce${visible > 1 ? 's' : ''}`;
+      if (catCountEl) catCountEl.textContent = visible === 0 ? t().comingSoon : `${visible} ${visible > 1 ? t().pieces : t().piece}`;
       const catGridEmpty = document.getElementById('catGridEmpty');
       if (catGridEmpty) catGridEmpty.hidden = visible !== 0;
       catFilterNavs.forEach(nav => {

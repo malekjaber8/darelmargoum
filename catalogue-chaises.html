@@ -69,34 +69,42 @@ fbq("track", "PageView");
       <span class="logo-text">Margoum<em>Tunisia</em></span>
     </a>
     <nav class="nav" id="nav">
-      <a href="index.html#accueil" class="nav-link">Accueil</a>
+      <a href="index.html#accueil" class="nav-link" data-i18n="nav.home">Accueil</a>
       <div class="nav-item-dropdown">
-        <a href="index.html#collection" class="nav-link active">Catégories <svg width="10" height="7" viewBox="0 0 10 7" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="index.html#collection" class="nav-link active"><span data-i18n="nav.categories">Catégories</span> <svg width="10" height="7" viewBox="0 0 10 7" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <div class="nav-dropdown-panel">
           <div class="nav-dropdown-col">
-            <h5>Mobilier &amp; Assises</h5>
-            <a href="catalogue-fauteuils.html">Fauteuils</a>
-            <a href="catalogue-chaises.html">Chaises en Margoum</a>
-            <a href="catalogue-chaises-rondes.html">Chaises Rondes</a>
-            <a href="catalogue-poufs.html">Poufs &amp; Méridiennes</a>
-            <a href="catalogue-salon-exterieur.html">Salon en Margoum</a>
-            <a href="catalogue-tables-accessoires.html">Tables &amp; Accessoires</a>
+            <h5 data-i18n="nav.furniture">Mobilier &amp; Assises</h5>
+            <a href="catalogue-fauteuils.html" data-i18n="nav.armchairs">Fauteuils</a>
+            <a href="catalogue-chaises.html" data-i18n="nav.chairs">Chaises en Margoum</a>
+            <a href="catalogue-chaises-rondes.html" data-i18n="nav.roundChairs">Chaises Rondes</a>
+            <a href="catalogue-poufs.html" data-i18n="nav.poufs">Poufs &amp; Méridiennes</a>
+            <a href="catalogue-salon-exterieur.html" data-i18n="nav.outdoor">Salon en Margoum</a>
+            <a href="catalogue-tables-accessoires.html" data-i18n="nav.tables">Tables &amp; Accessoires</a>
           </div>
           <div class="nav-dropdown-col">
-            <h5><a href="index.html#tapis">Tapis &amp; Margoum</a></h5>
-            <a href="catalogue-tapis.html">Tous les tapis</a>
+            <h5><a href="index.html#tapis" data-i18n="nav.rugsHeading">Tapis &amp; Margoum</a></h5>
+            <a href="catalogue-tapis.html" data-i18n="nav.allRugs">Tous les tapis</a>
           </div>
           <div class="nav-dropdown-col">
-            <h5>Déco &amp; Couteaux</h5>
-            <a href="catalogue-deco-couteaux.html">Couteaux &amp; Coussins</a>
+            <h5 data-i18n="nav.decoHeading">Déco &amp; Couteaux</h5>
+            <a href="catalogue-deco-couteaux.html" data-i18n="nav.decoKnives">Couteaux &amp; Coussins</a>
           </div>
         </div>
       </div>
-      <a href="index.html#reassurance" class="nav-link">À propos</a>
-      <a href="index.html#sur-mesure" class="nav-link">Sur-Mesure</a>
-      <a href="index.html#contact" class="nav-link">Contact</a>
+      <a href="index.html#reassurance" class="nav-link" data-i18n="nav.about">À propos</a>
+      <a href="index.html#sur-mesure" class="nav-link" data-i18n="nav.custom">Sur-Mesure</a>
+      <a href="index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-actions">
+      <div class="lang-switcher" id="langSwitcher">
+        <button type="button" class="lang-toggle" id="langToggle" data-cursor="big" aria-label="Langue">FR</button>
+        <div class="lang-menu" id="langMenu">
+          <button type="button" data-lang="fr">Français</button>
+          <button type="button" data-lang="en">English</button>
+          <button type="button" data-lang="ar" disabled>العربية <span class="lang-soon">Bientôt</span></button>
+        </div>
+      </div>
       <div class="currency-switcher" id="currencySwitcher">
         <button type="button" class="currency-toggle" id="currencyToggle" data-cursor="big" aria-label="Devise">TND</button>
         <div class="currency-menu" id="currencyMenu">
@@ -109,7 +117,7 @@ fbq("track", "PageView");
         <button type="button" class="search-toggle" id="searchToggle" data-cursor="big" aria-label="Rechercher">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </button>
-        <input type="text" id="searchInput" class="header-search-input" placeholder="Rechercher…" autocomplete="off">
+        <input type="text" id="searchInput" class="header-search-input" placeholder="Rechercher…" data-i18n="search.placeholder" data-i18n-attr="placeholder" autocomplete="off">
         <div class="header-search-results" id="searchResults"></div>
       </div>
       <a href="index.html#contact" class="account-toggle" data-cursor="big" aria-label="Mon compte">
@@ -129,21 +137,21 @@ fbq("track", "PageView");
 <div class="cart-overlay" id="cartOverlay"></div>
 <aside class="cart-drawer" id="cartDrawer" aria-label="Panier">
   <div class="cart-drawer-head">
-    <h3>Votre panier</h3>
+    <h3 data-i18n="cart.title">Votre panier</h3>
     <button class="cart-close" id="cartClose" aria-label="Fermer">
       <svg width="16" height="16" viewBox="0 0 16 16"><path d="M1 1L15 15M15 1L1 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
     </button>
   </div>
   <div class="cart-items" id="cartItems">
-    <p class="cart-empty" id="cartEmpty">Votre panier est vide pour l'instant.</p>
+    <p class="cart-empty" id="cartEmpty"><span data-i18n="cart.empty">Votre panier est vide pour l'instant.</span></p>
   </div>
   <div class="cart-drawer-foot">
     <div class="cart-subtotal">
-      <span>Sous-total</span>
+      <span data-i18n="cart.subtotal">Sous-total</span>
       <strong id="cartSubtotal">0 TND</strong>
     </div>
-    <a href="index.html#contact" class="btn btn-solid cart-checkout" id="cartCheckout" data-cursor="big">Commander via WhatsApp</a>
-    <p class="cart-note">Paiement en ligne bientôt disponible — on finalise votre commande ensemble.</p>
+    <a href="index.html#contact" class="btn btn-solid cart-checkout" id="cartCheckout" data-cursor="big" data-i18n="cart.checkout">Commander via WhatsApp</a>
+    <p class="cart-note" data-i18n="cart.note">Paiement en ligne bientôt disponible — on finalise votre commande ensemble.</p>
   </div>
 </aside>
 
@@ -151,7 +159,7 @@ fbq("track", "PageView");
   <div class="container cat-breadcrumb" data-aos="fade-up">
     <a href="index.html" class="cat-back-btn">
       <svg width="15" height="12" viewBox="0 0 16 12" fill="none"><path d="M15 6H1M1 6L6 1M1 6L6 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Retour à l'accueil
+      <span data-i18n="breadcrumb.back">Retour à l'accueil</span>
     </a>
   </div>
 
@@ -194,17 +202,17 @@ fbq("track", "PageView");
           <nav class="cat-sidebar-nav">
             <a href="catalogue-fauteuils.html">Fauteuils &amp; Canapés</a>
             <a href="catalogue-chaises.html" class="active">Chaises</a>
-            <a href="catalogue-chaises-rondes.html">Chaises Rondes</a>
+            <a href="catalogue-chaises-rondes.html" data-i18n="nav.roundChairs">Chaises Rondes</a>
             <a href="catalogue-poufs.html">Poufs &amp; Assises Basses</a>
             <a href="catalogue-salon-exterieur.html">Salon Extérieur</a>
-            <a href="catalogue-tables-accessoires.html">Tables &amp; Accessoires</a>
+            <a href="catalogue-tables-accessoires.html" data-i18n="nav.tables">Tables &amp; Accessoires</a>
           </nav>
         </div>
         </div>
         <div class="cat-sidebar-cta">
-          <p>Une pièce sur-mesure ?</p>
-          <span>Choisissez le bois, le motif margoum, les dimensions.</span>
-          <a href="index.html#contact" class="btn-outline" data-cursor="big">Nous contacter</a>
+          <p data-i18n="sidebar.customTitle">Une pièce sur-mesure ?</p>
+          <span data-i18n="sidebar.customTextWood">Choisissez le bois, le motif margoum, les dimensions.</span>
+          <a href="index.html#contact" class="btn-outline" data-cursor="big" data-i18n="cta.contactUs">Nous contacter</a>
         </div>
       </aside>
 
@@ -212,11 +220,11 @@ fbq("track", "PageView");
         <div class="cat-toolbar">
           <span class="cat-count">14 pièces</span>
           <div class="cat-sort">
-            <label for="catSort">Trier par</label>
+            <label for="catSort" data-i18n="sort.label">Trier par</label>
             <select id="catSort" class="cat-sort-select">
-              <option value="default">Nos coups de cœur</option>
-              <option value="az">Nom A-Z</option>
-              <option value="za">Nom Z-A</option>
+              <option value="default" data-i18n="sort.default">Nos coups de cœur</option>
+              <option value="az" data-i18n="sort.az">Nom A-Z</option>
+              <option value="za" data-i18n="sort.za">Nom Z-A</option>
             </select>
           </div>
         </div>
@@ -234,14 +242,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Ensemble Coin Thé Authentique" data-aos="fade-up" data-aos-delay="240">
             <a href="#" class="tapis-card-media" data-quickview="ensemble-coin-the-duo-tradition-design">
               <img src="images/chaise/ensemble-coin-the-duo-tradition-design-1.jpg" alt="Ensemble 2 chaises margoum et table octogonale en bois">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Ensemble Coin Thé Authentique</h3>
               <p>2 chaises margoum + table octogonale en bois</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="1200">1 200 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="ensemble-coin-the-duo-tradition-design" data-name="Ensemble Coin Thé Authentique – 2 Chaises + Table Octogonale" data-img="images/chaise/ensemble-coin-the-duo-tradition-design-1.jpg" data-price="1200" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="ensemble-coin-the-duo-tradition-design" data-name="Ensemble Coin Thé Authentique – 2 Chaises + Table Octogonale" data-img="images/chaise/ensemble-coin-the-duo-tradition-design-1.jpg" data-price="1200" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Ensemble%20Coin%20Th%C3%A9%20Authentique%20%E2%80%93%202%20Chaises%20%2B%20Table%20Octogonale" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -252,14 +260,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise Signée en Bois &amp; Margoum Artisanal" data-aos="fade-up" data-aos-delay="320">
             <a href="#" class="tapis-card-media" data-quickview="chaise-signee-bois-margoum">
               <img src="images/chaise/chaise-signee-bois-margoum-1.jpg" alt="Chaise en bois massif, assise rembourrée margoum">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise Signée en Bois &amp; Margoum Artisanal</h3>
               <p>Bois massif, assise 100% laine tissée main — pièce unique</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="450">450 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-signee-bois-margoum" data-name="Chaise Signée en Bois &amp; Margoum Artisanal" data-img="images/chaise/chaise-signee-bois-margoum-1.jpg" data-price="450" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-signee-bois-margoum" data-name="Chaise Signée en Bois &amp; Margoum Artisanal" data-img="images/chaise/chaise-signee-bois-margoum-1.jpg" data-price="450" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Sign%C3%A9e%20en%20Bois%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -270,14 +278,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Blenz » Noir &amp; Blanc Artisanal" data-aos="fade-up">
             <a href="#" class="tapis-card-media" data-quickview="chaise-blenz-noir-blanc">
               <img src="images/chaise/chaise-blenz-noir-blanc-1.jpg" alt="Chaise fauteuil laquée blanc, assise tissée noir et blanc style Gafsa">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Blenz » Noir &amp; Blanc Artisanal</h3>
               <p>Bois laqué blanc, assise tissée main motifs de Gafsa</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="850">850 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-blenz-noir-blanc" data-name="Chaise « Blenz » Noir &amp; Blanc Artisanal" data-img="images/chaise/chaise-blenz-noir-blanc-1.jpg" data-price="850" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-blenz-noir-blanc" data-name="Chaise « Blenz » Noir &amp; Blanc Artisanal" data-img="images/chaise/chaise-blenz-noir-blanc-1.jpg" data-price="850" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Blenz%20%C2%BB%20Noir%20%26%20Blanc%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -288,14 +296,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Aurora » en Bois Blenz &amp; Margoum Artisanal" data-aos="fade-up" data-aos-delay="80">
             <a href="#" class="tapis-card-media" data-quickview="chaise-aurora-blenz">
               <img src="images/chaise/chaise-aurora-blenz-1.jpg" alt="Chaise bois Blenz dossier médaillon, margoum motifs berbères">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Aurora » en Bois Blenz &amp; Margoum Artisanal</h3>
               <p>Dossier médaillon évidé, margoum tissé main pure laine</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-aurora-blenz" data-name="Chaise « Aurora » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-aurora-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-aurora-blenz" data-name="Chaise « Aurora » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-aurora-blenz-1.jpg" data-price="480" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Aurora%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -306,14 +314,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Elissa » en Bois Blenz &amp; Margoum Losanges" data-aos="fade-up" data-aos-delay="160">
             <a href="#" class="tapis-card-media" data-quickview="chaise-elissa-blenz">
               <img src="images/chaise/chaise-elissa-blenz-1.jpg" alt="Chaise bois Blenz dossier arqué, margoum motif losanges multicolores">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Elissa » en Bois Blenz &amp; Margoum Losanges</h3>
               <p>Dossier arqué, margoum motif losanges tissé main</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-elissa-blenz" data-name="Chaise « Elissa » en Bois Blenz &amp; Margoum Losanges" data-img="images/chaise/chaise-elissa-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-elissa-blenz" data-name="Chaise « Elissa » en Bois Blenz &amp; Margoum Losanges" data-img="images/chaise/chaise-elissa-blenz-1.jpg" data-price="480" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Elissa%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Losanges" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -324,14 +332,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Ajmal » en Bois Blenz &amp; Margoum Artisanal" data-aos="fade-up" data-aos-delay="240">
             <a href="#" class="tapis-card-media" data-quickview="chaise-ajmal-blenz">
               <img src="images/chaise/chaise-ajmal-blenz-1.jpg" alt="Chaise bois Blenz dossier évidé, margoum teinte orange">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Ajmal » en Bois Blenz &amp; Margoum Artisanal</h3>
               <p>Dossier évidé, margoum teinte orange tissé main</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-ajmal-blenz" data-name="Chaise « Ajmal » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-ajmal-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-ajmal-blenz" data-name="Chaise « Ajmal » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-ajmal-blenz-1.jpg" data-price="480" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Ajmal%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -342,14 +350,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Arc-en-Ciel » en Bois Blenz &amp; Margoum Artisanal" data-aos="fade-up" data-aos-delay="320">
             <a href="#" class="tapis-card-media" data-quickview="chaise-arc-en-ciel-blenz">
               <img src="images/chaise/chaise-arc-en-ciel-blenz-1.jpg" alt="Chaise bois Blenz dossier évidé, margoum rayures multicolores">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Arc-en-Ciel » en Bois Blenz &amp; Margoum Artisanal</h3>
               <p>Dossier évidé, margoum rayures multicolores tissé main</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-arc-en-ciel-blenz" data-name="Chaise « Arc-en-Ciel » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-arc-en-ciel-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-arc-en-ciel-blenz" data-name="Chaise « Arc-en-Ciel » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-arc-en-ciel-blenz-1.jpg" data-price="480" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Arc-en-Ciel%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -360,14 +368,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise Fauteuil « Ambassadeur » Mosaïque en Margoum" data-aos="fade-up">
             <a href="#" class="tapis-card-media" data-quickview="fauteuil-ambassadeur-margoum">
               <img src="images/chaise/fauteuil-ambassadeur-margoum-1.jpg" alt="Chaise fauteuil dossier haut, mosaïque margoum jaune, rouge, violet et bleu">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise Fauteuil « Ambassadeur » Mosaïque en Margoum</h3>
               <p>Dossier haut majestueux, accoudoirs intégrés, margoum mosaïque</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="650">650 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="fauteuil-ambassadeur-margoum" data-name="Chaise Fauteuil « Ambassadeur » Mosaïque en Margoum" data-img="images/chaise/fauteuil-ambassadeur-margoum-1.jpg" data-price="650" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="fauteuil-ambassadeur-margoum" data-name="Chaise Fauteuil « Ambassadeur » Mosaïque en Margoum" data-img="images/chaise/fauteuil-ambassadeur-margoum-1.jpg" data-price="650" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Fauteuil%20%C2%AB%20Ambassadeur%20%C2%BB%20Mosa%C3%AFque%20en%20Margoum" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -378,14 +386,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise Fauteuil « Agadir » en Margoum Artisanal" data-aos="fade-up" data-aos-delay="80">
             <a href="#" class="tapis-card-media" data-quickview="fauteuil-agadir-margoum">
               <img src="images/chaise/fauteuil-agadir-margoum-1.jpg" alt="Chaise fauteuil dossier haut, margoum indigo et symboles berbères">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise Fauteuil « Agadir » en Margoum Artisanal</h3>
               <p>Dossier haut enveloppant, margoum indigo &amp; symboles berbères</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="650">650 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="fauteuil-agadir-margoum" data-name="Chaise Fauteuil « Agadir » en Margoum Artisanal" data-img="images/chaise/fauteuil-agadir-margoum-1.jpg" data-price="650" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="fauteuil-agadir-margoum" data-name="Chaise Fauteuil « Agadir » en Margoum Artisanal" data-img="images/chaise/fauteuil-agadir-margoum-1.jpg" data-price="650" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Fauteuil%20%C2%AB%20Agadir%20%C2%BB%20en%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -396,14 +404,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise Fauteuil « Atlas » Mosaïque &amp; Rayures en Margoum" data-aos="fade-up" data-aos-delay="160">
             <a href="#" class="tapis-card-media" data-quickview="fauteuil-atlas-margoum">
               <img src="images/chaise/fauteuil-atlas-margoum-1.jpg" alt="Chaise fauteuil dossier haut, margoum patchwork et rayures multicolores">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise Fauteuil « Atlas » Mosaïque &amp; Rayures en Margoum</h3>
               <p>Dossier haut imposant, margoum patchwork &amp; rayures</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="650">650 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="fauteuil-atlas-margoum" data-name="Chaise Fauteuil « Atlas » Mosaïque &amp; Rayures en Margoum" data-img="images/chaise/fauteuil-atlas-margoum-1.jpg" data-price="650" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="fauteuil-atlas-margoum" data-name="Chaise Fauteuil « Atlas » Mosaïque &amp; Rayures en Margoum" data-img="images/chaise/fauteuil-atlas-margoum-1.jpg" data-price="650" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20Fauteuil%20%C2%AB%20Atlas%20%C2%BB%20Mosa%C3%AFque%20%26%20Rayures%20en%20Margoum" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -414,14 +422,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Odyssée » en Bois Blenz &amp; Margoum Losanges" data-aos="fade-up" data-aos-delay="240">
             <a href="#" class="tapis-card-media" data-quickview="chaise-odyssee-blenz">
               <img src="images/chaise/chaise-odyssee-blenz-1.jpg" alt="Chaise bois Blenz dossier arqué, margoum motif losanges corail bleu violet">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Odyssée » en Bois Blenz &amp; Margoum Losanges</h3>
               <p>Dossier arqué, margoum losanges tissé main</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-odyssee-blenz" data-name="Chaise « Odyssée » en Bois Blenz &amp; Margoum Losanges" data-img="images/chaise/chaise-odyssee-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-odyssee-blenz" data-name="Chaise « Odyssée » en Bois Blenz &amp; Margoum Losanges" data-img="images/chaise/chaise-odyssee-blenz-1.jpg" data-price="480" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Odyss%C3%A9e%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Losanges" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -432,14 +440,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Allégria » en Bois Blenz &amp; Margoum Artisanal" data-aos="fade-up" data-aos-delay="320">
             <a href="#" class="tapis-card-media" data-quickview="chaise-allegria-blenz">
               <img src="images/chaise/chaise-allegria-blenz-1.jpg" alt="Chaise bois Blenz dossier arqué, margoum rose fuchsia et losanges">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Allégria » en Bois Blenz &amp; Margoum Artisanal</h3>
               <p>Dossier arqué, assise fuchsia, dossier losanges tissé main</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="480">480 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-allegria-blenz" data-name="Chaise « Allégria » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-allegria-blenz-1.jpg" data-price="480" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-allegria-blenz" data-name="Chaise « Allégria » en Bois Blenz &amp; Margoum Artisanal" data-img="images/chaise/chaise-allegria-blenz-1.jpg" data-price="480" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20All%C3%A9gria%20%C2%BB%20en%20Bois%20Blenz%20%26%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -450,14 +458,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Sindbad » Enveloppante Margoum Artisanal" data-aos="fade-up" data-aos-delay="400">
             <a href="#" class="tapis-card-media" data-quickview="chaise-sindbad-blenz">
               <img src="images/chaise/chaise-sindbad-blenz-1.jpg" alt="Chaise crapaud enveloppante margoum mosaïque fuchsia vert jaune rouge">
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Sindbad » Enveloppante Margoum Artisanal</h3>
               <p>Dossier arrondi style crapaud — 520 TND, duo 850 TND</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="520">520 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-sindbad-blenz" data-name="Chaise « Sindbad » Enveloppante Margoum Artisanal" data-img="images/chaise/chaise-sindbad-blenz-1.jpg" data-price="520" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-sindbad-blenz" data-name="Chaise « Sindbad » Enveloppante Margoum Artisanal" data-img="images/chaise/chaise-sindbad-blenz-1.jpg" data-price="520" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Sindbad%20%C2%BB%20Enveloppante%20Margoum%20Artisanal" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -468,14 +476,14 @@ fbq("track", "PageView");
           <article class="tapis-card" data-name="Chaise « Ulysse » Design &amp; Margoum Laine Brute" data-aos="fade-up" data-aos-delay="480">
             <a href="#" class="tapis-card-media tapis-card-media-video" data-quickview="chaise-ulysse-blenz">
               <video src="images/chaise/chaise-ulysse-blenz.mp4" poster="images/chaise/chaise-ulysse-blenz-1.jpg" muted loop playsinline autoplay></video>
-              <span class="tapis-card-view-btn">Voir les détails</span>
+              <span class="tapis-card-view-btn" data-i18n="cta.viewDetails">Voir les détails</span>
             </a>
             <div class="tapis-card-body">
               <h3>Chaise « Ulysse » Design &amp; Margoum Laine Brute</h3>
               <p>Dossier rouleau, laine brute naturelle — 690 TND, duo 1190 TND</p>
               <div class="tapis-card-price-row"><strong class="price" data-price-tnd="690">690 TND</strong></div>
               <div class="tapis-card-buttons">
-                <button class="btn-order" data-id="chaise-ulysse-blenz" data-name="Chaise « Ulysse » Design &amp; Margoum Laine Brute" data-img="images/chaise/chaise-ulysse-blenz-1.jpg" data-price="690" data-cursor="big">Commander</button>
+                <button class="btn-order" data-id="chaise-ulysse-blenz" data-name="Chaise « Ulysse » Design &amp; Margoum Laine Brute" data-img="images/chaise/chaise-ulysse-blenz-1.jpg" data-price="690" data-cursor="big" data-i18n="cta.order">Commander</button>
                 <a class="btn-whatsapp-card" href="https://wa.me/21629457597?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20%3A%20Chaise%20%C2%AB%20Ulysse%20%C2%BB%20Design%20%26%20Margoum%20Laine%20Brute" target="_blank" rel="noopener" data-cursor="big">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
                   WhatsApp
@@ -511,7 +519,7 @@ fbq("track", "PageView");
         <img src="images/logo-mark.png" alt="" class="logo-icon">
         <span class="logo-text">Margoum<em>Tunisia</em></span>
       </a>
-      <p>Le Margoum, c'est l'alliance du bois et du tissage pour sublimer vos espaces avec authenticité et raffinement.</p>
+      <p data-i18n="footer.tagline">Le Margoum, c'est l'alliance du bois et du tissage pour sublimer vos espaces avec authenticité et raffinement.</p>
       <div class="footer-contact">
         <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 21s-6-6.7-6-11.5A6 6 0 0 1 18 9.5C18 14.3 12 21 12 21z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.2" stroke="currentColor" stroke-width="1.5"/></svg> Bchechma, avant l'entrée de Kairouan, rue de Tunisie</p>
         <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M4 5c0 8 7 15 15 15l2-4-5-2-2 2c-2-1-4-3-5-5l2-2-2-5-4 1z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg> <a href="tel:+21629457597">29 457 597</a> / <a href="tel:+21656093248">56 093 248</a></p>
@@ -525,29 +533,29 @@ fbq("track", "PageView");
     </div>
 
     <div class="footer-col">
-      <h4>Liens rapides</h4>
-      <a href="index.html#accueil">Accueil</a>
+      <h4 data-i18n="footer.quickLinks">Liens rapides</h4>
+      <a href="index.html#accueil" data-i18n="nav.home">Accueil</a>
       <a href="index.html#collection">Catégories</a>
-      <a href="index.html#reassurance">À propos</a>
-      <a href="index.html#sur-mesure">Sur-Mesure</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html#reassurance" data-i18n="nav.about">À propos</a>
+      <a href="index.html#sur-mesure" data-i18n="nav.custom">Sur-Mesure</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
     </div>
 
     <div class="footer-col">
-      <h4>Besoin d'aide ?</h4>
-      <a href="index.html#contact">FAQ</a>
-      <a href="index.html#contact">Livraison &amp; retour</a>
-      <a href="index.html#contact">Entretien</a>
-      <a href="cgv.html">Conditions générales</a>
-      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <h4 data-i18n="footer.help">Besoin d'aide ?</h4>
+      <a href="index.html#contact" data-i18n="footer.faq">FAQ</a>
+      <a href="index.html#contact" data-i18n="footer.shipping">Livraison &amp; retour</a>
+      <a href="index.html#contact" data-i18n="footer.care">Entretien</a>
+      <a href="cgv.html" data-i18n="footer.terms">Conditions générales</a>
+      <a href="politique-confidentialite.html" data-i18n="footer.privacy">Politique de confidentialité</a>
     </div>
 
     <div class="footer-col footer-newsletter">
-      <h4>Newsletter</h4>
-      <p>Recevez nos nouveautés et inspirations en avant-première.</p>
+      <h4 data-i18n="footer.newsletter">Newsletter</h4>
+      <p data-i18n="footer.newsletterText">Recevez nos nouveautés et inspirations en avant-première.</p>
       <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="Votre e-mail" required aria-label="Votre e-mail">
-        <button type="submit" data-cursor="big">S'inscrire</button>
+        <input type="email" placeholder="Votre e-mail" required aria-label="Votre e-mail" data-i18n="footer.newsletterPlaceholder" data-i18n-attr="placeholder">
+        <button type="submit" data-cursor="big" data-i18n="footer.newsletterBtn">S'inscrire</button>
       </form>
       <p class="newsletter-status" id="newsletterStatus"></p>
     </div>
@@ -555,7 +563,7 @@ fbq("track", "PageView");
 
   <div class="container footer-bottom">
     <span>© <span id="year"></span> Margoum Tunisia — STÉ DAR EL-MARGOUM ETTOUNSI. Tous droits réservés.</span>
-    <span class="footer-credit">Créé avec passion en Tunisie <svg width="12" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2C19.5 16.3 12 21 12 21z"/></svg></span>
+    <span class="footer-credit"><span data-i18n="footer.madeWith">Créé avec passion en Tunisie</span> <svg width="12" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.7-10-9.3C.4 8 2 4.5 5.5 4c2.2-.3 4 .9 6.5 3.6C14.5 4.9 16.3 3.7 18.5 4c3.5.5 5.1 4 3.5 7.2C19.5 16.3 12 21 12 21z"/></svg></span>
   </div>
 </footer>
 
@@ -574,7 +582,7 @@ fbq("track", "PageView");
     <p class="quickview-desc" id="quickviewDesc"></p>
     <ul class="quickview-specs" id="quickviewSpecs"></ul>
     <div class="quickview-actions">
-      <button class="btn-order" id="quickviewOrderBtn" data-cursor="big">Commander</button>
+      <button class="btn-order" id="quickviewOrderBtn" data-cursor="big" data-i18n="quickview.order">Commander</button>
       <a class="btn-whatsapp-card" id="quickviewWhatsBtn" target="_blank" rel="noopener" data-cursor="big">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.82L2 22l5.42-1.36c1.36.71 2.9 1.11 4.62 1.11 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.7 14.16c-.24.68-1.18 1.24-1.94 1.4-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.24-5.05-4.44-.15-.2-1.22-1.62-1.22-3.1s.77-2.2 1.05-2.5c.24-.26.53-.32.71-.32h.51c.16 0 .38-.02.58.45.24.57.83 1.98.9 2.13.07.15.11.32.02.51-.09.19-.14.31-.28.48-.14.16-.29.36-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.94 1.93 1.23 2.21 1.37.28.14.44.12.6-.06.16-.19.68-.79.86-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.17 1.36z"/></svg>
         WhatsApp
@@ -583,20 +591,20 @@ fbq("track", "PageView");
     <div class="quickview-trust">
       <p class="quickview-trust-badge">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="5" stroke="currentColor" stroke-width="1.4"/><path d="M8.5 13.5L6 21l6-3 6 3-2.5-7.5" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-        100% fait main par nos artisan(e)s en Tunisie — Qualité supérieure A1
+        <span data-i18n="quickview.badge">100% fait main par nos artisan(e)s en Tunisie — Qualité supérieure A1</span>
       </p>
       <details class="quickview-trust-details">
-        <summary>Entretien, livraison &amp; garanties</summary>
+        <summary data-i18n="quickview.careSummary">Entretien, livraison &amp; garanties</summary>
         <ul>
-          <li>Dépoussiérage régulier à l'aspirateur ou au chiffon doux.</li>
-          <li>En cas de tache, nettoyer immédiatement avec un chiffon humide et du savon doux.</li>
-          <li>Nettoyage à sec professionnel recommandé si nécessaire.</li>
-          <li>Livraison rapide et emballage sécurisé sur toute la Tunisie.</li>
-          <li>Inspection du produit possible à la livraison, avant paiement.</li>
+          <li data-i18n="quickview.care1">Dépoussiérage régulier à l'aspirateur ou au chiffon doux.</li>
+          <li data-i18n="quickview.care2">En cas de tache, nettoyer immédiatement avec un chiffon humide et du savon doux.</li>
+          <li data-i18n="quickview.care3">Nettoyage à sec professionnel recommandé si nécessaire.</li>
+          <li data-i18n="quickview.care4">Livraison rapide et emballage sécurisé sur toute la Tunisie.</li>
+          <li data-i18n="quickview.care5">Inspection du produit possible à la livraison, avant paiement.</li>
         </ul>
       </details>
       <a href="https://wa.me/21629457597?text=Bonjour%2C%20j%27ai%20besoin%20d%27aide%20pour%20choisir%20un%20mod%C3%A8le." target="_blank" rel="noopener" class="quickview-trust-advice" data-cursor="big">
-        Besoin d'aide pour choisir ? Envoyez une photo de votre salon sur WhatsApp →
+        <span data-i18n="quickview.advice">Besoin d'aide pour choisir ? Envoyez une photo de votre salon sur WhatsApp →</span>
       </a>
     </div>
   </div>
