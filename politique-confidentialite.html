@@ -13,6 +13,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 <link rel="stylesheet" href="css/style.css">
+<!-- Google tag (gtag.js) — replace GA_MEASUREMENT_ID_A_REMPLACER with the real GA4 Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID_A_REMPLACER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "GA_MEASUREMENT_ID_A_REMPLACER");
+</script>
+
+<!-- Meta Pixel Code — replace FACEBOOK_PIXEL_ID_A_REMPLACER with the real Pixel ID -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,"script",
+"https://connect.facebook.net/en_US/fbevents.js");
+fbq("init", "FACEBOOK_PIXEL_ID_A_REMPLACER");
+fbq("track", "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=FACEBOOK_PIXEL_ID_A_REMPLACER&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body class="subpage">
 
@@ -148,7 +172,7 @@
 
       <h2>Cookies et outils de suivi</h2>
       <p>
-        Ce site n'utilise pas de cookies publicitaires ni d'outils d'analyse ou de suivi tiers (type Google Analytics ou pixels publicitaires).
+        Ce site utilise Google Analytics (mesure d'audience) et le Pixel Meta/Facebook (suivi publicitaire) afin de comprendre la fréquentation du site et d'améliorer nos campagnes publicitaires. Ces outils peuvent déposer des cookies ou identifiants techniques dans votre navigateur. Vous pouvez à tout moment bloquer ces outils via les paramètres de confidentialité de votre navigateur ou des extensions de blocage de traceurs.
       </p>
 
       <h2>Partage des données</h2>
